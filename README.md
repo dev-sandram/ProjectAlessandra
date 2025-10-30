@@ -54,4 +54,4 @@ vignette("workflow_analysis", package = "ProjectAlessandra")
 
 Developed by Alessandra Monterosso, as part of the October 2025 multi-omics integration project --- a didactic and research exercise in modular R workflow design.
 
-Built using: data.table, ggplot2, microbenchmark, usethis, devtools, roxygen2
+Built using: data.table, ggplot2, microbenchmark, devtools, roxygen2
