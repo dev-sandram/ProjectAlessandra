@@ -1,0 +1,19 @@
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit reset --hard origin/master
+[A
+[?2004lHEAD is now at 15c6fd4 Second README update
+]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ [7mgit add README.md[27m
+[7mgit commit -m "Aggiornamento README"[27m
+[7mgit push origin master[27m
+[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit add README.md
+git commit -m "Aggiornamento README"
+git push origin master
+[?2004lOn branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31m.local/share/rstudio/projects/none/console07/715B2410[m
+	[31m.local/share/rstudio/projects/none/console07/715B2410.env[m
+	[31m.local/share/rstudio/sessions/active/session-7a3d2c08/[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+Everything up-to-date
+]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ [K]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ [K]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ 

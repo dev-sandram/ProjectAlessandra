@@ -45,4 +45,4 @@ Total 20 (delta 8), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas:   0% (0/8)[Kremote: Resolving deltas:  12% (1/8)[Kremote: Resolving deltas:  25% (2/8)[Kremote: Resolving deltas:  37% (3/8)[Kremote: Resolving deltas:  50% (4/8)[Kremote: Resolving deltas:  62% (5/8)[Kremote: Resolving deltas:  75% (6/8)[Kremote: Resolving deltas:  87% (7/8)[Kremote: Resolving deltas: 100% (8/8)[Kremote: Resolving deltas: 100% (8/8), completed with 8 local objects.[K
 To https://github.com/dev-sandram/ProjectAlessandra.git
    71e774b..880a43c  master -> master
-]0;/home/rstudio[?2004h]0;rstudio@f83cf597cd57: ~[01;32mrstudio@f83cf597cd57[00m:[01;34m~[00m$ git push origin master --force[1Pcommit -m "Project oct25"add .[K
+git add .

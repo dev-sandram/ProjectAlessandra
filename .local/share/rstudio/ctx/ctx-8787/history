@@ -1,0 +1,19 @@
+sisi ci sono
+è giusto che non siano selezionate
+devtools::document()
+devtools::SANDRAA
+A
+devtools::document()
+devtools::load_all()
+devtools::import()
+non mi ricordo il terzo
+vediamo
+devtools::install()
+library(data.table)
+library(devtools)
+library(ggplot2)
+library(microbenchmark)
+library(roxygen2)
+library(rmarkdown)
+library(knitr)
+getwd()
