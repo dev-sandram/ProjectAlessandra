@@ -4,5 +4,6 @@
     "reuse_sessions_for_project_links": true,
     "posix_terminal_shell": "bash",
     "jobs_tab_visibility": "shown",
-    "tab_key_move_focus": true
+    "tab_key_move_focus": true,
+    "initial_working_directory": "~"
 }

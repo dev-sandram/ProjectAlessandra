@@ -2,4 +2,41 @@
 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvignettes/workflow_analysis.Rmd
 [A
 [?2004lbash: vignettes/workflow_analysis.Rmd: Permission denied
-]0;/home/rstudio[?2004h]0;rstudio@f83cf597cd57: ~[01;32mrstudio@f83cf597cd57[00m:[01;34m~[00m$ 
+]0;/home/rstudio[?2004h]0;rstudio@f83cf597cd57: ~[01;32mrstudio@f83cf597cd57[00m:[01;34m~[00m$ git status
+[?2004lOn branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   .config/rstudio/rstudio-prefs.json[m
+	[31mmodified:   .local/share/rstudio/client-state/workbenchp.persistent[m
+	[31mmodified:   .local/share/rstudio/history_database[m
+	[31mmodified:   .local/share/rstudio/monitored/lists/file_mru[m
+	[31mmodified:   .local/share/rstudio/monitored/lists/help_history_links[m
+	[31mmodified:   .local/share/rstudio/projects/bca006bd/console07/8C486E02[m
+	[31mmodified:   .local/share/rstudio/projects/bca006bd/console07/INDEX001[m
+	[31mmodified:   .local/share/rstudio/rstudio-server.json[m
+	[31mmodified:   .local/share/rstudio/sessions/active/session-549e88dc/properites/blocking_suspend[m
+	[31mmodified:   .local/share/rstudio/sessions/active/session-549e88dc/properites/executing[m
+	[31mmodified:   .local/share/rstudio/sessions/active/session-549e88dc/properites/last-used[m
+	[31mmodified:   .local/share/rstudio/sessions/active/session-549e88dc/properites/last_state_updated[m
+	[31mmodified:   .local/share/rstudio/sessions/active/session-549e88dc/rmd-outputs[m
+	[31mdeleted:    project_oct25/celltype_counts_per_cluster.csv[m
+	[31mdeleted:    project_oct25/combined_integration_clustering.csv[m
+	[31mdeleted:    project_oct25/final_revision_cells_clusters_celltypes.csv[m
+	[31mdeleted:    project_oct25/final_revision_percentages_simple.csv[m
+	[31mdeleted:    project_oct25/normalized_celltype_percentages_by_tissue.csv[m
+	[31mdeleted:    project_oct25/summary_cluster_celltype_tissue.csv[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mREADME.md[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;/home/rstudio[?2004h]0;rstudio@f83cf597cd57: ~[01;32mrstudio@f83cf597cd57[00m:[01;34m~[00m$ git add
+[?2004lNothing specified, nothing added.
+[33mhint: Maybe you wanted to say 'git add .'?[m
+[33mhint: Turn this message off by running[m
+[33mhint: "git config advice.addEmptyPathspec false"[m
+]0;/home/rstudio[?2004h]0;rstudio@f83cf597cd57: ~[01;32mrstudio@f83cf597cd57[00m:[01;34m~[00m$ git add .

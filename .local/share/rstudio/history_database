@@ -4665,3 +4665,750 @@
 1761840772398:user.email = "alessandramonte050@gmail.com"
 1761840772399:)
 1761840808270:usethis::use_git()
+1761840897654:usethis::use_github()
+1761840921916:gh_token_help()
+1761841319398:usethis::use_github()
+1761841367832:usethis::create_github_token()
+1761841589360:gitcreds::gitcreds_set()
+1761841630187:gitcreds::gitcreds_set()
+1761841705227:gitcreds::gitcreds_set()
+1761841757079:gitcreds::gitcreds_delete()
+1761841774860:?data.table
+1761841826690:gitcreds::gitcreds_set()
+1761841854638:usethis::use_github()
+1761841994156:usethis::use_readme_md()
+1761843310352:## ProjectAlessandra
+1761843310356:[![R-CMD-check](https://github.com/dev-sandram/ProjectAlessandra/workflows/R-CMD-check/badge.svg)](https://github.com/dev-sandram/ProjectAlessandra/actions)
+1761843325255:<!-- badges: start -->
+1761843332656:## ProjectAlessandra
+1761843333850:ProjectAlessandra is an R package designed to provide a unified, reproducible framework for **multi-omics data analysis** — including bulk RNA-seq, clinical, ATAC-seq, variant, and single-cell integration datasets - and benchmarking.
+1761843339207:## ProjectAlessandra
+1761843339209:ProjectAlessandra is an R package designed to provide a unified, reproducible framework for **multi-omics data analysis** — including bulk RNA-seq, clinical, ATAC-seq, variant, and single-cell integration datasets - and benchmarking.
+1761843346205:## ProjectAlessandra
+1761843346208:ProjectAlessandra is an R package designed to provide a unified, reproducible framework for **multi-omics data analysis** — including bulk RNA-seq, clinical, ATAC-seq, variant, and single-cell integration datasets - and benchmarking.
+1761843443733:git add README.md
+1761845135940:# ==========================================================
+1761845135943:# df_functions.R
+1761845135945:# Generalized and reusable base R (data.frame) functions
+1761845135947:# for bulk RNA-seq processing and summarization
+1761845135948:# ==========================================================
+1761845135950:# ----------------------------------------------------------
+1761845135951:# TASK 1 – Merge, filter, summarize, and compute per-condition means
+1761845135953:# ----------------------------------------------------------
+1761845135954:#' Summarize bulk RNA counts with metadata
+1761845135956:#'
+1761845135957:#' This function reads in raw bulk RNA-seq counts and metadata,
+1761845135958:#' it merges bulk RNA-seq count data with sample metadata by "sample_id",
+1761845135960:#' filters treated samples whose gene names start with "GENE_00",
+1761845135961:#' and computes multiple summary statistics:
+1761845135962:#' mean/median counts per gene as well as per-condition mean counts.
+1761845135965:#' Designed for quick quality control and exploratory summaries using data.table's fast aggregation capabilities.
+1761845135966:#'
+1761845135968:#' @param counts_path Path to CSV file with columns: gene, sample_id, count.
+1761845135971:#' @param meta_path Path to CSV file with columns: sample_id, condition, batch, patient ID, timepoint.
+1761845135973:#' @return none
+1761845135975:#' @export
+1761845135976:bulk_counts_summary_df <- function(counts_path, meta_path) {
+1761845135978:# 1. Import
+1761845135980:counts <- read.csv(counts_path)
+1761845135982:meta   <- read.csv(meta_path)
+1761845135988:# 2. Join counts + metadata by sample_id
+1761845135990:merged_data <- merge(counts, meta, by = "sample_id")
+1761845135992:# 3. Filter for treated samples and GENE_00* genes
+1761845135993:treated_data <- subset(merged_data,
+1761845135994:condition == "treated" & grepl("^GENE_00", gene))
+1761845135998:# 4. Compute mean and median per gene
+1761845135999:gene_summary <- aggregate(
+1761845136001:count ~ gene,
+1761845136003:data = treated_data,
+1761845136005:FUN  = function(x) c(mean = mean(x), median = median(x))
+1761845136006:)
+1761845136008:# 5. Simplify format
+1761845136009:gene_summary_df <- data.frame(
+1761845136011:gene = gene_summary$gene,
+1761845136013:mean_count   = gene_summary$count[, "mean"],
+1761845136015:median_count = gene_summary$count[, "median"]
+1761845136017:)
+1761845136019:# 6 Calcolo della media dei conteggi per ciascun gene e condizione
+1761845136021:# aggregate() calcola una funzione (mean) per gruppi
+1761845136022:gene_condition_means_f <- aggregate(
+1761845136023:count ~ gene + condition,   # formula: raggruppa per gene e condition
+1761845136024:data = merged_data,         # tabella di partenza
+1761845136025:FUN = mean,                 # funzione da applicare
+1761845136026:na.rm = TRUE                # ignora eventuali valori mancanti
+1761845136027:)
+1761845136029:# 7 Ordina i risultati per gene e condition (per leggibilità)
+1761845136030:gene_condition_means_f <- gene_condition_means_f[order(gene_condition_means_f$gene,
+1761845136031:gene_condition_means_f$condition), ]
+1761845136032:}
+1761845136034:# ----------------------------------------------------------
+1761845136035:# TASK 2 – Add log2(count + 1) and binary flags
+1761845136036:# ----------------------------------------------------------
+1761845136037:#' Add QC-style derived columns
+1761845136038:#'
+1761845136038:#' Computes log2-transformed counts and adds a binary \code{high} flag
+1761845136039:#' indicating whether a count is above the gene-wise median.
+1761845136040:#' This mimics typical preprocessing steps in QC pipelines to visualize
+1761845136041:#' count distributions and detect outliers.
+1761845136041:#'
+1761845136042:#' @param counts_path Path to CSV file with columns: gene, sample_id, count.
+1761845136043:#' @return none
+1761845136044:#' @export
+1761845136045:bulk_counts_qc_df <- function(counts_path) {
+1761845136045:# 1. Import
+1761845136046:counts <- read.csv(counts_path)
+1761845136048:# 2. Add log2(count + 1) column
+1761845136048:counts$log2_count <- log2(counts$count + 1)
+1761845136050:# 3. Add binary flag 'high' (count > 100)
+1761845136051:counts$high <- counts$count > 100
+1761845136052:# 4. Overwrite 'high' using gene-wise median threshold
+1761845136053:#    Qui usiamo tapply() per calcolare la mediana per gene,
+1761845136053:#    poi combiniamo i risultati in un vettore logico della stessa lunghezza
+1761845136054:medians_by_gene <- tapply(counts$count, counts$gene, median)
+1761845136054:counts$high <- counts$count > medians_by_gene[counts$gene]
+1761845136055:}
+1761845136057:#-----------------------------------------------------------
+1761845136057:#Task 3 non ha la funzione perchè ha senso solo in data.table
+1761845136058:#-----------------------------------------------------------
+1761845136059:# ----------------------------------------------------------
+1761845136060:# TASK 4 – Filter genes by thresholded normalized expression
+1761845136061:# ----------------------------------------------------------
+1761845136061:#' Annotate counts with metadata and compute summaries
+1761845136062:#'
+1761845136062:#' Adds patient metadata to bulk counts, computes per-patient total counts,
+1761845136063:#' per-gene means by condition, and identifies top 10 genes per condition
+1761845136064:#' ranked by average expression.
+1761845136064:#'
+1761845136065:#' @param counts_path Path to CSV file with columns: gene, sample_id, count.
+1761845136066:#' @param meta_path Path to CSV file with columns: sample_id, condition, batch, patient ID, timepoint.
+1761845136066:#' @return none
+1761845136067:#' @export
+1761845136067:annotate_counts_df <- function(counts_path, meta_path) {
+1761845136068:counts <- read.csv(counts_path)
+1761845136069:meta   <- read.csv(meta_path, stringsAsFactors = FALSE)
+1761845136070:# 2. Join
+1761845136071:merged_data <- merge(counts, meta, by = "sample_id")
+1761845136072:# 3. Total counts per patient
+1761845136072:patient_totals <- aggregate(count ~ patient_id, data = merged_data, FUN = sum)
+1761845136073:names(patient_totals)[2] <- "total_count"
+1761845136074:# 4. Mean count per gene and condition
+1761845136075:gene_means <- aggregate(count ~ gene + condition, data = merged_data, FUN = mean)
+1761845136075:names(gene_means)[3] <- "mean_count"
+1761845136077:# 5. Top 10 genes by condition
+1761845136077:conditions <- unique(gene_means$condition)
+1761845136078:top10_by_condition <- data.frame()
+1761845136079:for (cond in conditions) {
+1761845136080:subset_cond <- subset(gene_means, condition == cond)
+1761845136081:subset_cond <- subset_cond[order(-subset_cond$mean_count), ]
+1761845136082:top10 <- head(subset_cond, 10)
+1761845136083:top10_by_condition <- rbind(top10_by_condition, top10)}
+1761845136083:}
+1761845136085:# ----------------------------------------------------------
+1761845136085:# TASK 5 – Summary table by condition and gene class
+1761845136086:# ----------------------------------------------------------
+1761845136086:#' Classify lab values against reference intervals
+1761845136087:#'
+1761845136088:#' Merges patient lab results with reference intervals and assigns each test
+1761845136088:#' as "normal" or "out_of_range", and summarizes abnormalities per patient and per lab.
+1761845136089:#'
+1761845136089:#' @param labs_path Path to CSV file with columns: patient_id, time_iso, lab, value.
+1761845136090:#' @param ref_path Path to CSV file with columns: lab, sex,lower, upper.
+1761845136090:#' @return none
+1761845136091:#' @export
+1761845136091:classify_labs_df <- function(labs_path, ref_path) {
+1761845136092:# 1. Import
+1761845136092:labs <- read.csv(labs_path)
+1761845136093:ref  <- read.csv(ref_path)
+1761845136094:# 2. Keep unique reference intervals
+1761845136094:ref_unique <- unique(ref[, c("lab", "lower", "upper")])
+1761845136095:# 3. Join
+1761845136096:merged_labs <- merge(labs, ref_unique, by = "lab")
+1761845136097:# 4. Classify as normal/out_of_range
+1761845136097:merged_labs$status <- ifelse(merged_labs$value >= merged_labs$lower &
+1761845136098:merged_labs$value <= merged_labs$upper,
+1761845136099:"normal", "out_of_range")
+1761845136100:# 5. Summaries
+1761845136100:abnormal_by_patient <- aggregate(status ~ patient_id, data = merged_labs,
+1761845136101:FUN = function(x) {
+1761845136101:total <- length(x)
+1761845136102:out   <- sum(x == "out_of_range")
+1761845136102:c(total_tests = total, out_of_range = out)
+1761845136103:})
+1761845136104:# split matrix-like column into two numeric columns
+1761845136105:abnormal_by_patient$total_tests  <- abnormal_by_patient$status[, "total_tests"]
+1761845136106:abnormal_by_patient$out_of_range <- abnormal_by_patient$status[, "out_of_range"]
+1761845136106:abnormal_by_patient$status <- NULL
+1761845136107:abnormal_by_lab <- aggregate(status ~ lab, data = merged_labs,
+1761845136108:FUN = function(x) {
+1761845136109:total <- length(x)
+1761845136109:out   <- sum(x == "out_of_range")
+1761845136110:c(total_tests = total, out_of_range = out)
+1761845136110:})
+1761845136112:abnormal_by_lab$total_tests  <- abnormal_by_lab$status[, "total_tests"]
+1761845136112:abnormal_by_lab$out_of_range <- abnormal_by_lab$status[, "out_of_range"]
+1761845136113:abnormal_by_lab$status <- NULL
+1761845136114:}
+1761845136116:# ----------------------------------------------------------
+1761845136116:# TASK 6 – Compute fold change between treated and control
+1761845136117:# ----------------------------------------------------------
+1761845136118:#' Nearest-time matching of vitals and labs
+1761845136118:#'
+1761845136119:#' Matches nearest HR/SBP readings, vital signs, to each lab time and computes correlations.
+1761845136120:#'
+1761845136121:#' Performs "rolling join" to match the closest available heart rate (HR)
+1761845136121:#' and systolic blood pressure (SBP) to each lab test times for the same patient.
+1761845136122:#' Computes per-patient correlations between CRP (C-reactive protein) and vitals.
+1761845136122:#'
+1761845136123:#' @param labs_path Path to CSV file with columns: patient_id, time_iso, lab, value.
+1761845136123:#' @param vitals_path Path to CSV file with columns: time_iso
+1761845136124:#' @return none
+1761845136125:#' @export
+1761845136125:match_vitals_df <- function(labs_path, vitals_path) {
+1761845136126:# 1. Import
+1761845136126:labs   <- read.csv(labs_path)
+1761845136127:vitals <- read.csv(vitals_path)
+1761845136128:# 2. Convert to POSIXct
+1761845136128:labs$time_iso   <- as.POSIXct(labs$time_iso)
+1761845136129:vitals$time_iso <- as.POSIXct(vitals$time_iso)
+1761845136130:# 3. Join nearest HR/SBP manually (loop-based)
+1761845136130:nearest_match <- function(lab_df, vitals_df, vital_type) {
+1761845136131:vitals_sub <- vitals_df[vitals_df$vital == vital_type, ]
+1761845136132:results <- list()
+1761845136132:for (i in seq_len(nrow(lab_df))) {
+1761845136133:pid <- lab_df$patient_id[i]
+1761845136134:time <- lab_df$time_iso[i]
+1761845136134:v_sub <- vitals_sub[vitals_sub$patient_id == pid, ]
+1761845136135:if (nrow(v_sub) > 0) {
+1761845136135:idx <- which.min(abs(difftime(v_sub$time_iso, time, units = "mins")))
+1761845136136:results[[i]] <- v_sub[idx, c("value", "time_iso")]
+1761845136137:} else {
+1761845136137:results[[i]] <- data.frame(value = NA, time_iso = NA)
+1761845136138:}
+1761845136139:}
+1761845136139:out <- do.call(rbind, results)
+1761845136140:names(out) <- c(paste0("nearest_", vital_type), paste0(vital_type, "_time"))
+1761845136141:return(out)
+1761845136142:}
+1761845136143:# 4. Attach nearest HR and SBP
+1761845136144:hr_data  <- nearest_match(labs, vitals, "HR")
+1761845136145:sbp_data <- nearest_match(labs, vitals, "SBP")
+1761845136146:labs_with_vitals <- cbind(labs, hr_data, sbp_data)
+1761845136147:labs_with_vitals$hr_lag_minutes  <- as.numeric(difftime(labs_with_vitals$time_iso, labs_with_vitals$HR_time, units = "mins"))
+1761845136147:labs_with_vitals$sbp_lag_minutes <- as.numeric(difftime(labs_with_vitals$time_iso, labs_with_vitals$SBP_time, units = "mins"))
+1761845136149:# 5. Correlation per patient (CRP only) — robust version in base R
+1761845136149:crp_data <- subset(labs_with_vitals, lab == "CRP")
+1761845136151:# Split by patient_id
+1761845136152:patients_list <- split(crp_data, crp_data$patient_id)
+1761845136154:# Function to compute correlation safely
+1761845136154:safe_cor <- function(df, col_x = "value", col_y = "nearest_HR") {
+1761845136155:if (nrow(df) < 2) return(NA_real_)           # meno di 2 osservazioni -> NA
+1761845136156:x <- df[[col_x]]
+1761845136157:y <- df[[col_y]]
+1761845136157:# keep only pairs non-NA
+1761845136158:ok <- !is.na(x) & !is.na(y)
+1761845136159:if (sum(ok) < 2) return(NA_real_)            # meno di 2 coppie valide -> NA
+1761845136160:return(cor(x[ok], y[ok], use = "complete.obs"))
+1761845136160:}
+1761845136162:# Calcola correlazione CRP vs HR per ogni paziente
+1761845136163:cor_crp_hr <- data.frame(
+1761845136164:patient_id = names(patients_list),
+1761845136165:correlation_CRP_HR = sapply(patients_list, safe_cor, col_x = "value", col_y = "nearest_HR"),
+1761845136166:row.names = NULL,
+1761845136167:stringsAsFactors = FALSE
+1761845136168:)
+1761845136169:# Calcola correlazione CRP vs SBP per ogni paziente
+1761845136170:cor_crp_sbp <- data.frame(
+1761845136171:patient_id = names(patients_list),
+1761845136172:correlation_CRP_SBP = sapply(patients_list, safe_cor, col_x = "value", col_y = "nearest_SBP"),
+1761845136173:row.names = NULL,
+1761845136174:stringsAsFactors = FALSE
+1761845136175:)
+1761845136176:}
+1761845136178:# ----------------------------------------------------------
+1761845136179:# TASK 7 – Compute coefficient of variation (CV)
+1761845136179:# ----------------------------------------------------------
+1761845136180:#' Extract peaks on chromosome and return top N by score
+1761845136181:#'
+1761845136181:#' Filters ATAC peaks by chromosome and genomic interval and returns
+1761845136182:#' the top 50 by score — useful for quick locus-specific exploration.
+1761845136183:#'
+1761845136184:#' @param peaks_path Path to CSV file with columns:chr, start, end, peak_id, score
+1761845136185:#' @param chr_sel selected chromosome string e.g.:"chr2"
+1761845136186:#' @param start_min lower bound of range e.g.:2000000
+1761845136186:#' @param start_max upper bound of range e.g.:4000000
+1761845136187:#' @return none
+1761845136188:#' @export
+1761845136189:top_peaks_df <- function(peaks_path, chr_sel, start_min , start_max) {
+1761845136190:peaks <- read.csv(peaks_path, stringsAsFactors = FALSE)
+1761845136190:subset_peaks <- subset(peaks, chr == chr_sel & start >= start_min & start <= start_max)
+1761845136191:subset_peaks <- subset_peaks[order(-subset_peaks$score), ]
+1761845136192:top50_peaks <- head(subset_peaks, 50)
+1761845136193:}
+1761845136194:# ----------------------------------------------------------
+1761845136195:# TASK 8 – Identify most variable genes
+1761845136195:# ----------------------------------------------------------
+1761845136196:#' Compute per-condition gene stas and filter based on fold change.
+1761845136197:#'
+1761845136198:#' Calculates mean, median, and quartile statistics for each gene under
+1761845136198:#' treated and control conditions, then filters genes where the treated
+1761845136199:#' mean is at least twice the control mean (treated_mean ≥ 2 × control_mean).
+1761845136199:#'
+1761845136200:#' @param counts_path Path to CSV file with columns: gene, sample_id, count.
+1761845136201:#' @param meta_path Path to CSV file with columns: sample_id, condition, batch, patient ID, timepoint.
+1761845136202:#' @return none
+1761845136202:#' @export
+1761845136203:gene_stats_filter_df <- function(counts_path, meta_path) {
+1761845136204:counts <- read.csv(counts_path, stringsAsFactors = FALSE)
+1761845136204:meta   <- read.csv(meta_path, stringsAsFactors = FALSE)
+1761845136206:merged <- merge(counts, meta, by = "sample_id")
+1761845136207:stats_by_gene_condition <- aggregate(count ~ gene + condition, data = merged,
+1761845136208:FUN = function(x) c(mean = mean(x), median = median(x),
+1761845136208:Q1 = quantile(x, 0.25, type = 2),
+1761845136209:Q3 = quantile(x, 0.75, type = 2)))
+1761845136210:stats_df <- data.frame(
+1761845136211:gene = stats_by_gene_condition$gene,
+1761845136212:condition = stats_by_gene_condition$condition,
+1761845136212:mean_count = stats_by_gene_condition$count[, "mean"],
+1761845136213:median_count = stats_by_gene_condition$count[, "median"],
+1761845136213:Q1 = stats_by_gene_condition$count[, "Q1.25%"],
+1761845136214:Q3 = stats_by_gene_condition$count[, "Q3.75%"]
+1761845136215:)
+1761845136216:treated <- subset(stats_df, condition == "treated")[, c("gene", "mean_count")]
+1761845136217:control <- subset(stats_df, condition == "control")[, c("gene", "mean_count")]
+1761845136217:names(treated)[2] <- "treated_mean"
+1761845136218:names(control)[2] <- "control_mean"
+1761845136219:means_wide <- merge(treated, control, by = "gene")
+1761845136220:kept_genes <- subset(means_wide, treated_mean >= 2 * control_mean)
+1761845136221:}
+1761845136222:# ----------------------------------------------------------
+1761845136223:# TASK 9 – Compute correlation matrix across samples
+1761845136223:# ----------------------------------------------------------
+1761845136224:#' Convert wide counts to long and back, computing mean per condition
+1761845136225:#'
+1761845136225:#'Demonstrates data reshaping with \code{melt()} and \code{dcast()}.
+1761845136226:#' Converts wide-format counts (one column per sample) to long format,
+1761845136226:#' merges with metadata, computes mean per gene and condition,
+1761845136227:#' and returns a condition-wide table again.
+1761845136227:#'
+1761845136228:#' @param counts_wide_path Path to CSV file with columns genes and samples
+1761845136228:#' @return none
+1761845136229:#' @export
+1761845136230:wide_long_wide_df <- function(counts_path, meta_path) {
+1761845136230:counts_wide <- read.csv(counts_path, stringsAsFactors = FALSE)
+1761845136231:counts_long <- reshape(counts_wide, varying = names(counts_wide)[-1],
+1761845136232:v.names = "count", timevar = "sample_id",
+1761845136233:times = names(counts_wide)[-1], idvar = "gene",
+1761845136233:direction = "long")
+1761845136234:meta <- read.csv(meta_path, stringsAsFactors = FALSE)
+1761845136235:merged <- merge(counts_long, meta, by = "sample_id")
+1761845136236:totals_per_sample <- aggregate(count ~ sample_id, data = merged, sum)
+1761845136237:names(totals_per_sample)[2] <- "total_count"
+1761845136238:merged <- merge(merged, totals_per_sample, by = "sample_id")
+1761845136239:gene_condition_means <- aggregate(count ~ gene + condition, data = merged, mean)
+1761845136240:counts_condition_wide <- reshape(gene_condition_means,
+1761845136240:timevar = "condition", idvar = "gene",
+1761845136241:direction = "wide")
+1761845136242:}
+1761845136243:# ----------------------------------------------------------
+1761845136243:# TASK 10 – PCA on normalized data
+1761845136244:# ----------------------------------------------------------
+1761845136244:#' Map ATAC-seq peaks to genes using genomic overlaps
+1761845136245:#'
+1761845136246:#' Uses \code{foverlaps()} to detect overlaps between peak intervals
+1761845136246:#' and gene coordinates, computes overlap lengths, and summarizes
+1761845136247:#' peaks per gene and total overlap length. Returns top 20 genes
+1761845136247:#' with the most total overlapping base pairs.
+1761845136248:#'
+1761845136248:#' @param peaks_path Path to CSV file with columns: chr, start, end, peak_id, score
+1761845136249:#' @param genes_path Path to CSV file with columns: chr, start, end, gene
+1761845136249:#' @return none
+1761845136250:#' @export
+1761845136250:atac_to_gene_df <- function(peaks_path, genes_path) {
+1761845136251:peaks <- read.csv(peaks_path, stringsAsFactors = FALSE)
+1761845136251:genes <- read.csv(genes_path, stringsAsFactors = FALSE)
+1761845136252:# overlap calcolato “a mano”
+1761845136253:overlaps_list <- lapply(1:nrow(peaks), function(i) {
+1761845136254:p <- peaks[i, ]
+1761845136254:gsub <- subset(genes, chr == p$chr & start <= p$end & end >= p$start)
+1761845136255:if (nrow(gsub) == 0) return(NULL)
+1761845136255:gsub$overlap_bp <- pmin(p$end, gsub$end) - pmax(p$start, gsub$start)
+1761845136256:gsub <- gsub[gsub$overlap_bp > 0, ]
+1761845136257:gsub$peak_id <- i
+1761845136257:gsub
+1761845136258:})
+1761845136259:overlaps <- do.call(rbind, overlaps_list)
+1761845136260:peaks_per_gene <- aggregate(overlap_bp ~ gene, data = overlaps, FUN = length)
+1761845136261:names(peaks_per_gene)[2] <- "num_peaks"
+1761845136262:overlap_sum_per_gene <- aggregate(overlap_bp ~ gene, data = overlaps, sum)
+1761845136263:names(overlap_sum_per_gene)[2] <- "total_overlap_bp"
+1761845136264:top20_genes <- head(overlap_sum_per_gene[order(-overlap_sum_per_gene$total_overlap_bp), ], 20)
+1761845136265:}
+1761845136266:# ----------------------------------------------------------
+1761845136267:# TASK 11 – Plot gene expression distribution
+1761845136268:# ----------------------------------------------------------
+1761845136268:#' Map genetic variants to genes and count HIGH-impact variants
+1761845136269:#'
+1761845136269:#' Performs overlap join between variant coordinates and gene annotations,
+1761845136270:#' counts variants per gene, and identifies genes with HIGH-impact variants.
+1761845136270:#'
+1761845136271:#' @param variants_path  Path to CSV file with columns: sample_id, chr, pos, ref, alt, impact
+1761845136271:#' @param genes_path  Path to CSV file with columns: chr, start, end, gene
+1761845136272:#' @return none
+1761845136272:#' @export
+1761845136273:variants_to_genes_df <- function(variants_path, genes_path) {
+1761845136274:variants <- read.csv(variants_path)
+1761845136275:genes    <- read.csv(genes_path)
+1761845136276:# Creo intervalli 1-bp per le varianti -----------------------------------
+1761845136277:# Ogni variante è un punto, quindi creo due colonne identiche (start, end)
+1761845136277:variants$start <- variants$pos
+1761845136278:variants$end   <- variants$pos
+1761845136279:# 3 Trovo le varianti che si sovrappongono a ciascun gene ------------------
+1761845136280:# (equivalente a foverlaps)
+1761845136281:# Facciamo un ciclo semplice: per ogni variante controlliamo se rientra nell’intervallo del gene
+1761845136281:# Questo è molto meno efficiente, ma chiaro e comprensibile
+1761845136282:overlaps_list <- list()
+1761845136283:for (i in seq_len(nrow(variants))) {
+1761845136284:var_chr   <- variants$chr[i]
+1761845136284:var_start <- variants$start[i]
+1761845136285:var_end   <- variants$end[i]
+1761845136286:# Trova i geni sullo stesso cromosoma che si sovrappongono a quella variante?????
+1761845136287:overlapping_genes <- subset(genes,
+1761845136287:chr == var_chr &
+1761845136288:start <= var_end &
+1761845136289:end >= var_start)
+1761845136290:# Se ci sono geni che si sovrappongono, li aggiungo alla lista
+1761845136290:if (nrow(overlapping_genes) > 0) {
+1761845136291:tmp <- data.frame(
+1761845136292:sample_id = variants$sample_id[i],
+1761845136292:gene = overlapping_genes$gene,
+1761845136293:chr = var_chr,
+1761845136294:pos = var_start,
+1761845136294:impact = variants$impact[i],
+1761845136295:stringsAsFactors = FALSE
+1761845136296:)
+1761845136296:overlaps_list[[length(overlaps_list) + 1]] <- tmp
+1761845136297:}
+1761845136298:}
+1761845136299:# Combino tutti i risultati in un unico data.frame
+1761845136300:if (length(overlaps_list) > 0) {
+1761845136300:overlaps <- do.call(rbind, overlaps_list)
+1761845136301:} else {
+1761845136302:overlaps <- data.frame()
+1761845136303:}
+1761845136304:# Normalizzo la colonna impact a maiuscolo --------------------------------
+1761845136305:if (nrow(overlaps) > 0) {
+1761845136306:overlaps$impact_upper <- toupper(overlaps$impact)
+1761845136307:}
+1761845136308:# Filtro solo le varianti di alto impatto ---------------------------------
+1761845136309:high_overlaps <- subset(overlaps, impact_upper == "HIGH")
+1761845136310:# Conteggio delle varianti HIGH per gene e per sample ---------------------
+1761845136311:if (nrow(high_overlaps) > 0) {
+1761845136311:high_counts_by_gene_sample <- aggregate(
+1761845136312:x = list(high_variant_count = high_overlaps$impact_upper),
+1761845136313:by = list(gene = high_overlaps$gene, sample_id = high_overlaps$sample_id),
+1761845136314:FUN = length
+1761845136314:)
+1761845136315:} else {
+1761845136316:high_counts_by_gene_sample <- data.frame()
+1761845136317:}
+1761845136318:# Conteggio totale delle varianti HIGH per gene --------------------------
+1761845136319:if (nrow(high_overlaps) > 0) {
+1761845136320:high_counts_by_gene <- aggregate(
+1761845136321:x = list(total_high_variants = high_overlaps$impact_upper),
+1761845136322:by = list(gene = high_overlaps$gene),
+1761845136322:FUN = length
+1761845136323:)
+1761845136324:# Ordina in modo decrescente
+1761845136325:high_counts_by_gene <- high_counts_by_gene[order(-high_counts_by_gene$total_high_variants), ]
+1761845136326:# Geni con almeno una variante HIGH
+1761845136327:genes_with_high <- unique(high_counts_by_gene$gene)
+1761845136328:} else {
+1761845136328:high_counts_by_gene <- data.frame()
+1761845136329:genes_with_high <- character(0)
+1761845136330:}
+1761845136331:# Salvo i risultati su file CSV ------------------------------------------
+1761845136332:write.csv(high_counts_by_gene_sample, "project_oct25/high_variants_by_gene_sample.csv", row.names = FALSE)
+1761845136333:write.csv(high_counts_by_gene, "project_oct25/high_variants_by_gene_total.csv", row.names = FALSE)
+1761845136333:write.csv(data.frame(gene = genes_with_high), "project_oct25/genes_with_high_variants.csv", row.names = FALSE)
+1761845136334:}
+1761845136336:# ----------------------------------------------------------
+1761845136336:# TASK 12 – Compute summary statistics
+1761845136337:# ----------------------------------------------------------
+1761845136337:#' Combine cohorts safely and compute variability summaries
+1761845136338:#'
+1761845136338:#' This function merges two cohort-level sample metadata tables
+1761845136339:#' and joins them to a long-format RNA-seq counts table to perform a per-cohort, per-condition
+1761845136340:#' expression summary of the most 100 variable genes.
+1761845136341:#'
+1761845136341:#' @param cohortA_path Path to CSV file with columns: sample_id, condition, batch, patient_id, timepoint, cohort
+1761845136342:#' @param cohortB_path Path to CSV file with columns: sample_id, condition, batch, patient_id, timepoint, cohort
+1761845136342:#' @param counts_path Path to CSV file with columns: gene, sample_id, count.
+1761845136344:#' @return none
+1761845136344:#' @export
+1761845136345:combine_cohorts_df <- function(cohortA_path, cohortB_path, counts_path) {
+1761845136345:cohortA <- read.csv(cohortA_path, stringsAsFactors = FALSE)
+1761845136346:cohortB <- read.csv(cohortB_path, stringsAsFactors = FALSE)
+1761845136347:counts  <- read.csv(counts_path, stringsAsFactors = FALSE)
+1761845136348:cohortA$cohort <- "A"
+1761845136348:cohortB$cohort <- "B"
+1761845136349:combined_cohorts <- rbind(cohortA, cohortB)
+1761845136350:combined_cohorts <- combined_cohorts[order(combined_cohorts$cohort,
+1761845136351:combined_cohorts$condition,
+1761845136351:combined_cohorts$sample_id), ]
+1761845136352:merged <- merge(counts, combined_cohorts, by = "sample_id", all.x = TRUE)
+1761845136353:gene_variance <- aggregate(count ~ gene, data = merged, FUN = var, na.rm = TRUE)
+1761845136354:names(gene_variance)[2] <- "variance"
+1761845136355:top100_genes <- head(gene_variance[order(-gene_variance$variance), "gene"], 100)
+1761845136356:top100_data <- subset(merged, gene %in% top100_genes)
+1761845136357:mean_counts <- aggregate(count ~ gene + cohort + condition,
+1761845136358:data = top100_data, FUN = mean, na.rm = TRUE)
+1761845136358:names(mean_counts)[4] <- "mean_count"
+1761845136359:}
+1761845136361:# ----------------------------------------------------------
+1761845136362:# FINAL REVISION TASKS (1.1 -> 5.1)
+1761845136362:# ----------------------------------------------------------
+1761845136364:#TASK 1
+1761845136364:#' Combine integration and clustering data
+1761845136365:#'
+1761845136366:#' Reads and merges integration and clustering tables by cell ID, ensuring consistent ID formatting.
+1761845136367:#' @param integration_path Path to CSV file with columns: cell, integration_cluster
+1761845136368:#' @param clustering_path Path to CSV file with columns: cell, cell_type, sample_type
+1761845136368:#' @return none
+1761845136369:#' @export
+1761845136370:final_revision_df <- function(integration_path, clustering_path) {
+1761845136370:# Funzione di normalizzazione ID cellule
+1761845136371:normalize_cell_id <- function(x) {
+1761845136372:x <- as.character(x)
+1761845136372:x <- trimws(x)
+1761845136373:x <- gsub("_X_", "_", x)
+1761845136373:x <- gsub("_Y_", "_", x)
+1761845136374:x <- gsub("_\\.", ".", x)
+1761845136374:return(x)
+1761845136375:}
+1761845136376:# ==========================================
+1761845136377:# TASK 1.1
+1761845136377:# ==========================================
+1761845136378:# Leggi i file in data.frame
+1761845136379:integration_df <- read.csv(integration_path)
+1761845136379:clustering_df  <- read.csv(clustering_path)
+1761845136380:# Normalizza gli ID
+1761845136381:integration_df$cell_clean <- normalize_cell_id(integration_df$cell)
+1761845136382:clustering_df$cell_clean  <- normalize_cell_id(clustering_df$cell)
+1761845136383:# Join sulle cellule
+1761845136383:combined_df <- merge(integration_df, clustering_df, by = "cell_clean", all = FALSE)
+1761845136384:# Salva file Task 1
+1761845136385:write.csv(combined_df, "Outputs/combined_cell_cluster_celltype.csv", row.names = FALSE)
+1761845136386:# ==========================================
+1761845136387:# TASK 2.1
+1761845136387:# ==========================================
+1761845136388:counts_cluster_celltype <- aggregate(cell_clean ~ integration_cluster + cell_type,
+1761845136389:data = combined_df, FUN = length)
+1761845136390:colnames(counts_cluster_celltype)[3] <- "cell_count"
+1761845136391:write.csv(counts_cluster_celltype, "Outputs/counts_per_cluster_celltype.csv", row.names = FALSE)
+1761845136392:# ==========================================
+1761845136392:# TASK 3.1
+1761845136393:# ==========================================
+1761845136395:# Conta per cluster, cell_type, sample_type
+1761845136395:tab_ct_st <- aggregate(cell_clean ~ integration_cluster + cell_type + sample_type,
+1761845136396:data = combined_df, FUN = length)
+1761845136397:colnames(tab_ct_st)[4] <- "cell_count"
+1761845136399:# Totale per cluster
+1761845136400:totals_cluster <- aggregate(cell_clean ~ integration_cluster,
+1761845136400:data = combined_df, FUN = length)
+1761845136401:colnames(totals_cluster)[2] <- "cluster_total_cells"
+1761845136403:# Merge per aggiungere totale cluster
+1761845136403:tab_ct_st <- merge(tab_ct_st, totals_cluster, by = "integration_cluster", all.x = TRUE)
+1761845136405:# Percentuale dentro cluster
+1761845136406:tab_ct_st$pct_within_cluster <- (tab_ct_st$cell_count / tab_ct_st$cluster_total_cells) * 100
+1761845136407:# Totale per (cluster, cell_type)
+1761845136408:totals_cluster_celltype <- aggregate(cell_clean ~ integration_cluster + cell_type,
+1761845136409:data = combined_df, FUN = length)
+1761845136410:colnames(totals_cluster_celltype)[3] <- "cluster_celltype_total"
+1761845136411:# Merge + percentuale sample_type dentro cell_type del cluster
+1761845136412:tab_ct_st <- merge(tab_ct_st, totals_cluster_celltype,
+1761845136413:by = c("integration_cluster", "cell_type"), all.x = TRUE)
+1761845136414:tab_ct_st$pct_within_cluster_celltype <- (tab_ct_st$cell_count / tab_ct_st$cluster_celltype_total) * 100
+1761845136416:# Salva Task 3
+1761845136421:write.csv(tab_ct_st, "Outputs/summary_cluster_celltype_sampletype.csv", row.names = FALSE)
+1761845136425:# ==========================================
+1761845136426:# TASK 4.1
+1761845136427:# ==========================================
+1761845136428:plot_data <- as.data.frame(table(combined_df$integration_cluster,
+1761845136429:combined_df$cell_type,
+1761845136430:combined_df$sample_type))
+1761845136431:colnames(plot_data) <- c("cluster", "cell_type", "tissue", "count")
+1761845136433:# Totale per cluster e tessuto
+1761845136433:totals <- aggregate(count ~ cluster + tissue, data = plot_data, sum)
+1761845136434:colnames(totals)[3] <- "total"
+1761845136436:# Merge + percentuali
+1761845136436:plot_data <- merge(plot_data, totals, by = c("cluster", "tissue"))
+1761845136437:plot_data$percent <- (plot_data$count / plot_data$total) * 100
+1761845136439:# Plot
+1761845136439:plot4_1_df <- ggplot(plot_data, aes(x = cluster, y = percent, fill = cell_type)) +
+1761845136440:geom_bar(stat = "identity") +
+1761845136441:facet_wrap(~ tissue) +
+1761845136442:labs(title = "Distribution of cell types in clusters (Normal vs Tumor)",
+1761845136443:x = "Integration Cluster",
+1761845136443:y = "Cell Percentage (%)") +
+1761845136444:theme_minimal()
+1761845136446:ggsave( "Outputs/plot4_1_df.jpeg", plot = plot4_1_df, width = 3000, height = 1500, units = "px")
+1761845136448:# ==========================================
+1761845136449:# TASK 5.1
+1761845136450:# ==========================================
+1761845136451:# Conta celle
+1761845136452:counts <- as.data.frame(table(combined_df$integration_cluster,
+1761845136453:combined_df$cell_type,
+1761845136453:combined_df$sample_type))
+1761845136454:colnames(counts) = c("cluster", "cell_type", "tissue", "count")
+1761845136456:# Totale per cluster e tessuto
+1761845136457:totals <- aggregate(count ~ cluster + tissue, data = counts, sum)
+1761845136457:colnames(totals)[3] <- "total"
+1761845136459:# Merge e calcolo % normalizzata
+1761845136460:counts_norm <- merge(counts, totals, by = c("cluster", "tissue"))
+1761845136461:counts_norm$percent <- round((counts_norm$count / counts_norm$total) * 100, 2)
+1761845136462:# Salva Task 5
+1761845136464:write.csv(counts_norm, "Outputs/normalized_percent_cluster_celltype_tissue.csv", row.names = FALSE)
+1761845136466:}
+1761845204140:#Goal: Filter, summarize, and group bulk counts. Data: bulk_counts_long.csv, sample_metadata.csv Tasks:
+1761845204145:#• Keep counts for samples in condition == "treated" and genes starting with "GENE_00".
+1761845204146:#• Compute mean and median count by gene (valore centrale).
+1761845204149:#• Join sample metadata and compute per-condition mean counts by gene in one pipeline.
+1761845204152:library(data.table)
+1761845204319:# 1. Import
+1761845204320:bulk_counts <- fread("project_oct25/bulk_counts_long.csv")
+1761845204330:sample_meta   <- fread("project_oct25/sample_metadata.csv")
+1761845204332:# 2. Join counts + metadata by sample_id
+1761845204333:#imposta sample_id come chiave sull'oggetto counts e meta quindi counts viene ordinato per sample_id
+1761845204334:#effettua una modifica in place (non crea una copia)
+1761845204334:#questo permette join molto più rapidi
+1761845204335:setkey(bulk_counts, sample_id) #setkey ordina la tabella e rende più veloce l'unione di tabelle
+1761845204338:setkey(sample_meta, sample_id)
+1761845204340:join_data <- bulk_counts[sample_meta, nomatch = 0]
+1761845204383:#In data.table la forma X[i] può essere usata per i join:
+1761845204384:#X = tabella da cui prendi i dati (qui counts)
+1761845204384:#i = tabella che serve come query/indice (qui meta)
+1761845204385:#Quando ci sono chiavi compatibili (sample_id), counts[meta] interpreta meta come la tabella di lookup
+1761845204386:#e per ciascuna riga di meta estrae le righe corrispondenti da counts
+1761845204387:#nomatch = 0 significa: escludi le righe di meta che non trovano corrispondenza in counts.
+1761845204387:#Questo equivale a un inner join (solo righe with match).
+1761845204389:# 3. Filter for treated samples and GENE_00* genes
+1761845204390:filtered_data <- join_data[condition == "treated" & grepl("^GENE_00", gene)]
+1761845204395:#filtrare stringhe in base a un pattern (cioè una “regola” di testo).
+1761845204396:#Quindi grepl("^GENE_00", gene) restituisce:
+1761845204397:#TRUE per tutti i geni che iniziano con GENE_00
+1761845204397:#FALSE per tutti gli altri.
+1761845204399:# 4. Compute mean and median per gene
+1761845204399:gene_mean_median <- filtered_data[, .(
+1761845204400:mean_count   = mean(count),
+1761845204401:median_count = median(count)
+1761845204401:), by = gene]
+1761845204411:# Punto 5 corretto: join + per-condition mean by gene (una pipeline)
+1761845204412:# Calcola la media dei conteggi per ogni combinazione (gene, condition)
+1761845204413:# tutto in una singola pipeline: unisco metadata e counts e poi raggruppo
+1761845204414:gene_condition_means <- bulk_counts[
+1761845204415:sample_meta,                # uso sample_meta come "i" (lookup)
+1761845204416:on = "sample_id"            # join su sample_id (non serve setkey se usi on=)
+1761845204417:][ , .(
+1761845204417:mean_count = mean(count)   # media dei conteggi (ignora NA se ci sono)
+1761845204418:), by = .(gene, condition) ]               # raggruppa per gene e per condition
+1761845204436:#CON FUNCTION:
+1761845204447:result <- bulk_counts_summary_dt("project_oct25/bulk_counts_long.csv","project_oct25/sample_metadata.csv")
+1761845247244:# ==========================================================
+1761845247248:# TASK 6 – data.frame version
+1761845247251:# ==========================================================
+1761845247255:# 1. Import
+1761845247256:labs   <- read.csv("project_oct25/clinical_labs.csv")
+1761845247262:vitals <- read.csv("project_oct25/vitals_time_series.csv")
+1761845247270:# 2. Convert to POSIXct
+1761845247272:labs$time_iso   <- as.POSIXct(labs$time_iso)
+1761845247276:vitals$time_iso <- as.POSIXct(vitals$time_iso)
+1761845247281:# 3. Join nearest HR/SBP manually (loop-based)
+1761845247282:nearest_match <- function(lab_df, vitals_df, vital_type) {
+1761845247283:vitals_sub <- vitals_df[vitals_df$vital == vital_type, ]
+1761845247284:results <- list()
+1761845247285:for (i in seq_len(nrow(lab_df))) {
+1761845247286:pid <- lab_df$patient_id[i]
+1761845247287:time <- lab_df$time_iso[i]
+1761845247288:v_sub <- vitals_sub[vitals_sub$patient_id == pid, ]
+1761845247288:if (nrow(v_sub) > 0) {
+1761845247290:idx <- which.min(abs(difftime(v_sub$time_iso, time, units = "mins")))
+1761845247291:results[[i]] <- v_sub[idx, c("value", "time_iso")]
+1761845247292:} else {
+1761845247293:results[[i]] <- data.frame(value = NA, time_iso = NA)
+1761845247293:}
+1761845247294:}
+1761845247295:out <- do.call(rbind, results)
+1761845247296:names(out) <- c(paste0("nearest_", vital_type), paste0(vital_type, "_time"))
+1761845247297:return(out)
+1761845247297:}
+1761845247299:# 4. Attach nearest HR and SBP
+1761845247300:hr_data  <- nearest_match(labs, vitals, "HR")
+1761845247484:sbp_data <- nearest_match(labs, vitals, "SBP")
+1761845247645:labs_with_vitals <- cbind(labs, hr_data, sbp_data)
+1761845247647:labs_with_vitals$hr_lag_minutes  <- as.numeric(difftime(labs_with_vitals$time_iso, labs_with_vitals$HR_time, units = "mins"))
+1761845247648:labs_with_vitals$sbp_lag_minutes <- as.numeric(difftime(labs_with_vitals$time_iso, labs_with_vitals$SBP_time, units = "mins"))
+1761845247649:# 5. Correlation per patient (CRP only) — robust version in base R
+1761845247650:crp_data <- subset(labs_with_vitals, lab == "CRP")
+1761845247652:# Split by patient_id
+1761845247653:patients_list <- split(crp_data, crp_data$patient_id)
+1761845247659:# Function to compute correlation safely
+1761845247660:safe_cor <- function(df, col_x = "value", col_y = "nearest_HR") {
+1761845247660:if (nrow(df) < 2) return(NA_real_)           # meno di 2 osservazioni -> NA
+1761845247661:x <- df[[col_x]]
+1761845247662:y <- df[[col_y]]
+1761845247662:# keep only pairs non-NA
+1761845247663:ok <- !is.na(x) & !is.na(y)
+1761845247664:if (sum(ok) < 2) return(NA_real_)            # meno di 2 coppie valide -> NA
+1761845247664:return(cor(x[ok], y[ok], use = "complete.obs"))
+1761845247665:}
+1761845247666:# Calcola correlazione CRP vs HR per ogni paziente
+1761845247667:cor_crp_hr <- data.frame(
+1761845247667:patient_id = names(patients_list),
+1761845247668:correlation_CRP_HR = sapply(patients_list, safe_cor, col_x = "value", col_y = "nearest_HR"),
+1761845247668:row.names = NULL,
+1761845247669:stringsAsFactors = FALSE
+1761845247669:)
+1761845247684:# Calcola correlazione CRP vs SBP per ogni paziente
+1761845247685:cor_crp_sbp <- data.frame(
+1761845247686:patient_id = names(patients_list),
+1761845247687:correlation_CRP_SBP = sapply(patients_list, safe_cor, col_x = "value", col_y = "nearest_SBP"),
+1761845247687:row.names = NULL,
+1761845247688:stringsAsFactors = FALSE
+1761845247688:)
+1761845254363:# ==========================================================
+1761845254369:# TASK 9 – data.frame version
+1761845254371:# ==========================================================
+1761845254376:counts_wide <- read.csv("project_oct25/bulk_counts_wide.csv", stringsAsFactors = FALSE)
+1761845254389:counts_long <- reshape(counts_wide, varying = names(counts_wide)[-1],
+1761845254392:v.names = "count", timevar = "sample_id",
+1761845254394:times = names(counts_wide)[-1], idvar = "gene",
+1761845254399:direction = "long")
+1761845254436:meta <- read.csv("project_oct25/sample_metadata.csv", stringsAsFactors = FALSE)
+1761845254438:merged <- merge(counts_long, meta, by = "sample_id")
+1761845254506:totals_per_sample <- aggregate(count ~ sample_id, data = merged, sum)
+1761845254522:names(totals_per_sample)[2] <- "total_count"
+1761845254524:merged <- merge(merged, totals_per_sample, by = "sample_id")
+1761845254567:gene_condition_means <- aggregate(count ~ gene + condition, data = merged, mean)
+1761845254610:counts_condition_wide <- reshape(gene_condition_means,
+1761845254611:timevar = "condition", idvar = "gene",
+1761845254612:direction = "wide")
+1761845254624:cat("\n--- Tabella finale: media dei conteggi per gene e condizione ---\n")
+1761845254625:print(head(counts_condition_wide, 10))
+1761845262518:#Goal: Slice genomics windows efficiently. Data: atac_peaks.bed.csv
+1761845262524:#Tasks:
+1761845262527:#• Extract peaks on chr2 with start between 2 and 4 Mb.
+1761845262529:#• Among those peaks, return the top 50 by score after setorder() (descending)
+1761845262532:# Carico la libreria
+1761845262534:library(data.table)
+1761845262536:# Leggo il file dei picchi ATAC
+1761845262537:peaks <- fread("project_oct25/atac_peaks.bed.csv")
+1761845262586:# Filtro i picchi su chr2 e nella finestra 2–4 Mb
+1761845262587:# Nota: 1 Mb = 1.000.000 basi
+1761845262588:subset_peaks <- peaks[chr == "chr2" & start >= 2000000 & start <= 4000000]
+1761845262592:#Ordino i picchi per punteggio decrescente
+1761845262593:subset_peaks <- setorder(subset_peaks, -score)
+1761845262599:#Prendo i primi 50 picchi
+1761845262600:top50_peaks <- head(subset_peaks, 50)
+1761845262602:result <- top_peaks_dt("project_oct25/atac_peaks.bed.csv","chr2", 2000000,4000000)
+1761845297343:git status
+1761845357276:git status

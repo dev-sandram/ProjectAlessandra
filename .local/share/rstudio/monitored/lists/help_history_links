@@ -1,4 +1,3 @@
-help/library/data.table/html/data.table.html,R: Enhanced data.frame
 help/library/ggplot2/Example/ggsave,R: Examples for 'ggplot2::ggsave'
 help/library/ggplot2/html/ggplot.html,R: Create a new ggplot
 help/library/base/html/Logic.html,R: Logical Operators
@@ -13,3 +12,4 @@ help/library/ggplot2/html/autoplot.html,R: Create a complete ggplot appropriate 
 help/library/knitr/html/knitr-package.html,R: A general-purpose tool for dynamic report generation in R
 help/library/knitr/html/kable.html,"R: Create tables in LaTeX, HTML, Markdown and reStructuredText"
 help/library/stats/html/cor.html,"R: Correlation, Variance and Covariance (Matrices)"
+help/library/data.table/html/data.table.html,R: Enhanced data.frame
