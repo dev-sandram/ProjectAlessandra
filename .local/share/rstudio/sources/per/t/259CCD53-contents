@@ -1,0 +1,52 @@
+#' Summarize bulk RNA counts with metadata (data.table version)
+#'
+#' This function merges bulk count data with sample metadata,
+#' filters treated samples whose gene names start with `"GENE_00"`,
+#' and computes mean/median counts per gene, as well as per-condition means.
+#'
+#' @param counts_path Path to the CSV file containing bulk counts (columns: sample_id, gene, count).
+#' @param meta_path Path to the CSV file containing metadata (columns: sample_id, condition).
+#' @return A list with two data.tables:
+#'   \describe{
+#'     \item{gene_mean_median}{Mean and median counts by gene (treated only).}
+#'     \item{gene_condition_means}{Mean counts by gene and condition.}
+#'   }
+#' @examples
+#' \dontrun{
+#' result <- bulk_counts_summary_dt(
+#'   counts_path = "data/bulk_counts_long.csv",
+#'   meta_path   = "data/sample_metadata.csv"
+#' )
+#' }
+#' @export
+bulk_counts_summary_dt <- function(counts_path, meta_path) {
+  library(data.table)
+  
+  bulk_counts <- fread(counts_path)
+  sample_meta <- fread(meta_path)
+  
+  setkey(bulk_counts, sample_id)
+  setkey(sample_meta, sample_id)
+  join_data <- bulk_counts[sample_meta, nomatch = 0]
+  
+  filtered_data <- join_data[
+    condition == "treated" & grepl("^GENE_00", gene)
+  ]
+  
+  gene_mean_median <- filtered_data[, .(
+    mean_count   = mean(count),
+    median_count = median(count)
+  ), by = gene]
+  
+  gene_condition_means <- bulk_counts[
+    sample_meta,
+    on = "sample_id"
+  ][, .(
+    mean_count = mean(count)
+  ), by = .(gene, condition)]
+  
+  list(
+    gene_mean_median   = gene_mean_median,
+    gene_condition_means = gene_condition_means
+  )
+}

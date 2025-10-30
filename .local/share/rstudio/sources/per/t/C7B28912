@@ -1,0 +1,25 @@
+{
+    "id": "C7B28912",
+    "path": null,
+    "project_path": null,
+    "type": "r_code_browser",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1760795943037.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "context": ".GlobalEnv:::bulk_counts_summary_dt"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1760795453,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1760795943037,
+    "read_only": false,
+    "read_only_alternatives": []
+}

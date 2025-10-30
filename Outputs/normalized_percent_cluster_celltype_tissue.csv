@@ -1,0 +1,1313 @@
+"cluster","tissue","cell_type","count","total","percent"
+"0","N","Any Cell",0,682,0
+"0","N","Effector/Memory CD8+ T cells",34,682,4.99
+"0","N","T or NK Cell",7,682,1.03
+"0","N","pDC",0,682,0
+"0","N","MAIT cells",0,682,0
+"0","N","T regulatory cells",5,682,0.73
+"0","N","Exhausted CD8+ T cells",0,682,0
+"0","N","CD4 or CD8 T cell",12,682,1.76
+"0","N","Blood Cell",97,682,14.22
+"0","N","LAMP3 cDC",0,682,0
+"0","N","CD4+ T cell",3,682,0.44
+"0","N","Normal Tissue Cell",0,682,0
+"0","N","Naive CD8+ T cells",0,682,0
+"0","N","CD8 T or NK cell",3,682,0.44
+"0","N","Pancreatic Cancer Cell",0,682,0
+"0","N","CD8+ T cell",2,682,0.29
+"0","N","B Cell",0,682,0
+"0","N","Endothelial Cells",1,682,0.15
+"0","N","cDC1",0,682,0
+"0","N","Phagocytosis Macrophage",0,682,0
+"0","N","Mast cell",0,682,0
+"0","N","Tfh/Th1 helper CD4+ T cells",0,682,0
+"0","N","Pro-angiogenesis Macrophage",5,682,0.73
+"0","N","Naive CD4+ T cells",41,682,6.01
+"0","N","CAFadi",0,682,0
+"0","N","Lung Cancer Cell",2,682,0.29
+"0","N","CAFmyo",0,682,0
+"0","N","CAFinfla",0,682,0
+"0","N","Natural killer cell",5,682,0.73
+"0","N","Cancer Associated Fibroblasts",0,682,0
+"0","N","cDC2",0,682,0
+"0","N","Non Blood Cell",0,682,0
+"0","N","B cell or Plasmablast",0,682,0
+"0","N","Dendritic Cell",0,682,0
+"0","N","Pro-inflammatory Macrophage",0,682,0
+"0","N","Non Stromal Cell",0,682,0
+"0","N","Effector/Memory CD4+ T cells",463,682,67.89
+"0","N","Macrophage",1,682,0.15
+"0","N","Normal Fibroblast",0,682,0
+"0","N","Macrophage or Dendritic Cell",1,682,0.15
+"0","N","Stromal Cell",0,682,0
+"0","T","Any Cell",0,1086,0
+"0","T","Effector/Memory CD8+ T cells",130,1086,11.97
+"0","T","T or NK Cell",1,1086,0.09
+"0","T","pDC",0,1086,0
+"0","T","MAIT cells",0,1086,0
+"0","T","T regulatory cells",177,1086,16.3
+"0","T","Exhausted CD8+ T cells",6,1086,0.55
+"0","T","CD4 or CD8 T cell",65,1086,5.99
+"0","T","Blood Cell",23,1086,2.12
+"0","T","LAMP3 cDC",0,1086,0
+"0","T","CD4+ T cell",473,1086,43.55
+"0","T","Normal Tissue Cell",0,1086,0
+"0","T","Naive CD8+ T cells",1,1086,0.09
+"0","T","CD8 T or NK cell",4,1086,0.37
+"0","T","Pancreatic Cancer Cell",0,1086,0
+"0","T","CD8+ T cell",51,1086,4.7
+"0","T","B Cell",2,1086,0.18
+"0","T","Endothelial Cells",0,1086,0
+"0","T","cDC1",0,1086,0
+"0","T","Phagocytosis Macrophage",0,1086,0
+"0","T","Mast cell",0,1086,0
+"0","T","Tfh/Th1 helper CD4+ T cells",70,1086,6.45
+"0","T","Pro-angiogenesis Macrophage",1,1086,0.09
+"0","T","Naive CD4+ T cells",10,1086,0.92
+"0","T","CAFadi",0,1086,0
+"0","T","Lung Cancer Cell",0,1086,0
+"0","T","CAFmyo",0,1086,0
+"0","T","CAFinfla",0,1086,0
+"0","T","Natural killer cell",3,1086,0.28
+"0","T","Cancer Associated Fibroblasts",0,1086,0
+"0","T","cDC2",0,1086,0
+"0","T","Non Blood Cell",0,1086,0
+"0","T","B cell or Plasmablast",0,1086,0
+"0","T","Dendritic Cell",0,1086,0
+"0","T","Pro-inflammatory Macrophage",0,1086,0
+"0","T","Non Stromal Cell",0,1086,0
+"0","T","Effector/Memory CD4+ T cells",69,1086,6.35
+"0","T","Macrophage",0,1086,0
+"0","T","Normal Fibroblast",0,1086,0
+"0","T","Macrophage or Dendritic Cell",0,1086,0
+"0","T","Stromal Cell",0,1086,0
+"1","N","Blood Cell",2,393,0.51
+"1","N","Natural killer cell",26,393,6.62
+"1","N","Normal Tissue Cell",0,393,0
+"1","N","Tfh/Th1 helper CD4+ T cells",0,393,0
+"1","N","Non Blood Cell",0,393,0
+"1","N","Naive CD8+ T cells",0,393,0
+"1","N","B Cell",0,393,0
+"1","N","CD4 or CD8 T cell",30,393,7.63
+"1","N","cDC2",0,393,0
+"1","N","Effector/Memory CD8+ T cells",177,393,45.04
+"1","N","CAFadi",0,393,0
+"1","N","Dendritic Cell",0,393,0
+"1","N","Any Cell",0,393,0
+"1","N","B cell or Plasmablast",0,393,0
+"1","N","Pancreatic Cancer Cell",0,393,0
+"1","N","T or NK Cell",3,393,0.76
+"1","N","MAIT cells",2,393,0.51
+"1","N","Endothelial Cells",0,393,0
+"1","N","T regulatory cells",0,393,0
+"1","N","Mast cell",0,393,0
+"1","N","Non Stromal Cell",0,393,0
+"1","N","Pro-inflammatory Macrophage",0,393,0
+"1","N","Naive CD4+ T cells",0,393,0
+"1","N","CD4+ T cell",0,393,0
+"1","N","Macrophage",0,393,0
+"1","N","CAFmyo",0,393,0
+"1","N","CAFinfla",0,393,0
+"1","N","Effector/Memory CD4+ T cells",129,393,32.82
+"1","N","Cancer Associated Fibroblasts",0,393,0
+"1","N","Exhausted CD8+ T cells",0,393,0
+"1","N","pDC",0,393,0
+"1","N","Macrophage or Dendritic Cell",0,393,0
+"1","N","Normal Fibroblast",0,393,0
+"1","N","Stromal Cell",0,393,0
+"1","N","CD8+ T cell",0,393,0
+"1","N","CD8 T or NK cell",24,393,6.11
+"1","N","Lung Cancer Cell",0,393,0
+"1","N","cDC1",0,393,0
+"1","N","Phagocytosis Macrophage",0,393,0
+"1","N","LAMP3 cDC",0,393,0
+"1","N","Pro-angiogenesis Macrophage",0,393,0
+"1","T","Blood Cell",0,861,0
+"1","T","Natural killer cell",1,861,0.12
+"1","T","Normal Tissue Cell",0,861,0
+"1","T","Tfh/Th1 helper CD4+ T cells",22,861,2.56
+"1","T","Non Blood Cell",0,861,0
+"1","T","Naive CD8+ T cells",0,861,0
+"1","T","B Cell",0,861,0
+"1","T","CD4 or CD8 T cell",48,861,5.57
+"1","T","cDC2",0,861,0
+"1","T","Effector/Memory CD8+ T cells",173,861,20.09
+"1","T","CAFadi",0,861,0
+"1","T","Dendritic Cell",0,861,0
+"1","T","Any Cell",0,861,0
+"1","T","B cell or Plasmablast",0,861,0
+"1","T","Pancreatic Cancer Cell",0,861,0
+"1","T","T or NK Cell",1,861,0.12
+"1","T","MAIT cells",0,861,0
+"1","T","Endothelial Cells",0,861,0
+"1","T","T regulatory cells",1,861,0.12
+"1","T","Mast cell",0,861,0
+"1","T","Non Stromal Cell",0,861,0
+"1","T","Pro-inflammatory Macrophage",0,861,0
+"1","T","Naive CD4+ T cells",0,861,0
+"1","T","CD4+ T cell",12,861,1.39
+"1","T","Macrophage",0,861,0
+"1","T","CAFmyo",0,861,0
+"1","T","CAFinfla",0,861,0
+"1","T","Effector/Memory CD4+ T cells",5,861,0.58
+"1","T","Cancer Associated Fibroblasts",0,861,0
+"1","T","Exhausted CD8+ T cells",437,861,50.75
+"1","T","pDC",1,861,0.12
+"1","T","Macrophage or Dendritic Cell",0,861,0
+"1","T","Normal Fibroblast",0,861,0
+"1","T","Stromal Cell",0,861,0
+"1","T","CD8+ T cell",157,861,18.23
+"1","T","CD8 T or NK cell",3,861,0.35
+"1","T","Lung Cancer Cell",0,861,0
+"1","T","cDC1",0,861,0
+"1","T","Phagocytosis Macrophage",0,861,0
+"1","T","LAMP3 cDC",0,861,0
+"1","T","Pro-angiogenesis Macrophage",0,861,0
+"10","N","Blood Cell",0,4,0
+"10","N","CD4 or CD8 T cell",0,4,0
+"10","N","Pro-angiogenesis Macrophage",0,4,0
+"10","N","CAFadi",1,4,25
+"10","N","T or NK Cell",0,4,0
+"10","N","pDC",0,4,0
+"10","N","MAIT cells",0,4,0
+"10","N","T regulatory cells",0,4,0
+"10","N","Phagocytosis Macrophage",0,4,0
+"10","N","Mast cell",0,4,0
+"10","N","Tfh/Th1 helper CD4+ T cells",0,4,0
+"10","N","cDC2",0,4,0
+"10","N","Naive CD4+ T cells",0,4,0
+"10","N","CD4+ T cell",0,4,0
+"10","N","Pro-inflammatory Macrophage",0,4,0
+"10","N","CAFinfla",0,4,0
+"10","N","Any Cell",0,4,0
+"10","N","Stromal Cell",2,4,50
+"10","N","CAFmyo",0,4,0
+"10","N","B Cell",0,4,0
+"10","N","Non Blood Cell",0,4,0
+"10","N","Cancer Associated Fibroblasts",0,4,0
+"10","N","B cell or Plasmablast",0,4,0
+"10","N","Non Stromal Cell",0,4,0
+"10","N","Naive CD8+ T cells",0,4,0
+"10","N","CD8 T or NK cell",0,4,0
+"10","N","Normal Fibroblast",1,4,25
+"10","N","Dendritic Cell",0,4,0
+"10","N","CD8+ T cell",0,4,0
+"10","N","Effector/Memory CD8+ T cells",0,4,0
+"10","N","Effector/Memory CD4+ T cells",0,4,0
+"10","N","Natural killer cell",0,4,0
+"10","N","Exhausted CD8+ T cells",0,4,0
+"10","N","Pancreatic Cancer Cell",0,4,0
+"10","N","Normal Tissue Cell",0,4,0
+"10","N","cDC1",0,4,0
+"10","N","Macrophage or Dendritic Cell",0,4,0
+"10","N","Endothelial Cells",0,4,0
+"10","N","Macrophage",0,4,0
+"10","N","LAMP3 cDC",0,4,0
+"10","N","Lung Cancer Cell",0,4,0
+"10","T","Blood Cell",0,118,0
+"10","T","CD4 or CD8 T cell",0,118,0
+"10","T","Pro-angiogenesis Macrophage",0,118,0
+"10","T","CAFadi",18,118,15.25
+"10","T","T or NK Cell",0,118,0
+"10","T","pDC",0,118,0
+"10","T","MAIT cells",0,118,0
+"10","T","T regulatory cells",0,118,0
+"10","T","Phagocytosis Macrophage",0,118,0
+"10","T","Mast cell",0,118,0
+"10","T","Tfh/Th1 helper CD4+ T cells",0,118,0
+"10","T","cDC2",0,118,0
+"10","T","Naive CD4+ T cells",0,118,0
+"10","T","CD4+ T cell",0,118,0
+"10","T","Pro-inflammatory Macrophage",0,118,0
+"10","T","CAFinfla",54,118,45.76
+"10","T","Any Cell",0,118,0
+"10","T","Stromal Cell",0,118,0
+"10","T","CAFmyo",44,118,37.29
+"10","T","B Cell",0,118,0
+"10","T","Non Blood Cell",0,118,0
+"10","T","Cancer Associated Fibroblasts",1,118,0.85
+"10","T","B cell or Plasmablast",0,118,0
+"10","T","Non Stromal Cell",0,118,0
+"10","T","Naive CD8+ T cells",0,118,0
+"10","T","CD8 T or NK cell",0,118,0
+"10","T","Normal Fibroblast",1,118,0.85
+"10","T","Dendritic Cell",0,118,0
+"10","T","CD8+ T cell",0,118,0
+"10","T","Effector/Memory CD8+ T cells",0,118,0
+"10","T","Effector/Memory CD4+ T cells",0,118,0
+"10","T","Natural killer cell",0,118,0
+"10","T","Exhausted CD8+ T cells",0,118,0
+"10","T","Pancreatic Cancer Cell",0,118,0
+"10","T","Normal Tissue Cell",0,118,0
+"10","T","cDC1",0,118,0
+"10","T","Macrophage or Dendritic Cell",0,118,0
+"10","T","Endothelial Cells",0,118,0
+"10","T","Macrophage",0,118,0
+"10","T","LAMP3 cDC",0,118,0
+"10","T","Lung Cancer Cell",0,118,0
+"11","N","Mast cell",0,46,0
+"11","N","cDC2",15,46,32.61
+"11","N","MAIT cells",0,46,0
+"11","N","Naive CD4+ T cells",0,46,0
+"11","N","Cancer Associated Fibroblasts",0,46,0
+"11","N","Tfh/Th1 helper CD4+ T cells",0,46,0
+"11","N","CD8 T or NK cell",0,46,0
+"11","N","CAFinfla",0,46,0
+"11","N","Dendritic Cell",0,46,0
+"11","N","CD8+ T cell",0,46,0
+"11","N","CAFmyo",0,46,0
+"11","N","Blood Cell",0,46,0
+"11","N","CD4 or CD8 T cell",0,46,0
+"11","N","Exhausted CD8+ T cells",0,46,0
+"11","N","Non Stromal Cell",0,46,0
+"11","N","Naive CD8+ T cells",0,46,0
+"11","N","Effector/Memory CD4+ T cells",0,46,0
+"11","N","Normal Fibroblast",0,46,0
+"11","N","Any Cell",0,46,0
+"11","N","pDC",0,46,0
+"11","N","T regulatory cells",0,46,0
+"11","N","cDC1",10,46,21.74
+"11","N","Phagocytosis Macrophage",2,46,4.35
+"11","N","CAFadi",0,46,0
+"11","N","B cell or Plasmablast",0,46,0
+"11","N","LAMP3 cDC",6,46,13.04
+"11","N","T or NK Cell",0,46,0
+"11","N","Natural killer cell",0,46,0
+"11","N","CD4+ T cell",0,46,0
+"11","N","Normal Tissue Cell",0,46,0
+"11","N","B Cell",0,46,0
+"11","N","Endothelial Cells",0,46,0
+"11","N","Effector/Memory CD8+ T cells",0,46,0
+"11","N","Non Blood Cell",0,46,0
+"11","N","Pro-angiogenesis Macrophage",6,46,13.04
+"11","N","Macrophage or Dendritic Cell",5,46,10.87
+"11","N","Macrophage",2,46,4.35
+"11","N","Lung Cancer Cell",0,46,0
+"11","N","Pro-inflammatory Macrophage",0,46,0
+"11","N","Pancreatic Cancer Cell",0,46,0
+"11","N","Stromal Cell",0,46,0
+"11","T","Mast cell",0,40,0
+"11","T","cDC2",19,40,47.5
+"11","T","MAIT cells",0,40,0
+"11","T","Naive CD4+ T cells",0,40,0
+"11","T","Cancer Associated Fibroblasts",0,40,0
+"11","T","Tfh/Th1 helper CD4+ T cells",0,40,0
+"11","T","CD8 T or NK cell",0,40,0
+"11","T","CAFinfla",0,40,0
+"11","T","Dendritic Cell",1,40,2.5
+"11","T","CD8+ T cell",0,40,0
+"11","T","CAFmyo",0,40,0
+"11","T","Blood Cell",0,40,0
+"11","T","CD4 or CD8 T cell",0,40,0
+"11","T","Exhausted CD8+ T cells",0,40,0
+"11","T","Non Stromal Cell",0,40,0
+"11","T","Naive CD8+ T cells",0,40,0
+"11","T","Effector/Memory CD4+ T cells",0,40,0
+"11","T","Normal Fibroblast",0,40,0
+"11","T","Any Cell",0,40,0
+"11","T","pDC",0,40,0
+"11","T","T regulatory cells",0,40,0
+"11","T","cDC1",4,40,10
+"11","T","Phagocytosis Macrophage",0,40,0
+"11","T","CAFadi",0,40,0
+"11","T","B cell or Plasmablast",0,40,0
+"11","T","LAMP3 cDC",12,40,30
+"11","T","T or NK Cell",0,40,0
+"11","T","Natural killer cell",0,40,0
+"11","T","CD4+ T cell",0,40,0
+"11","T","Normal Tissue Cell",0,40,0
+"11","T","B Cell",0,40,0
+"11","T","Endothelial Cells",0,40,0
+"11","T","Effector/Memory CD8+ T cells",0,40,0
+"11","T","Non Blood Cell",0,40,0
+"11","T","Pro-angiogenesis Macrophage",0,40,0
+"11","T","Macrophage or Dendritic Cell",1,40,2.5
+"11","T","Macrophage",3,40,7.5
+"11","T","Lung Cancer Cell",0,40,0
+"11","T","Pro-inflammatory Macrophage",0,40,0
+"11","T","Pancreatic Cancer Cell",0,40,0
+"11","T","Stromal Cell",0,40,0
+"12","N","Exhausted CD8+ T cells",0,27,0
+"12","N","cDC1",0,27,0
+"12","N","Blood Cell",0,27,0
+"12","N","LAMP3 cDC",0,27,0
+"12","N","CD4 or CD8 T cell",0,27,0
+"12","N","CAFadi",0,27,0
+"12","N","CD8 T or NK cell",0,27,0
+"12","N","T or NK Cell",0,27,0
+"12","N","MAIT cells",0,27,0
+"12","N","CD8+ T cell",0,27,0
+"12","N","T regulatory cells",0,27,0
+"12","N","cDC2",0,27,0
+"12","N","pDC",0,27,0
+"12","N","Endothelial Cells",27,27,100
+"12","N","Lung Cancer Cell",0,27,0
+"12","N","CD4+ T cell",0,27,0
+"12","N","Mast cell",0,27,0
+"12","N","CAFinfla",0,27,0
+"12","N","Any Cell",0,27,0
+"12","N","Effector/Memory CD8+ T cells",0,27,0
+"12","N","CAFmyo",0,27,0
+"12","N","B Cell",0,27,0
+"12","N","Pancreatic Cancer Cell",0,27,0
+"12","N","Cancer Associated Fibroblasts",0,27,0
+"12","N","Phagocytosis Macrophage",0,27,0
+"12","N","Effector/Memory CD4+ T cells",0,27,0
+"12","N","Tfh/Th1 helper CD4+ T cells",0,27,0
+"12","N","Dendritic Cell",0,27,0
+"12","N","Naive CD4+ T cells",0,27,0
+"12","N","Macrophage or Dendritic Cell",0,27,0
+"12","N","Macrophage",0,27,0
+"12","N","Naive CD8+ T cells",0,27,0
+"12","N","Normal Tissue Cell",0,27,0
+"12","N","B cell or Plasmablast",0,27,0
+"12","N","Natural killer cell",0,27,0
+"12","N","Non Stromal Cell",0,27,0
+"12","N","Non Blood Cell",0,27,0
+"12","N","Normal Fibroblast",0,27,0
+"12","N","Pro-inflammatory Macrophage",0,27,0
+"12","N","Pro-angiogenesis Macrophage",0,27,0
+"12","N","Stromal Cell",0,27,0
+"12","T","Exhausted CD8+ T cells",0,56,0
+"12","T","cDC1",0,56,0
+"12","T","Blood Cell",0,56,0
+"12","T","LAMP3 cDC",0,56,0
+"12","T","CD4 or CD8 T cell",0,56,0
+"12","T","CAFadi",0,56,0
+"12","T","CD8 T or NK cell",0,56,0
+"12","T","T or NK Cell",0,56,0
+"12","T","MAIT cells",0,56,0
+"12","T","CD8+ T cell",0,56,0
+"12","T","T regulatory cells",0,56,0
+"12","T","cDC2",0,56,0
+"12","T","pDC",0,56,0
+"12","T","Endothelial Cells",56,56,100
+"12","T","Lung Cancer Cell",0,56,0
+"12","T","CD4+ T cell",0,56,0
+"12","T","Mast cell",0,56,0
+"12","T","CAFinfla",0,56,0
+"12","T","Any Cell",0,56,0
+"12","T","Effector/Memory CD8+ T cells",0,56,0
+"12","T","CAFmyo",0,56,0
+"12","T","B Cell",0,56,0
+"12","T","Pancreatic Cancer Cell",0,56,0
+"12","T","Cancer Associated Fibroblasts",0,56,0
+"12","T","Phagocytosis Macrophage",0,56,0
+"12","T","Effector/Memory CD4+ T cells",0,56,0
+"12","T","Tfh/Th1 helper CD4+ T cells",0,56,0
+"12","T","Dendritic Cell",0,56,0
+"12","T","Naive CD4+ T cells",0,56,0
+"12","T","Macrophage or Dendritic Cell",0,56,0
+"12","T","Macrophage",0,56,0
+"12","T","Naive CD8+ T cells",0,56,0
+"12","T","Normal Tissue Cell",0,56,0
+"12","T","B cell or Plasmablast",0,56,0
+"12","T","Natural killer cell",0,56,0
+"12","T","Non Stromal Cell",0,56,0
+"12","T","Non Blood Cell",0,56,0
+"12","T","Normal Fibroblast",0,56,0
+"12","T","Pro-inflammatory Macrophage",0,56,0
+"12","T","Pro-angiogenesis Macrophage",0,56,0
+"12","T","Stromal Cell",0,56,0
+"13","N","LAMP3 cDC",0,64,0
+"13","N","Lung Cancer Cell",61,64,95.31
+"13","N","Exhausted CD8+ T cells",0,64,0
+"13","N","Macrophage",0,64,0
+"13","N","Any Cell",0,64,0
+"13","N","B cell or Plasmablast",0,64,0
+"13","N","Macrophage or Dendritic Cell",0,64,0
+"13","N","B Cell",0,64,0
+"13","N","MAIT cells",0,64,0
+"13","N","Non Blood Cell",2,64,3.12
+"13","N","T regulatory cells",0,64,0
+"13","N","Mast cell",0,64,0
+"13","N","cDC2",0,64,0
+"13","N","Blood Cell",0,64,0
+"13","N","Naive CD4+ T cells",0,64,0
+"13","N","Dendritic Cell",0,64,0
+"13","N","CAFadi",1,64,1.56
+"13","N","CD8 T or NK cell",0,64,0
+"13","N","CAFinfla",0,64,0
+"13","N","cDC1",0,64,0
+"13","N","T or NK Cell",0,64,0
+"13","N","CAFmyo",0,64,0
+"13","N","pDC",0,64,0
+"13","N","CD4 or CD8 T cell",0,64,0
+"13","N","Cancer Associated Fibroblasts",0,64,0
+"13","N","Non Stromal Cell",0,64,0
+"13","N","Tfh/Th1 helper CD4+ T cells",0,64,0
+"13","N","Effector/Memory CD4+ T cells",0,64,0
+"13","N","Normal Fibroblast",0,64,0
+"13","N","CD8+ T cell",0,64,0
+"13","N","Naive CD8+ T cells",0,64,0
+"13","N","CD4+ T cell",0,64,0
+"13","N","Normal Tissue Cell",0,64,0
+"13","N","Endothelial Cells",0,64,0
+"13","N","Effector/Memory CD8+ T cells",0,64,0
+"13","N","Pancreatic Cancer Cell",0,64,0
+"13","N","Stromal Cell",0,64,0
+"13","N","Pro-angiogenesis Macrophage",0,64,0
+"13","N","Phagocytosis Macrophage",0,64,0
+"13","N","Pro-inflammatory Macrophage",0,64,0
+"13","N","Natural killer cell",0,64,0
+"13","T","LAMP3 cDC",0,4,0
+"13","T","Lung Cancer Cell",0,4,0
+"13","T","Exhausted CD8+ T cells",0,4,0
+"13","T","Macrophage",0,4,0
+"13","T","Any Cell",0,4,0
+"13","T","B cell or Plasmablast",0,4,0
+"13","T","Macrophage or Dendritic Cell",0,4,0
+"13","T","B Cell",0,4,0
+"13","T","MAIT cells",0,4,0
+"13","T","Non Blood Cell",0,4,0
+"13","T","T regulatory cells",0,4,0
+"13","T","Mast cell",0,4,0
+"13","T","cDC2",0,4,0
+"13","T","Blood Cell",0,4,0
+"13","T","Naive CD4+ T cells",0,4,0
+"13","T","Dendritic Cell",0,4,0
+"13","T","CAFadi",0,4,0
+"13","T","CD8 T or NK cell",0,4,0
+"13","T","CAFinfla",0,4,0
+"13","T","cDC1",0,4,0
+"13","T","T or NK Cell",0,4,0
+"13","T","CAFmyo",0,4,0
+"13","T","pDC",0,4,0
+"13","T","CD4 or CD8 T cell",0,4,0
+"13","T","Cancer Associated Fibroblasts",0,4,0
+"13","T","Non Stromal Cell",3,4,75
+"13","T","Tfh/Th1 helper CD4+ T cells",0,4,0
+"13","T","Effector/Memory CD4+ T cells",0,4,0
+"13","T","Normal Fibroblast",0,4,0
+"13","T","CD8+ T cell",0,4,0
+"13","T","Naive CD8+ T cells",0,4,0
+"13","T","CD4+ T cell",0,4,0
+"13","T","Normal Tissue Cell",0,4,0
+"13","T","Endothelial Cells",0,4,0
+"13","T","Effector/Memory CD8+ T cells",0,4,0
+"13","T","Pancreatic Cancer Cell",1,4,25
+"13","T","Stromal Cell",0,4,0
+"13","T","Pro-angiogenesis Macrophage",0,4,0
+"13","T","Phagocytosis Macrophage",0,4,0
+"13","T","Pro-inflammatory Macrophage",0,4,0
+"13","T","Natural killer cell",0,4,0
+"14","N","CAFinfla",0,11,0
+"14","N","Macrophage",0,11,0
+"14","N","CAFmyo",0,11,0
+"14","N","Non Blood Cell",0,11,0
+"14","N","Lung Cancer Cell",0,11,0
+"14","N","Normal Fibroblast",0,11,0
+"14","N","Non Stromal Cell",0,11,0
+"14","N","Blood Cell",1,11,9.09
+"14","N","CD8 T or NK cell",0,11,0
+"14","N","Exhausted CD8+ T cells",0,11,0
+"14","N","Cancer Associated Fibroblasts",0,11,0
+"14","N","Macrophage or Dendritic Cell",0,11,0
+"14","N","pDC",0,11,0
+"14","N","Naive CD4+ T cells",0,11,0
+"14","N","Pro-angiogenesis Macrophage",0,11,0
+"14","N","Phagocytosis Macrophage",0,11,0
+"14","N","LAMP3 cDC",0,11,0
+"14","N","Normal Tissue Cell",0,11,0
+"14","N","Effector/Memory CD4+ T cells",0,11,0
+"14","N","CAFadi",0,11,0
+"14","N","CD8+ T cell",0,11,0
+"14","N","Effector/Memory CD8+ T cells",0,11,0
+"14","N","B Cell",0,11,0
+"14","N","MAIT cells",0,11,0
+"14","N","Endothelial Cells",0,11,0
+"14","N","B cell or Plasmablast",0,11,0
+"14","N","CD4 or CD8 T cell",0,11,0
+"14","N","T or NK Cell",0,11,0
+"14","N","Tfh/Th1 helper CD4+ T cells",0,11,0
+"14","N","Naive CD8+ T cells",0,11,0
+"14","N","Pro-inflammatory Macrophage",0,11,0
+"14","N","Mast cell",10,11,90.91
+"14","N","Natural killer cell",0,11,0
+"14","N","Pancreatic Cancer Cell",0,11,0
+"14","N","T regulatory cells",0,11,0
+"14","N","Dendritic Cell",0,11,0
+"14","N","cDC1",0,11,0
+"14","N","Any Cell",0,11,0
+"14","N","CD4+ T cell",0,11,0
+"14","N","cDC2",0,11,0
+"14","N","Stromal Cell",0,11,0
+"14","T","CAFinfla",0,33,0
+"14","T","Macrophage",0,33,0
+"14","T","CAFmyo",0,33,0
+"14","T","Non Blood Cell",0,33,0
+"14","T","Lung Cancer Cell",0,33,0
+"14","T","Normal Fibroblast",0,33,0
+"14","T","Non Stromal Cell",0,33,0
+"14","T","Blood Cell",1,33,3.03
+"14","T","CD8 T or NK cell",0,33,0
+"14","T","Exhausted CD8+ T cells",0,33,0
+"14","T","Cancer Associated Fibroblasts",0,33,0
+"14","T","Macrophage or Dendritic Cell",0,33,0
+"14","T","pDC",0,33,0
+"14","T","Naive CD4+ T cells",0,33,0
+"14","T","Pro-angiogenesis Macrophage",0,33,0
+"14","T","Phagocytosis Macrophage",0,33,0
+"14","T","LAMP3 cDC",0,33,0
+"14","T","Normal Tissue Cell",0,33,0
+"14","T","Effector/Memory CD4+ T cells",0,33,0
+"14","T","CAFadi",0,33,0
+"14","T","CD8+ T cell",0,33,0
+"14","T","Effector/Memory CD8+ T cells",0,33,0
+"14","T","B Cell",0,33,0
+"14","T","MAIT cells",0,33,0
+"14","T","Endothelial Cells",0,33,0
+"14","T","B cell or Plasmablast",0,33,0
+"14","T","CD4 or CD8 T cell",0,33,0
+"14","T","T or NK Cell",0,33,0
+"14","T","Tfh/Th1 helper CD4+ T cells",1,33,3.03
+"14","T","Naive CD8+ T cells",0,33,0
+"14","T","Pro-inflammatory Macrophage",0,33,0
+"14","T","Mast cell",31,33,93.94
+"14","T","Natural killer cell",0,33,0
+"14","T","Pancreatic Cancer Cell",0,33,0
+"14","T","T regulatory cells",0,33,0
+"14","T","Dendritic Cell",0,33,0
+"14","T","cDC1",0,33,0
+"14","T","Any Cell",0,33,0
+"14","T","CD4+ T cell",0,33,0
+"14","T","cDC2",0,33,0
+"14","T","Stromal Cell",0,33,0
+"15","N","Blood Cell",0,21,0
+"15","N","Exhausted CD8+ T cells",0,21,0
+"15","N","CD8 T or NK cell",0,21,0
+"15","N","LAMP3 cDC",0,21,0
+"15","N","Naive CD4+ T cells",0,21,0
+"15","N","CD8+ T cell",0,21,0
+"15","N","CAFadi",0,21,0
+"15","N","Naive CD8+ T cells",0,21,0
+"15","N","T or NK Cell",0,21,0
+"15","N","cDC1",0,21,0
+"15","N","Natural killer cell",0,21,0
+"15","N","pDC",21,21,100
+"15","N","cDC2",0,21,0
+"15","N","Pro-angiogenesis Macrophage",0,21,0
+"15","N","Phagocytosis Macrophage",0,21,0
+"15","N","Lung Cancer Cell",0,21,0
+"15","N","Pro-inflammatory Macrophage",0,21,0
+"15","N","Effector/Memory CD4+ T cells",0,21,0
+"15","N","CAFinfla",0,21,0
+"15","N","Any Cell",0,21,0
+"15","N","Effector/Memory CD8+ T cells",0,21,0
+"15","N","CAFmyo",0,21,0
+"15","N","Non Blood Cell",0,21,0
+"15","N","MAIT cells",0,21,0
+"15","N","T regulatory cells",0,21,0
+"15","N","Non Stromal Cell",0,21,0
+"15","N","CD4 or CD8 T cell",0,21,0
+"15","N","Normal Fibroblast",0,21,0
+"15","N","Dendritic Cell",0,21,0
+"15","N","CD4+ T cell",0,21,0
+"15","N","Normal Tissue Cell",0,21,0
+"15","N","Macrophage",0,21,0
+"15","N","Stromal Cell",0,21,0
+"15","N","Pancreatic Cancer Cell",0,21,0
+"15","N","Macrophage or Dendritic Cell",0,21,0
+"15","N","B Cell",0,21,0
+"15","N","Endothelial Cells",0,21,0
+"15","N","Cancer Associated Fibroblasts",0,21,0
+"15","N","B cell or Plasmablast",0,21,0
+"15","N","Mast cell",0,21,0
+"15","N","Tfh/Th1 helper CD4+ T cells",0,21,0
+"15","T","Blood Cell",0,16,0
+"15","T","Exhausted CD8+ T cells",0,16,0
+"15","T","CD8 T or NK cell",0,16,0
+"15","T","LAMP3 cDC",0,16,0
+"15","T","Naive CD4+ T cells",0,16,0
+"15","T","CD8+ T cell",0,16,0
+"15","T","CAFadi",0,16,0
+"15","T","Naive CD8+ T cells",0,16,0
+"15","T","T or NK Cell",0,16,0
+"15","T","cDC1",0,16,0
+"15","T","Natural killer cell",0,16,0
+"15","T","pDC",16,16,100
+"15","T","cDC2",0,16,0
+"15","T","Pro-angiogenesis Macrophage",0,16,0
+"15","T","Phagocytosis Macrophage",0,16,0
+"15","T","Lung Cancer Cell",0,16,0
+"15","T","Pro-inflammatory Macrophage",0,16,0
+"15","T","Effector/Memory CD4+ T cells",0,16,0
+"15","T","CAFinfla",0,16,0
+"15","T","Any Cell",0,16,0
+"15","T","Effector/Memory CD8+ T cells",0,16,0
+"15","T","CAFmyo",0,16,0
+"15","T","Non Blood Cell",0,16,0
+"15","T","MAIT cells",0,16,0
+"15","T","T regulatory cells",0,16,0
+"15","T","Non Stromal Cell",0,16,0
+"15","T","CD4 or CD8 T cell",0,16,0
+"15","T","Normal Fibroblast",0,16,0
+"15","T","Dendritic Cell",0,16,0
+"15","T","CD4+ T cell",0,16,0
+"15","T","Normal Tissue Cell",0,16,0
+"15","T","Macrophage",0,16,0
+"15","T","Stromal Cell",0,16,0
+"15","T","Pancreatic Cancer Cell",0,16,0
+"15","T","Macrophage or Dendritic Cell",0,16,0
+"15","T","B Cell",0,16,0
+"15","T","Endothelial Cells",0,16,0
+"15","T","Cancer Associated Fibroblasts",0,16,0
+"15","T","B cell or Plasmablast",0,16,0
+"15","T","Mast cell",0,16,0
+"15","T","Tfh/Th1 helper CD4+ T cells",0,16,0
+"2","N","cDC2",0,886,0
+"2","N","CAFadi",0,886,0
+"2","N","CAFmyo",0,886,0
+"2","N","CAFinfla",0,886,0
+"2","N","Blood Cell",0,886,0
+"2","N","CD4 or CD8 T cell",0,886,0
+"2","N","Mast cell",0,886,0
+"2","N","MAIT cells",0,886,0
+"2","N","CD4+ T cell",0,886,0
+"2","N","Normal Tissue Cell",0,886,0
+"2","N","Dendritic Cell",0,886,0
+"2","N","Non Stromal Cell",0,886,0
+"2","N","CD8 T or NK cell",0,886,0
+"2","N","Naive CD4+ T cells",0,886,0
+"2","N","Any Cell",0,886,0
+"2","N","CD8+ T cell",0,886,0
+"2","N","pDC",0,886,0
+"2","N","Pancreatic Cancer Cell",0,886,0
+"2","N","Cancer Associated Fibroblasts",0,886,0
+"2","N","Phagocytosis Macrophage",27,886,3.05
+"2","N","B cell or Plasmablast",0,886,0
+"2","N","Non Blood Cell",0,886,0
+"2","N","Pro-angiogenesis Macrophage",836,886,94.36
+"2","N","Normal Fibroblast",0,886,0
+"2","N","Pro-inflammatory Macrophage",0,886,0
+"2","N","Naive CD8+ T cells",0,886,0
+"2","N","Effector/Memory CD4+ T cells",0,886,0
+"2","N","Stromal Cell",0,886,0
+"2","N","Natural killer cell",0,886,0
+"2","N","Effector/Memory CD8+ T cells",0,886,0
+"2","N","B Cell",0,886,0
+"2","N","cDC1",0,886,0
+"2","N","Endothelial Cells",0,886,0
+"2","N","T regulatory cells",0,886,0
+"2","N","Exhausted CD8+ T cells",0,886,0
+"2","N","T or NK Cell",0,886,0
+"2","N","Tfh/Th1 helper CD4+ T cells",0,886,0
+"2","N","LAMP3 cDC",0,886,0
+"2","N","Macrophage or Dendritic Cell",0,886,0
+"2","N","Lung Cancer Cell",0,886,0
+"2","N","Macrophage",23,886,2.6
+"2","T","cDC2",0,251,0
+"2","T","CAFadi",0,251,0
+"2","T","CAFmyo",0,251,0
+"2","T","CAFinfla",0,251,0
+"2","T","Blood Cell",0,251,0
+"2","T","CD4 or CD8 T cell",0,251,0
+"2","T","Mast cell",0,251,0
+"2","T","MAIT cells",0,251,0
+"2","T","CD4+ T cell",0,251,0
+"2","T","Normal Tissue Cell",0,251,0
+"2","T","Dendritic Cell",0,251,0
+"2","T","Non Stromal Cell",0,251,0
+"2","T","CD8 T or NK cell",0,251,0
+"2","T","Naive CD4+ T cells",0,251,0
+"2","T","Any Cell",0,251,0
+"2","T","CD8+ T cell",0,251,0
+"2","T","pDC",0,251,0
+"2","T","Pancreatic Cancer Cell",0,251,0
+"2","T","Cancer Associated Fibroblasts",0,251,0
+"2","T","Phagocytosis Macrophage",155,251,61.75
+"2","T","B cell or Plasmablast",0,251,0
+"2","T","Non Blood Cell",0,251,0
+"2","T","Pro-angiogenesis Macrophage",6,251,2.39
+"2","T","Normal Fibroblast",0,251,0
+"2","T","Pro-inflammatory Macrophage",0,251,0
+"2","T","Naive CD8+ T cells",0,251,0
+"2","T","Effector/Memory CD4+ T cells",0,251,0
+"2","T","Stromal Cell",0,251,0
+"2","T","Natural killer cell",0,251,0
+"2","T","Effector/Memory CD8+ T cells",0,251,0
+"2","T","B Cell",0,251,0
+"2","T","cDC1",0,251,0
+"2","T","Endothelial Cells",0,251,0
+"2","T","T regulatory cells",0,251,0
+"2","T","Exhausted CD8+ T cells",0,251,0
+"2","T","T or NK Cell",0,251,0
+"2","T","Tfh/Th1 helper CD4+ T cells",0,251,0
+"2","T","LAMP3 cDC",0,251,0
+"2","T","Macrophage or Dendritic Cell",2,251,0.8
+"2","T","Lung Cancer Cell",0,251,0
+"2","T","Macrophage",88,251,35.06
+"3","N","Blood Cell",0,734,0
+"3","N","CAFinfla",0,734,0
+"3","N","CAFadi",0,734,0
+"3","N","CD8 T or NK cell",0,734,0
+"3","N","cDC1",0,734,0
+"3","N","CD8+ T cell",0,734,0
+"3","N","cDC2",0,734,0
+"3","N","T or NK Cell",0,734,0
+"3","N","CD4+ T cell",0,734,0
+"3","N","Dendritic Cell",0,734,0
+"3","N","LAMP3 cDC",0,734,0
+"3","N","Exhausted CD8+ T cells",0,734,0
+"3","N","Effector/Memory CD4+ T cells",0,734,0
+"3","N","Naive CD8+ T cells",0,734,0
+"3","N","Any Cell",0,734,0
+"3","N","Naive CD4+ T cells",0,734,0
+"3","N","CAFmyo",0,734,0
+"3","N","pDC",0,734,0
+"3","N","CD4 or CD8 T cell",0,734,0
+"3","N","T regulatory cells",0,734,0
+"3","N","Phagocytosis Macrophage",0,734,0
+"3","N","Mast cell",0,734,0
+"3","N","Tfh/Th1 helper CD4+ T cells",0,734,0
+"3","N","Pro-angiogenesis Macrophage",725,734,98.77
+"3","N","Effector/Memory CD8+ T cells",0,734,0
+"3","N","Normal Tissue Cell",0,734,0
+"3","N","Lung Cancer Cell",0,734,0
+"3","N","MAIT cells",0,734,0
+"3","N","Cancer Associated Fibroblasts",0,734,0
+"3","N","Natural killer cell",0,734,0
+"3","N","B Cell",0,734,0
+"3","N","Non Stromal Cell",0,734,0
+"3","N","Endothelial Cells",0,734,0
+"3","N","B cell or Plasmablast",0,734,0
+"3","N","Normal Fibroblast",0,734,0
+"3","N","Pro-inflammatory Macrophage",0,734,0
+"3","N","Pancreatic Cancer Cell",0,734,0
+"3","N","Macrophage",9,734,1.23
+"3","N","Stromal Cell",0,734,0
+"3","N","Non Blood Cell",0,734,0
+"3","N","Macrophage or Dendritic Cell",0,734,0
+"3","T","Blood Cell",0,62,0
+"3","T","CAFinfla",0,62,0
+"3","T","CAFadi",0,62,0
+"3","T","CD8 T or NK cell",0,62,0
+"3","T","cDC1",0,62,0
+"3","T","CD8+ T cell",0,62,0
+"3","T","cDC2",0,62,0
+"3","T","T or NK Cell",0,62,0
+"3","T","CD4+ T cell",0,62,0
+"3","T","Dendritic Cell",0,62,0
+"3","T","LAMP3 cDC",0,62,0
+"3","T","Exhausted CD8+ T cells",0,62,0
+"3","T","Effector/Memory CD4+ T cells",0,62,0
+"3","T","Naive CD8+ T cells",0,62,0
+"3","T","Any Cell",0,62,0
+"3","T","Naive CD4+ T cells",0,62,0
+"3","T","CAFmyo",0,62,0
+"3","T","pDC",0,62,0
+"3","T","CD4 or CD8 T cell",0,62,0
+"3","T","T regulatory cells",0,62,0
+"3","T","Phagocytosis Macrophage",13,62,20.97
+"3","T","Mast cell",0,62,0
+"3","T","Tfh/Th1 helper CD4+ T cells",0,62,0
+"3","T","Pro-angiogenesis Macrophage",17,62,27.42
+"3","T","Effector/Memory CD8+ T cells",0,62,0
+"3","T","Normal Tissue Cell",0,62,0
+"3","T","Lung Cancer Cell",0,62,0
+"3","T","MAIT cells",0,62,0
+"3","T","Cancer Associated Fibroblasts",0,62,0
+"3","T","Natural killer cell",0,62,0
+"3","T","B Cell",0,62,0
+"3","T","Non Stromal Cell",0,62,0
+"3","T","Endothelial Cells",0,62,0
+"3","T","B cell or Plasmablast",0,62,0
+"3","T","Normal Fibroblast",0,62,0
+"3","T","Pro-inflammatory Macrophage",0,62,0
+"3","T","Pancreatic Cancer Cell",0,62,0
+"3","T","Macrophage",32,62,51.61
+"3","T","Stromal Cell",0,62,0
+"3","T","Non Blood Cell",0,62,0
+"3","T","Macrophage or Dendritic Cell",0,62,0
+"4","N","Blood Cell",20,366,5.46
+"4","N","CD4 or CD8 T cell",0,366,0
+"4","N","CAFadi",0,366,0
+"4","N","Lung Cancer Cell",0,366,0
+"4","N","LAMP3 cDC",0,366,0
+"4","N","Exhausted CD8+ T cells",0,366,0
+"4","N","CAFinfla",0,366,0
+"4","N","cDC1",0,366,0
+"4","N","Mast cell",0,366,0
+"4","N","MAIT cells",0,366,0
+"4","N","T regulatory cells",0,366,0
+"4","N","CD4+ T cell",0,366,0
+"4","N","Normal Tissue Cell",0,366,0
+"4","N","cDC2",0,366,0
+"4","N","B cell or Plasmablast",0,366,0
+"4","N","Macrophage",128,366,34.97
+"4","N","T or NK Cell",0,366,0
+"4","N","Pro-inflammatory Macrophage",0,366,0
+"4","N","CAFmyo",0,366,0
+"4","N","Non Blood Cell",0,366,0
+"4","N","B Cell",0,366,0
+"4","N","Cancer Associated Fibroblasts",0,366,0
+"4","N","Tfh/Th1 helper CD4+ T cells",0,366,0
+"4","N","CD8 T or NK cell",0,366,0
+"4","N","Naive CD4+ T cells",22,366,6.01
+"4","N","Dendritic Cell",0,366,0
+"4","N","CD8+ T cell",0,366,0
+"4","N","Macrophage or Dendritic Cell",0,366,0
+"4","N","Pancreatic Cancer Cell",0,366,0
+"4","N","Stromal Cell",0,366,0
+"4","N","Phagocytosis Macrophage",19,366,5.19
+"4","N","Non Stromal Cell",0,366,0
+"4","N","Naive CD8+ T cells",0,366,0
+"4","N","Pro-angiogenesis Macrophage",167,366,45.63
+"4","N","Normal Fibroblast",0,366,0
+"4","N","Any Cell",4,366,1.09
+"4","N","pDC",0,366,0
+"4","N","Effector/Memory CD4+ T cells",1,366,0.27
+"4","N","Endothelial Cells",0,366,0
+"4","N","Natural killer cell",3,366,0.82
+"4","N","Effector/Memory CD8+ T cells",2,366,0.55
+"4","T","Blood Cell",53,394,13.45
+"4","T","CD4 or CD8 T cell",6,394,1.52
+"4","T","CAFadi",0,394,0
+"4","T","Lung Cancer Cell",0,394,0
+"4","T","LAMP3 cDC",0,394,0
+"4","T","Exhausted CD8+ T cells",1,394,0.25
+"4","T","CAFinfla",0,394,0
+"4","T","cDC1",0,394,0
+"4","T","Mast cell",0,394,0
+"4","T","MAIT cells",0,394,0
+"4","T","T regulatory cells",0,394,0
+"4","T","CD4+ T cell",16,394,4.06
+"4","T","Normal Tissue Cell",0,394,0
+"4","T","cDC2",0,394,0
+"4","T","B cell or Plasmablast",0,394,0
+"4","T","Macrophage",207,394,52.54
+"4","T","T or NK Cell",0,394,0
+"4","T","Pro-inflammatory Macrophage",0,394,0
+"4","T","CAFmyo",0,394,0
+"4","T","Non Blood Cell",1,394,0.25
+"4","T","B Cell",13,394,3.3
+"4","T","Cancer Associated Fibroblasts",0,394,0
+"4","T","Tfh/Th1 helper CD4+ T cells",0,394,0
+"4","T","CD8 T or NK cell",0,394,0
+"4","T","Naive CD4+ T cells",4,394,1.02
+"4","T","Dendritic Cell",0,394,0
+"4","T","CD8+ T cell",0,394,0
+"4","T","Macrophage or Dendritic Cell",1,394,0.25
+"4","T","Pancreatic Cancer Cell",0,394,0
+"4","T","Stromal Cell",0,394,0
+"4","T","Phagocytosis Macrophage",74,394,18.78
+"4","T","Non Stromal Cell",0,394,0
+"4","T","Naive CD8+ T cells",0,394,0
+"4","T","Pro-angiogenesis Macrophage",8,394,2.03
+"4","T","Normal Fibroblast",0,394,0
+"4","T","Any Cell",6,394,1.52
+"4","T","pDC",0,394,0
+"4","T","Effector/Memory CD4+ T cells",0,394,0
+"4","T","Endothelial Cells",0,394,0
+"4","T","Natural killer cell",0,394,0
+"4","T","Effector/Memory CD8+ T cells",4,394,1.02
+"5","N","Lung Cancer Cell",0,27,0
+"5","N","Macrophage",2,27,7.41
+"5","N","LAMP3 cDC",0,27,0
+"5","N","MAIT cells",0,27,0
+"5","N","Exhausted CD8+ T cells",0,27,0
+"5","N","Non Blood Cell",0,27,0
+"5","N","CD4+ T cell",0,27,0
+"5","N","CD4 or CD8 T cell",0,27,0
+"5","N","Macrophage or Dendritic Cell",0,27,0
+"5","N","cDC2",0,27,0
+"5","N","Naive CD4+ T cells",0,27,0
+"5","N","Mast cell",0,27,0
+"5","N","Non Stromal Cell",0,27,0
+"5","N","Naive CD8+ T cells",0,27,0
+"5","N","CD8 T or NK cell",0,27,0
+"5","N","Normal Fibroblast",0,27,0
+"5","N","Dendritic Cell",0,27,0
+"5","N","CD8+ T cell",0,27,0
+"5","N","T or NK Cell",0,27,0
+"5","N","pDC",0,27,0
+"5","N","cDC1",0,27,0
+"5","N","T regulatory cells",0,27,0
+"5","N","Phagocytosis Macrophage",0,27,0
+"5","N","Blood Cell",16,27,59.26
+"5","N","Tfh/Th1 helper CD4+ T cells",0,27,0
+"5","N","Pro-angiogenesis Macrophage",9,27,33.33
+"5","N","CAFadi",0,27,0
+"5","N","Normal Tissue Cell",0,27,0
+"5","N","Effector/Memory CD4+ T cells",0,27,0
+"5","N","Natural killer cell",0,27,0
+"5","N","Any Cell",0,27,0
+"5","N","Effector/Memory CD8+ T cells",0,27,0
+"5","N","CAFmyo",0,27,0
+"5","N","B Cell",0,27,0
+"5","N","Endothelial Cells",0,27,0
+"5","N","Cancer Associated Fibroblasts",0,27,0
+"5","N","B cell or Plasmablast",0,27,0
+"5","N","Pro-inflammatory Macrophage",0,27,0
+"5","N","CAFinfla",0,27,0
+"5","N","Pancreatic Cancer Cell",0,27,0
+"5","N","Stromal Cell",0,27,0
+"5","T","Lung Cancer Cell",0,713,0
+"5","T","Macrophage",1,713,0.14
+"5","T","LAMP3 cDC",0,713,0
+"5","T","MAIT cells",0,713,0
+"5","T","Exhausted CD8+ T cells",1,713,0.14
+"5","T","Non Blood Cell",0,713,0
+"5","T","CD4+ T cell",1,713,0.14
+"5","T","CD4 or CD8 T cell",0,713,0
+"5","T","Macrophage or Dendritic Cell",1,713,0.14
+"5","T","cDC2",0,713,0
+"5","T","Naive CD4+ T cells",0,713,0
+"5","T","Mast cell",0,713,0
+"5","T","Non Stromal Cell",0,713,0
+"5","T","Naive CD8+ T cells",0,713,0
+"5","T","CD8 T or NK cell",0,713,0
+"5","T","Normal Fibroblast",0,713,0
+"5","T","Dendritic Cell",0,713,0
+"5","T","CD8+ T cell",1,713,0.14
+"5","T","T or NK Cell",0,713,0
+"5","T","pDC",3,713,0.42
+"5","T","cDC1",0,713,0
+"5","T","T regulatory cells",0,713,0
+"5","T","Phagocytosis Macrophage",0,713,0
+"5","T","Blood Cell",17,713,2.38
+"5","T","Tfh/Th1 helper CD4+ T cells",0,713,0
+"5","T","Pro-angiogenesis Macrophage",1,713,0.14
+"5","T","CAFadi",0,713,0
+"5","T","Normal Tissue Cell",0,713,0
+"5","T","Effector/Memory CD4+ T cells",1,713,0.14
+"5","T","Natural killer cell",0,713,0
+"5","T","Any Cell",0,713,0
+"5","T","Effector/Memory CD8+ T cells",1,713,0.14
+"5","T","CAFmyo",0,713,0
+"5","T","B Cell",685,713,96.07
+"5","T","Endothelial Cells",0,713,0
+"5","T","Cancer Associated Fibroblasts",0,713,0
+"5","T","B cell or Plasmablast",0,713,0
+"5","T","Pro-inflammatory Macrophage",0,713,0
+"5","T","CAFinfla",0,713,0
+"5","T","Pancreatic Cancer Cell",0,713,0
+"5","T","Stromal Cell",0,713,0
+"6","N","Naive CD4+ T cells",0,377,0
+"6","N","Normal Fibroblast",0,377,0
+"6","N","Blood Cell",0,377,0
+"6","N","Naive CD8+ T cells",0,377,0
+"6","N","Non Blood Cell",0,377,0
+"6","N","pDC",0,377,0
+"6","N","Mast cell",0,377,0
+"6","N","Non Stromal Cell",0,377,0
+"6","N","Phagocytosis Macrophage",0,377,0
+"6","N","LAMP3 cDC",0,377,0
+"6","N","CD4 or CD8 T cell",0,377,0
+"6","N","Pro-angiogenesis Macrophage",1,377,0.27
+"6","N","Lung Cancer Cell",0,377,0
+"6","N","Normal Tissue Cell",0,377,0
+"6","N","CAFadi",0,377,0
+"6","N","Natural killer cell",370,377,98.14
+"6","N","MAIT cells",0,377,0
+"6","N","CAFinfla",0,377,0
+"6","N","Macrophage or Dendritic Cell",0,377,0
+"6","N","Exhausted CD8+ T cells",0,377,0
+"6","N","CAFmyo",0,377,0
+"6","N","T regulatory cells",0,377,0
+"6","N","cDC1",0,377,0
+"6","N","Cancer Associated Fibroblasts",0,377,0
+"6","N","cDC2",0,377,0
+"6","N","B cell or Plasmablast",0,377,0
+"6","N","CD4+ T cell",0,377,0
+"6","N","Pro-inflammatory Macrophage",0,377,0
+"6","N","Macrophage",0,377,0
+"6","N","Pancreatic Cancer Cell",0,377,0
+"6","N","Stromal Cell",0,377,0
+"6","N","T or NK Cell",0,377,0
+"6","N","CD8+ T cell",0,377,0
+"6","N","Effector/Memory CD8+ T cells",3,377,0.8
+"6","N","CD8 T or NK cell",3,377,0.8
+"6","N","B Cell",0,377,0
+"6","N","Endothelial Cells",0,377,0
+"6","N","Tfh/Th1 helper CD4+ T cells",0,377,0
+"6","N","Effector/Memory CD4+ T cells",0,377,0
+"6","N","Dendritic Cell",0,377,0
+"6","N","Any Cell",0,377,0
+"6","T","Naive CD4+ T cells",0,83,0
+"6","T","Normal Fibroblast",0,83,0
+"6","T","Blood Cell",0,83,0
+"6","T","Naive CD8+ T cells",0,83,0
+"6","T","Non Blood Cell",0,83,0
+"6","T","pDC",0,83,0
+"6","T","Mast cell",0,83,0
+"6","T","Non Stromal Cell",0,83,0
+"6","T","Phagocytosis Macrophage",0,83,0
+"6","T","LAMP3 cDC",0,83,0
+"6","T","CD4 or CD8 T cell",0,83,0
+"6","T","Pro-angiogenesis Macrophage",0,83,0
+"6","T","Lung Cancer Cell",0,83,0
+"6","T","Normal Tissue Cell",0,83,0
+"6","T","CAFadi",0,83,0
+"6","T","Natural killer cell",58,83,69.88
+"6","T","MAIT cells",0,83,0
+"6","T","CAFinfla",0,83,0
+"6","T","Macrophage or Dendritic Cell",0,83,0
+"6","T","Exhausted CD8+ T cells",8,83,9.64
+"6","T","CAFmyo",0,83,0
+"6","T","T regulatory cells",0,83,0
+"6","T","cDC1",0,83,0
+"6","T","Cancer Associated Fibroblasts",0,83,0
+"6","T","cDC2",0,83,0
+"6","T","B cell or Plasmablast",0,83,0
+"6","T","CD4+ T cell",0,83,0
+"6","T","Pro-inflammatory Macrophage",0,83,0
+"6","T","Macrophage",0,83,0
+"6","T","Pancreatic Cancer Cell",0,83,0
+"6","T","Stromal Cell",0,83,0
+"6","T","T or NK Cell",0,83,0
+"6","T","CD8+ T cell",2,83,2.41
+"6","T","Effector/Memory CD8+ T cells",13,83,15.66
+"6","T","CD8 T or NK cell",2,83,2.41
+"6","T","B Cell",0,83,0
+"6","T","Endothelial Cells",0,83,0
+"6","T","Tfh/Th1 helper CD4+ T cells",0,83,0
+"6","T","Effector/Memory CD4+ T cells",0,83,0
+"6","T","Dendritic Cell",0,83,0
+"6","T","Any Cell",0,83,0
+"7","N","Non Stromal Cell",0,246,0
+"7","N","LAMP3 cDC",0,246,0
+"7","N","Naive CD8+ T cells",0,246,0
+"7","N","Non Blood Cell",0,246,0
+"7","N","Lung Cancer Cell",0,246,0
+"7","N","Mast cell",0,246,0
+"7","N","Macrophage or Dendritic Cell",0,246,0
+"7","N","Exhausted CD8+ T cells",0,246,0
+"7","N","Naive CD4+ T cells",0,246,0
+"7","N","Normal Fibroblast",0,246,0
+"7","N","Pro-angiogenesis Macrophage",106,246,43.09
+"7","N","cDC2",0,246,0
+"7","N","Normal Tissue Cell",0,246,0
+"7","N","Pro-inflammatory Macrophage",55,246,22.36
+"7","N","Natural killer cell",0,246,0
+"7","N","MAIT cells",0,246,0
+"7","N","Macrophage",85,246,34.55
+"7","N","pDC",0,246,0
+"7","N","Any Cell",0,246,0
+"7","N","CD8+ T cell",0,246,0
+"7","N","Phagocytosis Macrophage",0,246,0
+"7","N","B Cell",0,246,0
+"7","N","cDC1",0,246,0
+"7","N","CD4 or CD8 T cell",0,246,0
+"7","N","B cell or Plasmablast",0,246,0
+"7","N","Blood Cell",0,246,0
+"7","N","CD4+ T cell",0,246,0
+"7","N","Dendritic Cell",0,246,0
+"7","N","Pancreatic Cancer Cell",0,246,0
+"7","N","Stromal Cell",0,246,0
+"7","N","T or NK Cell",0,246,0
+"7","N","CAFinfla",0,246,0
+"7","N","Tfh/Th1 helper CD4+ T cells",0,246,0
+"7","N","T regulatory cells",0,246,0
+"7","N","CAFmyo",0,246,0
+"7","N","Effector/Memory CD4+ T cells",0,246,0
+"7","N","Cancer Associated Fibroblasts",0,246,0
+"7","N","CD8 T or NK cell",0,246,0
+"7","N","CAFadi",0,246,0
+"7","N","Effector/Memory CD8+ T cells",0,246,0
+"7","N","Endothelial Cells",0,246,0
+"7","T","Non Stromal Cell",0,64,0
+"7","T","LAMP3 cDC",0,64,0
+"7","T","Naive CD8+ T cells",0,64,0
+"7","T","Non Blood Cell",0,64,0
+"7","T","Lung Cancer Cell",0,64,0
+"7","T","Mast cell",0,64,0
+"7","T","Macrophage or Dendritic Cell",8,64,12.5
+"7","T","Exhausted CD8+ T cells",0,64,0
+"7","T","Naive CD4+ T cells",0,64,0
+"7","T","Normal Fibroblast",0,64,0
+"7","T","Pro-angiogenesis Macrophage",6,64,9.38
+"7","T","cDC2",0,64,0
+"7","T","Normal Tissue Cell",0,64,0
+"7","T","Pro-inflammatory Macrophage",4,64,6.25
+"7","T","Natural killer cell",0,64,0
+"7","T","MAIT cells",0,64,0
+"7","T","Macrophage",45,64,70.31
+"7","T","pDC",0,64,0
+"7","T","Any Cell",0,64,0
+"7","T","CD8+ T cell",0,64,0
+"7","T","Phagocytosis Macrophage",1,64,1.56
+"7","T","B Cell",0,64,0
+"7","T","cDC1",0,64,0
+"7","T","CD4 or CD8 T cell",0,64,0
+"7","T","B cell or Plasmablast",0,64,0
+"7","T","Blood Cell",0,64,0
+"7","T","CD4+ T cell",0,64,0
+"7","T","Dendritic Cell",0,64,0
+"7","T","Pancreatic Cancer Cell",0,64,0
+"7","T","Stromal Cell",0,64,0
+"7","T","T or NK Cell",0,64,0
+"7","T","CAFinfla",0,64,0
+"7","T","Tfh/Th1 helper CD4+ T cells",0,64,0
+"7","T","T regulatory cells",0,64,0
+"7","T","CAFmyo",0,64,0
+"7","T","Effector/Memory CD4+ T cells",0,64,0
+"7","T","Cancer Associated Fibroblasts",0,64,0
+"7","T","CD8 T or NK cell",0,64,0
+"7","T","CAFadi",0,64,0
+"7","T","Effector/Memory CD8+ T cells",0,64,0
+"7","T","Endothelial Cells",0,64,0
+"8","N","MAIT cells",0,140,0
+"8","N","Mast cell",0,140,0
+"8","N","Pro-inflammatory Macrophage",0,140,0
+"8","N","Normal Fibroblast",21,140,15
+"8","N","pDC",0,140,0
+"8","N","Naive CD4+ T cells",0,140,0
+"8","N","Phagocytosis Macrophage",1,140,0.71
+"8","N","B Cell",0,140,0
+"8","N","Any Cell",12,140,8.57
+"8","N","Pro-angiogenesis Macrophage",3,140,2.14
+"8","N","B cell or Plasmablast",0,140,0
+"8","N","Blood Cell",0,140,0
+"8","N","CD4 or CD8 T cell",0,140,0
+"8","N","Naive CD8+ T cells",0,140,0
+"8","N","Normal Tissue Cell",0,140,0
+"8","N","Stromal Cell",7,140,5
+"8","N","T or NK Cell",0,140,0
+"8","N","Pancreatic Cancer Cell",0,140,0
+"8","N","Non Blood Cell",18,140,12.86
+"8","N","T regulatory cells",0,140,0
+"8","N","CAFmyo",0,140,0
+"8","N","Non Stromal Cell",1,140,0.71
+"8","N","Tfh/Th1 helper CD4+ T cells",0,140,0
+"8","N","Cancer Associated Fibroblasts",1,140,0.71
+"8","N","LAMP3 cDC",0,140,0
+"8","N","Endothelial Cells",7,140,5
+"8","N","cDC2",0,140,0
+"8","N","CAFadi",6,140,4.29
+"8","N","CD4+ T cell",0,140,0
+"8","N","Natural killer cell",0,140,0
+"8","N","CAFinfla",3,140,2.14
+"8","N","CD8 T or NK cell",0,140,0
+"8","N","Effector/Memory CD4+ T cells",0,140,0
+"8","N","Macrophage or Dendritic Cell",0,140,0
+"8","N","Exhausted CD8+ T cells",0,140,0
+"8","N","Effector/Memory CD8+ T cells",0,140,0
+"8","N","Lung Cancer Cell",59,140,42.14
+"8","N","cDC1",0,140,0
+"8","N","Dendritic Cell",0,140,0
+"8","N","Macrophage",1,140,0.71
+"8","N","CD8+ T cell",0,140,0
+"8","T","MAIT cells",0,166,0
+"8","T","Mast cell",0,166,0
+"8","T","Pro-inflammatory Macrophage",0,166,0
+"8","T","Normal Fibroblast",10,166,6.02
+"8","T","pDC",0,166,0
+"8","T","Naive CD4+ T cells",0,166,0
+"8","T","Phagocytosis Macrophage",0,166,0
+"8","T","B Cell",0,166,0
+"8","T","Any Cell",9,166,5.42
+"8","T","Pro-angiogenesis Macrophage",0,166,0
+"8","T","B cell or Plasmablast",0,166,0
+"8","T","Blood Cell",1,166,0.6
+"8","T","CD4 or CD8 T cell",0,166,0
+"8","T","Naive CD8+ T cells",0,166,0
+"8","T","Normal Tissue Cell",6,166,3.61
+"8","T","Stromal Cell",1,166,0.6
+"8","T","T or NK Cell",0,166,0
+"8","T","Pancreatic Cancer Cell",69,166,41.57
+"8","T","Non Blood Cell",18,166,10.84
+"8","T","T regulatory cells",0,166,0
+"8","T","CAFmyo",4,166,2.41
+"8","T","Non Stromal Cell",9,166,5.42
+"8","T","Tfh/Th1 helper CD4+ T cells",2,166,1.2
+"8","T","Cancer Associated Fibroblasts",14,166,8.43
+"8","T","LAMP3 cDC",0,166,0
+"8","T","Endothelial Cells",5,166,3.01
+"8","T","cDC2",0,166,0
+"8","T","CAFadi",2,166,1.2
+"8","T","CD4+ T cell",0,166,0
+"8","T","Natural killer cell",0,166,0
+"8","T","CAFinfla",13,166,7.83
+"8","T","CD8 T or NK cell",0,166,0
+"8","T","Effector/Memory CD4+ T cells",0,166,0
+"8","T","Macrophage or Dendritic Cell",0,166,0
+"8","T","Exhausted CD8+ T cells",0,166,0
+"8","T","Effector/Memory CD8+ T cells",0,166,0
+"8","T","Lung Cancer Cell",0,166,0
+"8","T","cDC1",0,166,0
+"8","T","Dendritic Cell",0,166,0
+"8","T","Macrophage",3,166,1.81
+"8","T","CD8+ T cell",0,166,0
+"9","N","Tfh/Th1 helper CD4+ T cells",0,37,0
+"9","N","Naive CD8+ T cells",0,37,0
+"9","N","Naive CD4+ T cells",0,37,0
+"9","N","Any Cell",0,37,0
+"9","N","MAIT cells",0,37,0
+"9","N","T regulatory cells",0,37,0
+"9","N","Normal Fibroblast",0,37,0
+"9","N","Mast cell",0,37,0
+"9","N","Non Stromal Cell",0,37,0
+"9","N","B cell or Plasmablast",0,37,0
+"9","N","Blood Cell",1,37,2.7
+"9","N","CD4 or CD8 T cell",0,37,0
+"9","N","LAMP3 cDC",0,37,0
+"9","N","CAFadi",0,37,0
+"9","N","Normal Tissue Cell",0,37,0
+"9","N","T or NK Cell",0,37,0
+"9","N","Natural killer cell",3,37,8.11
+"9","N","pDC",0,37,0
+"9","N","Non Blood Cell",0,37,0
+"9","N","B Cell",0,37,0
+"9","N","Phagocytosis Macrophage",0,37,0
+"9","N","Macrophage or Dendritic Cell",0,37,0
+"9","N","Exhausted CD8+ T cells",0,37,0
+"9","N","Pro-angiogenesis Macrophage",31,37,83.78
+"9","N","Endothelial Cells",0,37,0
+"9","N","cDC2",0,37,0
+"9","N","Pro-inflammatory Macrophage",0,37,0
+"9","N","CD4+ T cell",1,37,2.7
+"9","N","Lung Cancer Cell",0,37,0
+"9","N","CAFinfla",0,37,0
+"9","N","Pancreatic Cancer Cell",0,37,0
+"9","N","Macrophage",0,37,0
+"9","N","CAFmyo",0,37,0
+"9","N","CD8+ T cell",0,37,0
+"9","N","Effector/Memory CD8+ T cells",0,37,0
+"9","N","Cancer Associated Fibroblasts",0,37,0
+"9","N","cDC1",0,37,0
+"9","N","Dendritic Cell",0,37,0
+"9","N","Stromal Cell",0,37,0
+"9","N","CD8 T or NK cell",0,37,0
+"9","N","Effector/Memory CD4+ T cells",1,37,2.7
+"9","T","Tfh/Th1 helper CD4+ T cells",5,145,3.45
+"9","T","Naive CD8+ T cells",0,145,0
+"9","T","Naive CD4+ T cells",0,145,0
+"9","T","Any Cell",1,145,0.69
+"9","T","MAIT cells",0,145,0
+"9","T","T regulatory cells",9,145,6.21
+"9","T","Normal Fibroblast",0,145,0
+"9","T","Mast cell",0,145,0
+"9","T","Non Stromal Cell",0,145,0
+"9","T","B cell or Plasmablast",1,145,0.69
+"9","T","Blood Cell",2,145,1.38
+"9","T","CD4 or CD8 T cell",7,145,4.83
+"9","T","LAMP3 cDC",0,145,0
+"9","T","CAFadi",0,145,0
+"9","T","Normal Tissue Cell",0,145,0
+"9","T","T or NK Cell",0,145,0
+"9","T","Natural killer cell",2,145,1.38
+"9","T","pDC",0,145,0
+"9","T","Non Blood Cell",0,145,0
+"9","T","B Cell",4,145,2.76
+"9","T","Phagocytosis Macrophage",5,145,3.45
+"9","T","Macrophage or Dendritic Cell",1,145,0.69
+"9","T","Exhausted CD8+ T cells",65,145,44.83
+"9","T","Pro-angiogenesis Macrophage",1,145,0.69
+"9","T","Endothelial Cells",0,145,0
+"9","T","cDC2",2,145,1.38
+"9","T","Pro-inflammatory Macrophage",0,145,0
+"9","T","CD4+ T cell",2,145,1.38
+"9","T","Lung Cancer Cell",0,145,0
+"9","T","CAFinfla",0,145,0
+"9","T","Pancreatic Cancer Cell",0,145,0
+"9","T","Macrophage",12,145,8.28
+"9","T","CAFmyo",0,145,0
+"9","T","CD8+ T cell",16,145,11.03
+"9","T","Effector/Memory CD8+ T cells",6,145,4.14
+"9","T","Cancer Associated Fibroblasts",0,145,0
+"9","T","cDC1",3,145,2.07
+"9","T","Dendritic Cell",0,145,0
+"9","T","Stromal Cell",0,145,0
+"9","T","CD8 T or NK cell",1,145,0.69
+"9","T","Effector/Memory CD4+ T cells",0,145,0

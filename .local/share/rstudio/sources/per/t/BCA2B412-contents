@@ -1,0 +1,12 @@
+Package: projectOct25
+Type: Package
+Title: Bioinformatics
+Version: 0.1.0
+Author: Alessandra
+Maintainer: Alessandra <alessandramonte050@gmail.com>
+Description: Comparison of data.frame and data.table workflows for transcriptomics tasks and pipeline of the analysis of biological samples
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3

@@ -1,0 +1,57 @@
+#' Merge and summarize bulk counts
+#' Combine bulk RNA counts with metadata, filter treated samples, 
+#' and compute per-gene mean/median counts and per-condition averages.
+
+bulk_counts_summary_df <- function(counts_path, meta_path) {
+  counts <- read.csv(counts_path)
+  meta   <- read.csv(meta_path)
+  
+  merged_data <- merge(counts, meta, by = "sample_id")
+  
+  treated_data <- subset(merged_data,
+                         condition == "treated" & grepl("^GENE_00", gene))
+  
+  gene_summary <- aggregate(
+    count ~ gene,
+    data = treated_data,
+    FUN  = function(x) c(mean = mean(x), median = median(x))
+  )
+  
+  gene_summary_df <- data.frame(
+    gene         = gene_summary$gene,
+    mean_count   = gene_summary$count[, "mean"],
+    median_count = gene_summary$count[, "median"]
+  )
+  
+  gene_condition_means_f <- aggregate(
+    count ~ gene + condition,
+    data = merged_data,
+    FUN  = mean,
+    na.rm = TRUE
+  )
+  
+  gene_condition_means_f <- gene_condition_means_f[order(
+    gene_condition_means_f$gene, gene_condition_means_f$condition
+  ), ]
+  
+  list(
+    gene_summary_df       = gene_summary_df,
+    gene_condition_means_f = gene_condition_means_f
+  )
+}
+
+#' Add QC-style derived columns (data.frame version)
+#' Add log2-transformed counts and a binary “high” flag based on 
+#' gene-wise median thresholds.
+
+bulk_counts_qc_df <- function(counts_path) {
+  counts <- read.csv(counts_path, stringsAsFactors = FALSE)
+  
+  counts$log2_count <- log2(counts$count + 1)
+  counts$high <- counts$count > 100
+  
+  medians_by_gene <- tapply(counts$count, counts$gene, median)
+  counts$high <- counts$count > medians_by_gene[counts$gene]
+  
+  counts
+}

@@ -1,0 +1,512 @@
+library(microbenchmark)
+library(ggplot2)
+# carico le funzioni
+source("R/df_functions.R")
+source("R/dt_functions.R")
+#FINAL REVISION
+benchfr <- microbenchmark(
+df_version = final_revision_df("project_oct25/annotated_GSM3516673_normal_annotated_GSM3516672_tumor_SeuratIntegration.csv", "project_oct25/nt_combined_clustering.output.csv"),
+dt_version = final_revision_dt ("project_oct25/annotated_GSM3516673_normal_annotated_GSM3516672_tumor_SeuratIntegration.csv", "project_oct25/nt_combined_clustering.output.csv"),
+times = 10
+)
+?ggsvae
+?ggsave
+getwd()
+source("R/dt_functions.R")
+#FINAL REVISION
+benchfr <- microbenchmark(
+df_version = final_revision_df("project_oct25/annotated_GSM3516673_normal_annotated_GSM3516672_tumor_SeuratIntegration.csv", "project_oct25/nt_combined_clustering.output.csv"),
+dt_version = final_revision_dt ("project_oct25/annotated_GSM3516673_normal_annotated_GSM3516672_tumor_SeuratIntegration.csv", "project_oct25/nt_combined_clustering.output.csv"),
+times = 10
+)
+("R/df_functions.R")
+source("R/dt_functions.R")
+#FINAL REVISION
+benchfr <- microbenchmark(
+df_version = final_revision_df("project_oct25/annotated_GSM3516673_normal_annotated_GSM3516672_tumor_SeuratIntegration.csv", "project_oct25/nt_combined_clustering.output.csv"),
+dt_version = final_revision_dt ("project_oct25/annotated_GSM3516673_normal_annotated_GSM3516672_tumor_SeuratIntegration.csv", "project_oct25/nt_combined_clustering.output.csv"),
+times = 10
+)
+library(data.table)
+library(microbenchmark)
+library(ggplot2)
+# carico le funzioni
+source("R/df_functions.R")
+source("R/dt_functions.R")
+#FINAL REVISION
+benchfr <- microbenchmark(
+df_version = final_revision_df("project_oct25/annotated_GSM3516673_normal_annotated_GSM3516672_tumor_SeuratIntegration.csv", "project_oct25/nt_combined_clustering.output.csv"),
+dt_version = final_revision_dt ("project_oct25/annotated_GSM3516673_normal_annotated_GSM3516672_tumor_SeuratIntegration.csv", "project_oct25/nt_combined_clustering.output.csv"),
+times = 10
+)
+source("R/dt_functions.R")
+dt_version = final_revision_dt ("project_oct25/annotated_GSM3516673_normal_annotated_GSM3516672_tumor_SeuratIntegration.csv", "project_oct25/nt_combined_clustering.output.csv")
+source("R/dt_functions.R")
+dt_version = final_revision_dt ("project_oct25/annotated_GSM3516673_normal_annotated_GSM3516672_tumor_SeuratIntegration.csv", "project_oct25/nt_combined_clustering.output.csv")
+source("R/dt_functions.R")
+dt_version = final_revision_dt ("project_oct25/annotated_GSM3516673_normal_annotated_GSM3516672_tumor_SeuratIntegration.csv", "project_oct25/nt_combined_clustering.output.csv")
+?ggplot
+devtools::document()
+devtools::document()
+devtools::loadall()
+devtools::load_all()
+devtools::install()
+?!
+a
+?normalizePath
+getwd()
+?ggsave
+?ggsave
+library(ggplot2)
+library(ggplot2)
+?ggsave
+devtools::document()
+devtools::load_all()
+devtools::install()
+list.files("Outputs")
+?import
+?bulk_counts_qc_dt
+?bulk_counts_summary_dt
+# Task 1
+bench1 <- microbenchmark(
+df_version = bulk_counts_summary_df("project_oct25/bulk_counts_long.csv", "project_oct25/sample_metadata.csv"),
+dt_version = bulk_counts_summary_dt("project_oct25/bulk_counts_long.csv", "project_oct25/sample_metadata.csv"),
+times = 10
+)
+library(microbenchmark)
+# Task 1
+bench1 <- microbenchmark(
+df_version = bulk_counts_summary_df("project_oct25/bulk_counts_long.csv", "project_oct25/sample_metadata.csv"),
+dt_version = bulk_counts_summary_dt("project_oct25/bulk_counts_long.csv", "project_oct25/sample_metadata.csv"),
+times = 10
+)
+autoplot(bench1)
+# Task 2
+bench2 <- microbenchmark(
+df_version = bulk_counts_qc_df("project_oct25/bulk_counts_long.csv"),
+dt_version = bulk_counts_qc_dt("project_oct25/bulk_counts_long.csv"),
+times = 10
+)
+autoplot(bench2)
+# Task 4
+bench4 <- microbenchmark(
+df_version = annotate_counts_df("project_oct25/bulk_counts_long.csv", "project_oct25/sample_metadata.csv"),
+dt_version = annotate_counts_dt("project_oct25/bulk_counts_long.csv", "project_oct25/sample_metadata.csv"),
+times = 10
+)
+autoplot(bench4)
+# Task 5
+bench5 <- microbenchmark(
+df_version = classify_labs_df("project_oct25/clinical_labs.csv", "project_oct25/lab_reference_ranges.csv"),
+dt_version = classify_labs_dt("project_oct25/clinical_labs.csv", "project_oct25/lab_reference_ranges.csv"),
+times = 10
+)
+autoplot(bench5)
+# Task 6
+bench6 <- microbenchmark(
+df_version = match_vitals_df("project_oct25/clinical_labs.csv", "project_oct25/vitals_time_series.csv"),
+dt_version = match_vitals_dt("project_oct25/clinical_labs.csv", "project_oct25/vitals_time_series.csv"),
+times = 10
+)
+autoplot(bench6)
+# Task 7
+bench7 <- microbenchmark(
+df_version = top_peaks_df("project_oct25/atac_peaks.bed.csv", "chr2", 2000000, 4000000),
+dt_version = top_peaks_dt("project_oct25/atac_peaks.bed.csv", "chr2", 2000000, 4000000),
+times = 10
+)
+autoplot(bench7)
+# Task 8
+bench8 <- microbenchmark(
+df_version = gene_stats_filter_df("project_oct25/bulk_counts_long.csv", "project_oct25/sample_metadata.csv"),
+dt_version = gene_stats_filter_dt("project_oct25/bulk_counts_long.csv", "project_oct25/sample_metadata.csv"),
+times = 10
+)
+autoplot(bench8)
+# Task 9
+bench9 <- microbenchmark(
+df_version = wide_long_wide_df("project_oct25/bulk_counts_wide.csv", "project_oct25/sample_metadata.csv"),
+dt_version = wide_long_wide_dt("project_oct25/bulk_counts_wide.csv", "project_oct25/sample_metadata.csv"),
+times = 10
+)
+autoplot(bench9)
+# Task 10
+bench10 <- microbenchmark(
+df_version = atac_to_gene_df("project_oct25/atac_peaks.bed.csv", "project_oct25/gene_annotation.bed.csv"),
+dt_version = atac_to_gene_dt("project_oct25/atac_peaks.bed.csv", "project_oct25/gene_annotation.bed.csv"),
+times = 10
+)
+autoplot(bench10)
+# Task 11
+bench11 <- microbenchmark(
+df_version = variants_to_genes_df("project_oct25/variants.csv", "project_oct25/gene_annotation.bed.csv"),
+dt_version = variants_to_genes_dt("project_oct25/variants.csv", "project_oct25/gene_annotation.bed.csv"),
+times = 10
+)
+autoplot(bench11)
+# Task 12
+bench12 <- microbenchmark(
+df_version = combine_cohorts_df("project_oct25/cohortA_samples.csv", "project_oct25/cohortB_samples.csv","project_oct25/bulk_counts_long.csv"),
+dt_version = combine_cohorts_dt("project_oct25/cohortA_samples.csv", "project_oct25/cohortB_samples.csv","project_oct25/bulk_counts_long.csv"),
+times = 10
+)
+autoplot(bench12)
+#FINAL REVISION
+benchfr <- microbenchmark(
+df_version = final_revision_df("project_oct25/annotated_GSM3516673_normal_annotated_GSM3516672_tumor_SeuratIntegration.csv", "project_oct25/nt_combined_clustering.output.csv"),
+dt_version = final_revision_dt ("project_oct25/annotated_GSM3516673_normal_annotated_GSM3516672_tumor_SeuratIntegration.csv", "project_oct25/nt_combined_clustering.output.csv"),
+times = 10
+)
+autoplot(benchfr)
+results <- rbindlist(list(
+task1 = as.data.table(bench1),
+task2 = as.data.table(bench2),
+task4 = as.data.table(bench4),
+task5 = as.data.table(bench5),
+task6 = as.data.table(bench6),
+task7 = as.data.table(bench7),
+task8 = as.data.table(bench8),
+task9 = as.data.table(bench9),
+task10 = as.data.table(bench10),
+task11 = as.data.table(bench11),
+task12 = as.data.table(bench12),
+final_revision = as.data.table(benchfr)
+), idcol = "task")[, .(df_mean = mean(time[expr=="df_version"])/1e6,
+dt_mean = mean(time[expr=="dt_version"])/1e6),
+by = task]
+library(data.table)
+results <- rbindlist(list(
+task1 = as.data.table(bench1),
+task2 = as.data.table(bench2),
+task4 = as.data.table(bench4),
+task5 = as.data.table(bench5),
+task6 = as.data.table(bench6),
+task7 = as.data.table(bench7),
+task8 = as.data.table(bench8),
+task9 = as.data.table(bench9),
+task10 = as.data.table(bench10),
+task11 = as.data.table(bench11),
+task12 = as.data.table(bench12),
+final_revision = as.data.table(benchfr)
+), idcol = "task")[, .(df_mean = mean(time[expr=="df_version"])/1e6,
+dt_mean = mean(time[expr=="dt_version"])/1e6),
+by = task]
+View(results)
+?outoplot
+library(ggplot2)
+?outoplot
+?autoplot
+library(ggplot2)
+devtools::document()
+devtools::load_all()
+devtools::install()
+# 1. Import
+bulk_counts <- fread("project_oct25/bulk_counts_long.csv")
+sample_meta   <- fread("project_oct25/sample_metadata.csv")
+View(bulk_counts)
+View(sample_meta)
+#' Classify lab values against reference intervals
+#'
+#' Merges patient lab results with reference intervals and assigns each test
+#' as "normal" or "out_of_range", and summarizes abnormalities per patient and per lab.
+#'
+#' @param labs_path Path to CSV file with columns: patient_id, time_iso, lab, value.
+#' @param ref_path Path to CSV file with columns: lab, sex,lower, upper.
+#' @return List with merged_labs, abnormal_by_patient, abnormal_by_lab.
+#' @import data.table
+#' @export
+classify_labs_dt <- function(labs_path, ref_path) {
+labs <- fread(labs_path)
+ref  <- fread(ref_path)
+ref_unique <- unique(ref[, .(lab, lower, upper)])
+merged_labs <- merge(labs, ref_unique, by = "lab")
+merged_labs[, status := ifelse(value >= lower & value <= upper, "normal", "out_of_range")]
+abnormal_by_patient <- merged_labs[, .(
+total_tests = .N,
+out_of_range = sum(status == "out_of_range")
+), by = patient_id]
+abnormal_by_lab <- merged_labs[, .(
+total_tests = .N,
+out_of_range = sum(status == "out_of_range")
+), by = lab]
+return(list(merged_labs = merged_labs, abnormal_by_patient = abnormal_by_patient, abnormal_by_lab = abnormal_by_lab))
+}
+#'
+#' Performs "rolling join" to match the closest available heart rate (HR)
+#' and systolic blood pressure (SBP) to each lab test times for the same patient.
+#' Computes per-patient correlations between CRP (C-reactive protein) and vitals.
+#'
+#' @param labs_path Path to CSV file with columns: patient_id, time_iso, lab, value.
+#' @param vitals_path Path to CSV file with columns: time_iso
+#' @return List with labs_with_vitals and correlations (CRP vs HR/SBP)
+#' @import data.table
+#' @export
+match_vitals_dt <- function(labs_path, vitals_path) {
+labs <- fread(labs_path)
+vitals <- fread(vitals_path)
+labs[, time_iso := as.POSIXct(time_iso)]
+vitals[, time_iso := as.POSIXct(time_iso)]
+setorder(labs, patient_id, time_iso)
+setorder(vitals, patient_id, time_iso)
+labs[, lab_time := time_iso]
+setkey(labs, patient_id, time_iso)
+setkey(vitals, patient_id, time_iso)
+vitals_hr <- vitals[vital == "HR", .(patient_id, time_iso, value)]
+setnames(vitals_hr, "value", "nearest_HR")
+vitals_hr[, hr_time := time_iso]
+setkey(vitals_hr, patient_id, time_iso)
+labs_with_hr <- vitals_hr[labs, roll = "nearest"]
+labs_with_hr[, hr_lag_minutes := as.numeric(difftime(lab_time, hr_time, units = "mins"))]
+vitals_sbp <- vitals[vital == "SBP", .(patient_id, time_iso, value)]
+setnames(vitals_sbp, "value", "nearest_SBP")
+vitals_sbp[, sbp_time := time_iso]
+setkey(vitals_sbp, patient_id, time_iso)
+labs_with_vitals <- vitals_sbp[labs_with_hr, roll = "nearest"]
+labs_with_vitals[, sbp_lag_minutes := as.numeric(difftime(lab_time, sbp_time, units = "mins"))]
+crp_data <- labs_with_vitals[lab == "CRP"]
+cor_crp_hr <- crp_data[!is.na(nearest_HR), .(
+correlation_CRP_HR = cor(value, nearest_HR, use = "complete.obs")
+), by = patient_id]
+cor_crp_sbp <- crp_data[!is.na(nearest_SBP), .(
+correlation_CRP_SBP = cor(value, nearest_SBP, use = "complete.obs")
+), by = patient_id]
+return(list(labs_with_hr = labs_with_hr, labs_with_vitals=labs_with_vitals, cor_crp_hr = cor_crp_hr, cor_crp_sbp = cor_crp_sbp))
+}
+# 1 Carico i file
+labs <- fread("project_oct25/clinical_labs.csv")
+ref  <- fread("project_oct25/lab_reference_ranges.csv")
+View(labs)
+View(ref)
+# Unisco le tabelle per aggiungere i range di riferimento
+# Dato che i range sono uguali per M e F, li prendo una sola volta
+ref_unique <- unique(ref[, .(lab, lower, upper)])
+# Uso una join per aggiungere a ogni valore clinico i limiti lower e upper del test corrispondente
+merged_labs <- merge(labs, ref_unique, by = "lab")
+# -----------------------------------------------------
+# PARTE 2: Classifico i valori come "normal" o "out_of_range"
+# -----------------------------------------------------
+merged_labs[, status := ifelse(value >= lower & value <= upper, "normal", "out_of_range")]
+# -----------------------------------------------------
+# PARTE 3: Calcolo la percentuale di risultati fuori range per paziente
+# -----------------------------------------------------
+abnormal_by_patient <- merged_labs[, .(
+total_tests = .N,                                 # numero totale di test per paziente
+out_of_range = sum(status == "out_of_range")      # quanti sono fuori range
+), by = patient_id]
+# -----------------------------------------------------
+# PARTE 4: Calcolo i risultati fuori range per tipo di test
+# -----------------------------------------------------
+abnormal_by_lab <- merged_labs[, .(
+total_tests = .N,
+out_of_range = sum(status == "out_of_range")
+), by = lab]
+View(abnormal_by_lab)
+View(abnormal_by_lab)
+View(abnormal_by_patient)
+View(merged_labs)
+#Goal: Slice genomics windows efficiently. Data: atac_peaks.bed.csv
+#Tasks:
+#• Extract peaks on chr2 with start between 2 and 4 Mb.
+#• Among those peaks, return the top 50 by score after setorder() (descending)
+# Carico la libreria
+library(data.table)
+# Leggo il file dei picchi ATAC
+peaks <- fread("project_oct25/atac_peaks.bed.csv")
+# Filtro i picchi su chr2 e nella finestra 2–4 Mb
+# Nota: 1 Mb = 1.000.000 basi
+subset_peaks <- peaks[chr == "chr2" & start >= 2000000 & start <= 4000000]
+#Ordino i picchi per punteggio decrescente
+subset_peaks <- setorder(subset_peaks, -score)
+#Prendo i primi 50 picchi
+top50_peaks <- head(subset_peaks, 50)
+result <- top_peaks_dt("project_oct25/atac_peaks.bed.csv","chr2", 2000000,4000000)
+View(subset_peaks)
+View(top50_peaks)
+View(top50_peaks)
+# =====================================================
+# Goal: Nearest-time matching of vitals to lab draws. Data: clinical_labs.csv, vitals_time_series.csv Tasks:
+#• For each lab measurement, attach the nearest HR and SBP reading using a rolling join on (patient_id, time)
+#and report the time lag in minutes.
+#• Summarize correlation between CRP and nearest HR/SBP by patient.
+#si lavora su dati di pazienti, si introducono misurazioni reali nel tempo,
+#si usano strumenti “temporali” come il rolling join per trovare misure vicine nel tempo.
+#TASK 6: Nearest-time matching of vitals to lab draws
+# =====================================================
+library(data.table)
+# 1. Carico i dati
+labs <- fread("project_oct25/clinical_labs.csv")
+vitals <- fread("project_oct25/vitals_time_series.csv")
+# 2. Preparo le tabelle e converte le date in un formato tempo che R può confrontare
+labs[, time_iso := as.POSIXct(time_iso)]
+vitals[, time_iso := as.POSIXct(time_iso)]
+#ordina i dati per paziente e per tempo, serve per i join temporali
+setorder(labs, patient_id, time_iso)
+setorder(vitals, patient_id, time_iso)
+# Salvo il tempo del laboratorio, creando una nuova colonna lab_time con l'orario del prelievo
+labs[, lab_time := time_iso]
+#imposto le chiavi, importante per il join
+setkey(labs, patient_id, time_iso)
+setkey(vitals, patient_id, time_iso)
+# 3. Trovo l'HR più vicino
+vitals_hr <- vitals[vital == "HR", .(patient_id, time_iso, value)] #prendo solo le righe dei HR
+setnames(vitals_hr, "value", "nearest_HR") #rinomino la colonna value in nearest HR
+# SALVO IL TEMPO DELL'HR PRIMA DEL JOIN!
+vitals_hr[, hr_time := time_iso] #salvo l'ora della misura HR
+setkey(vitals_hr, patient_id, time_iso)
+labs_with_hr <- vitals_hr[labs, roll = "nearest"] #rolling join
+#per ogni esame di lab, trova il battito HR più vicino nel tempo x lo stesso paziente
+labs_with_hr[, hr_lag_minutes := as.numeric(difftime(lab_time, hr_time, units = "mins"))]
+#calcola la differenza temporale in minuti tra prelievo e battito
+# 4. Trovo l'SBP più vicino, esattamente lo stesso per pressione
+vitals_sbp <- vitals[vital == "SBP", .(patient_id, time_iso, value)]
+setnames(vitals_sbp, "value", "nearest_SBP")
+# SALVO IL TEMPO DELL'SBP PRIMA DEL JOIN!
+vitals_sbp[, sbp_time := time_iso]
+setkey(vitals_sbp, patient_id, time_iso)
+labs_with_vitals <- vitals_sbp[labs_with_hr, roll = "nearest"]
+labs_with_vitals[, sbp_lag_minutes := as.numeric(difftime(lab_time, sbp_time, units = "mins"))]
+# 6. Analisi CRP: filtra solo le righe dove il lab è CRP
+crp_data <- labs_with_vitals[lab == "CRP"]
+#per ogni paziente (by sample id) calcola la correlazione tra CRP e battito e CRP e pressione
+#complete.obs: ignora le righe con dati mancanti
+cor_crp_hr <- crp_data[!is.na(nearest_HR), .(
+correlation_CRP_HR = cor(value, nearest_HR, use = "complete.obs")
+), by = patient_id]
+cor_crp_sbp <- crp_data[!is.na(nearest_SBP), .(
+correlation_CRP_SBP = cor(value, nearest_SBP, use = "complete.obs")
+), by = patient_id]
+View(cor_crp_sbp)
+#Goal: Multi-column operations per group.
+#Data: bulk_counts_long.csv, sample_metadata.csv
+#Tasks:
+#• Compute per-condition robust summary stats for each gene: mean, median, Q1/Q3.
+#• Return only genes where treated mean ‚â• 2√ó control mean.
+library(data.table)
+counts <- fread("project_oct25/bulk_counts_long.csv")
+meta   <- fread("project_oct25/sample_metadata.csv")
+#unione di counts e metadata per avere la colonna 'condition' insieme ai conteggi
+merged <- counts[meta, on = "sample_id"]
+#Calcoliamo le statistiche per gene e condition: mean, median, Q1 (25%) e Q3 (75%)
+stats_by_gene_condition <- merged[, .(
+mean_count   = mean(count),
+median_count = median(count),
+Q1           = quantile(count, 0.25, type = 2),
+Q3           = quantile(count, 0.75, type = 2)
+), by = .(gene, condition)]
+#Per applicare la regola "treated mean >= 2 * control mean" serve una tabella wide con le medie:
+#separiamo le medie per condition e poi facciamo un merge per gene.
+treated_means <- stats_by_gene_condition[condition == "treated", .(gene, treated_mean = mean_count)]
+control_means <- stats_by_gene_condition[condition == "control", .(gene, control_mean = mean_count)]
+#Uniamo le due tabelle delle medie per avere una riga per gene con entrambe le medie
+means_wide <- merge(treated_means, control_means, by = "gene", all = FALSE)
+# all = FALSE -> keep only genes present in both (necessario per confronto)
+#Applichiamo il filtro: kept genes dove treated_mean >= 2 * control_mean
+kept_genes <- means_wide[treated_mean >= 2 * control_mean]
+View(stats_by_gene_condition)
+View(kept_genes)
+# Carichiamo le librerie
+library(data.table)
+# Leggiamo i dati (matrice larga: una riga per gene, una colonna per campione)
+counts_wide <- fread("project_oct25/bulk_counts_wide.csv")
+# Aggiungiamo le informazioni di condizione per ogni sample
+# Carichiamo i metadati
+meta <- fread("project_oct25/sample_metadata.csv")
+View(counts_wide)
+#Goal: Go wide‚ to long‚ to wide for downstream plotting. Data: bulk_counts_wide.csv
+#Tasks:
+# • Convert the matrix to long, add per-sample totals, then back to a gene per condition table with mean counts.
+# =====================================================
+# TASK 9: Go wide → long → wide for downstream plotting
+# =====================================================
+# Carichiamo le librerie
+library(data.table)
+# Leggiamo i dati (matrice larga: una riga per gene, una colonna per campione)
+counts_wide <- fread("project_oct25/bulk_counts_wide.csv")
+# PARTE 1: Convertiamo da formato wide → long
+# -----------------------------------------------------
+# Supponiamo che la prima colonna si chiami "gene"
+counts_long <- melt(counts_wide, id.vars = "gene",
+variable.name = "sample_id", value.name = "count")
+#melt()	scioglie la tabella da larga a lunga.
+#counts_wide	è la tabella di partenza (quella larga).
+#id.vars = "gene"	dice a R: mantieni la colonna “gene” così com’è (non la trasformare).
+#Tutte le altre colonne (sample_1, sample_2, ecc.) verranno “sciolte”.
+#variable.name = "sample_id"	dà un nome alla nuova colonna che conterrà i nomi delle vecchie colonne (cioè i nomi dei campioni)
+#value.name = "count"	dà un nome alla colonna che conterrà i valori numerici (cioè i conteggi per gene e campione).
+# Aggiungiamo le informazioni di condizione per ogni sample
+# Carichiamo i metadati
+meta <- fread("project_oct25/sample_metadata.csv")
+# Uniamo metadati ai conteggi
+merged <- merge(counts_long, meta, by = "sample_id")
+# Calcoliamo i totali per campione
+totals_per_sample <- merged[, .(total_count = sum(count)), by = sample_id]
+# Aggiungiamo questi totali alla tabella principale
+merged <- merge(merged, totals_per_sample, by = "sample_id")
+# Torniamo da long → wide,
+#           ma ora con colonne per condizione (treated, control)
+#           e valori = media dei conteggi per gene
+gene_condition_means <- merged[, .(mean_count = mean(count)),
+by = .(gene, condition)]
+# Da long a wide: una riga per gene, colonne = condizioni
+counts_condition_wide <- dcast(gene_condition_means,
+gene ~ condition,
+value.var = "mean_count")
+View(counts_condition_wide)
+#Goal: Map SNPs to genes.
+#Data: variants.csv, gene_annotation.bed.csv
+#Tasks:
+#• Convert variant positions to 1-bp intervals (pos, pos)
+#and find overlaps with gene intervals.
+#• Summarize counts of HIGH impact variants by gene and by sample.
+#• List genes with HIGH-impact variants across all samples.
+#Obiettivo:
+#mappare le varianti (SNP) sui geni
+#contare le varianti ad alto impatto (HIGH) per gene e per campione
+#ottenere la lista dei geni che presentano almeno una variante HIGH in qualsiasi campione
+# carico la libreria
+library(data.table)
+# leggo i file
+variants <- fread("project_oct25/variants.csv")
+genes    <- fread("project_oct25/gene_annotation.bed.csv")
+# Creo intervalli 1-bp per le varianti: start = pos, end = pos
+#    (foverlaps lavora con intervalli start-end)
+variants[, start := pos]  #creo per ogni variante un intervallo 1bp
+variants[, end   := pos]  #foverlaps () lavora con intervalli start-end quindi gli servono
+# 5) imposto le chiavi per foverlaps: (chr, start, end), requisito per foverlaps utile per velocizzare
+setkey(variants, chr, start, end)
+setkey(genes,    chr, start, end)
+# 6) eseguo l'overlap: trovo per ogni variante i geni che si sovrappongono
+#    nomatch = 0L rimuove le varianti senza overlap, che non sovrappongono alcun gene
+overlaps <- foverlaps(variants, genes, type = "any", nomatch = 0L)
+#type any cioè prende qualsiasi sovrapposizione (parziale o completa)
+# 7) filtro le varianti di alto impatto (impact == "HIGH")
+#    normalizzo il valore di impact a maiuscole per sicurezza
+overlaps[, impact_upper := toupper(impact)] #normalizzo il campo impact
+#overlaps	È il nome della tabella su cui stai lavorando (una data.table).
+#[,]	In data.table, serve per dire “fai qualcosa su questa tabella”.
+#impact_upper := ...	Con := stai creando una nuova colonna chiamata impact_upper, oppure sovrascrivendo se già esiste.
+#toupper(impact)	È una funzione di R che trasforma tutto il testo in maiuscolo prendendo i valori della colonna impact.
+high_overlaps <- overlaps[impact_upper == "HIGH"] #seleziono solo le varianti con impact HIGH
+# 8) conto le varianti HIGH per gene e per sample_id
+#conta quante varianti ci sono per coppia gene x sample_id
+#.N è il conteggio delle righe del gruppo
+high_counts_by_gene_sample <- high_overlaps[, .(
+high_variant_count = .N
+), by = .(gene, sample_id)]
+# 9) conto le varianti HIGH per gene (tutte le sample aggregate)
+high_counts_by_gene <- high_overlaps[, .(
+total_high_variants = .N
+), by = gene][order(-total_high_variants)]
+#conta quanti HIGH per gene complessivamente e ordina decrescente i geni
+# 10) lista dei geni che hanno almeno una variante HIGH (unique gene)
+#Estrae i geni con almeno una variante HIGH
+genes_with_high <- unique(high_counts_by_gene$gene)
+print(genes_with_high)
+# 11) (Opzionale) salvo i risultati su file CSV nella cartella project_oct25
+fwrite(high_counts_by_gene_sample, "project_oct25/high_variants_by_gene_sample.csv")
+fwrite(high_counts_by_gene, "project_oct25/high_variants_by_gene_total.csv")
+fwrite(data.table(gene = genes_with_high), "project_oct25/genes_with_high_variants.csv")
+View(high_counts_by_gene)
+View(high_counts_by_gene_sample)
+View(genes)
+View(high_overlaps)
