@@ -1,4 +1,7 @@
+~/vignettes/workflow_analysis.html
+~/R/dt_functions.R
 ~/README.md
+~/vignettes/workflow_analysis.Rmd
 ~/scripts/Task7data_table.R
 ~/scripts/Task9data_frame.R
 ~/scripts/Task6data_frame.R
@@ -10,6 +13,3 @@
 ~/scripts/Task11data_table.R
 ~/scripts/Task9data_table.R
 ~/scripts/Task8data_table.R
-~/scripts/Task5data_table.R
-~/scripts/Comparative_analysis.R
-~/vignettes/test.Rmd

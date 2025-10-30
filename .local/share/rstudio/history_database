@@ -5412,3 +5412,30 @@
 1761845262602:result <- top_peaks_dt("project_oct25/atac_peaks.bed.csv","chr2", 2000000,4000000)
 1761845297343:git status
 1761845357276:git status
+1761866281416:?ProjectAlessandra
+1761866289781:library(ProjectAlessandra)
+1761866291857:?ProjectAlessandra
+1761866476543:?ProjectAlessandra
+1761866482698:??ProjectAlessandra
+1761866511404:?bulk_counts_summary_dt
+1761866524994:devtools::document
+1761866536595:?ProjectAlessandra
+1761866593390:devtools::load_all()
+1761866601935:devtools::document()
+1761866605856:devtools::load_all()
+1761866612371:devtools::install()
+1761866639587:?ProjectAlessandra
+1761866839877:vignette(ProjectAlessandra)
+1761866861073:vignette("ProjectAlessandra")
+1761867041748:library(ProjectAlessandra)
+1761867051954:library(help = "ProjectAlessandra")
+1761867072445:?ProjectAlessandra
+1761867096402:ls("package:ProjectAlessandra")
+1761867117522:ls("package:data.table")
+1761867155565:help(package = "ProjectAlessandra")
+1761867206127:help(package = "ProjectAlessandra")
+1761867232722:?ProjectAlessandra
+1761867245826:help(ProjectAlessandra)
+1761867253698:help(package = "ProjectAlessandra")
+1761867263848:?package = "ProjectAlessandra"
+1761867274643:?help
