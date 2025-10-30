@@ -5439,3 +5439,15 @@
 1761867253698:help(package = "ProjectAlessandra")
 1761867263848:?package = "ProjectAlessandra"
 1761867274643:?help
+1761867872650:render("workflow_analysis.Rmd", output_format = "html_document")
+1761867889367:library(rmarkdown)
+1761867891307:render("workflow_analysis.Rmd", output_format = "html_document")
+1761867903489:render("vignettes/workflow_analysis.Rmd", output_format = "html_document")
+1761867947576:?render
+1761868044426:render("vignettes/workflow_analysis.Rmd", output_format = "html_document", knit_root_dir = "home/rstudio")
+1761868118388:render(
+1761868118390:"vignettes/workflow_analysis.Rmd",
+1761868118392:output_format = "html_document",
+1761868118393:knit_root_dir = "/home/rstudio"
+1761868118394:)
+1761868266387:?ProjectAlessandra
