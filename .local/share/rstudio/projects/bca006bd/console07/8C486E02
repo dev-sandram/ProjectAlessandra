@@ -33,3 +33,35 @@ To https://github.com/dev-sandram/ProjectAlessandra.git
 ]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ [K]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ [K]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ [K]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ [K]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ [K]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git push origin mastercommit -m "General update""
  echo 15254793 && echo $HISTCONTROL && /usr/bin/env && echo 54AAB29D[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[K
 [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git add .push origin mastercommit -m "General update"[1P[1P[1P[1P[C[1P update"[1P update"[1P update"W update"o update"r update"k update"f update"l update"o update"w update"_ update"a update"n update"a update"l update"y update"s update"i update"s update"[C update"u update"p update"d update"a update"[1P update"[1P update"[1P update"[1P update"h update"t update"m update"l update"[C update"[1Pupdate"
+[?2004l[master 079f5d6] Workflow_analysis html update
+ 5 files changed, 50 insertions(+), 4 deletions(-)
+]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git commit -m "Workflow_analysis html update"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[Kpush origin master
+[?2004lTo https://github.com/dev-sandram/ProjectAlessandra.git
+ [31m! [rejected]       [m master -> master (fetch first)
+[31merror: failed to push some refs to 'https://github.com/dev-sandram/ProjectAlessandra.git'
+[m[33mhint: Updates were rejected because the remote contains work that you do[m
+[33mhint: not have locally. This is usually caused by another repository pushing[m
+[33mhint: to the same ref. You may want to first integrate the remote changes[m
+[33mhint: (e.g., 'git pull ...') before pushing again.[m
+[33mhint: See the 'Note about fast-forwards' in 'git push --help' for details.[m
+]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git push origin master
+[?2004lTo https://github.com/dev-sandram/ProjectAlessandra.git
+ [31m! [rejected]       [m master -> master (fetch first)
+[31merror: failed to push some refs to 'https://github.com/dev-sandram/ProjectAlessandra.git'
+[m[33mhint: Updates were rejected because the remote contains work that you do[m
+[33mhint: not have locally. This is usually caused by another repository pushing[m
+[33mhint: to the same ref. You may want to first integrate the remote changes[m
+[33mhint: (e.g., 'git pull ...') before pushing again.[m
+[33mhint: See the 'Note about fast-forwards' in 'git push --help' for details.[m
+]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git push origin mastercommit -m "Workflow_analysis html update"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[K
+[?2004l]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git add .push origin master
+[?2004lTo https://github.com/dev-sandram/ProjectAlessandra.git
+ [31m! [rejected]       [m master -> master (fetch first)
+[31merror: failed to push some refs to 'https://github.com/dev-sandram/ProjectAlessandra.git'
+[m[33mhint: Updates were rejected because the remote contains work that you do[m
+[33mhint: not have locally. This is usually caused by another repository pushing[m
+[33mhint: to the same ref. You may want to first integrate the remote changes[m
+[33mhint: (e.g., 'git pull ...') before pushing again.[m
+[33mhint: See the 'Note about fast-forwards' in 'git push --help' for details.[m
+]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git push origin masteradd .[Kpush origin masteradd .[K
