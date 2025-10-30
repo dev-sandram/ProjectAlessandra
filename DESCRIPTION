@@ -12,3 +12,5 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+URL: https://github.com/dev-sandram/ProjectAlessandra
+BugReports: https://github.com/dev-sandram/ProjectAlessandra/issues
