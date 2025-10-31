@@ -107,7 +107,7 @@ peaks_to_genes <- atac_to_gene_dt(
 ```
 
 Detailed examples and end-to-end workflows are available in the vignette:
-vignettes/workflow_analysis.Rmd
+```vignettes/workflow_analysis.Rmd```
 
 ## Benchmarking
 Each function includes two parallel implementations (*_df() and *_dt()) allowing reproducible benchmarking via microbenchmark:
@@ -169,12 +169,13 @@ Example outputs are available in Outputs/:
 - plot4_1.jpeg
 
 ## Dependencies
-Package	Purpose
+```Package	Purpose
 data.table	Fast data manipulation
 ggplot2	Visualization
 microbenchmark	Performance comparison
 knitr, rmarkdown	Reporting
 dplyr (optional)	Readability in comparisons
+```
 
 ## Citation
 If you use this package or adapt its structure, please cite:
