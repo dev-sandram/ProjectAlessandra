@@ -1,3 +1,6 @@
+~/man/ProjectAlessandra.Rd
+~/R/ProjectAlessandra_package.R
+~/DESCRIPTION
 ~/vignettes/workflow_analysis.html
 ~/R/dt_functions.R
 ~/README.md
@@ -10,6 +13,3 @@
 ~/Outputs/summary_cluster_celltype_tissue.csv
 ~/scripts/Task6data_table.R
 ~/scripts/Task4data_table.R
-~/scripts/Task11data_table.R
-~/scripts/Task9data_table.R
-~/scripts/Task8data_table.R

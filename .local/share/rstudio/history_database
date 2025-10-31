@@ -5451,3 +5451,93 @@
 1761868118393:knit_root_dir = "/home/rstudio"
 1761868118394:)
 1761868266387:?ProjectAlessandra
+1761869122584:?ProjectAlessandra
+1761869142430:help(projectAlessandra)
+1761869156677:help("projectAlessandra")
+1761869184998:library(ProjectAlessandra)
+1761869205384:?ProjectAlessandra
+1761869214685:devtools::document()
+1761869221593:devtools::load_all()
+1761869238988:devtools::install(ProjectAlessandra)
+1761869248989:devtools::install()
+1761869275590:?data.table
+1761869290233:?ProjectAlessandra
+1761869454615:help("ProjectAlessandra")
+1761869463580:help(package = "ProjectAlessandra")
+1761905280968:devtools::document()
+1761905288077:devtools::load_all()
+1761905297257:devtools::install
+1761905314241:?ProjectAlessandra
+1761905502338:devtools::document()
+1761905536409:devtools::document()
+1761905543129:devtools::load_all()
+1761905550849:devtools::install()
+1761905570575:?ProjectAlessandra
+1761905613661:devtools::document()
+1761905619067:devtools::load_all()
+1761905625941:devtools::install()
+1761905638762:?ProjectAlessandra
+1761905734253:devtools::document()
+1761905741049:devtools::load_all()
+1761905745822:devtools::install()
+1761905808609:remove.packages("ProjectAlessandra")
+1761905820588:devtools::clean_dll()
+1761905829842:devtools::document()
+1761905831609:devtools::install(clean = TRUE)
+1761905912186:remove.packages("ProjectAlessandra")
+1761905924763:find.package("ProjectAlessandra")
+1761905933865:devtools::document()
+1761905948336:unlink("ProjectAlessandra.Rcheck", recursive = TRUE)
+1761905948340:unlink("ProjectAlessandra_*.tar.gz")
+1761905955328:devtools::install()
+1761906027512:?ProjectAlessandra
+1761906034910:remove.packages("ProjectAlessandra")
+1761906035154:unlink("/usr/local/lib/R/site-library/ProjectAlessandra", recursive = TRUE)
+1761906047874:unlink("~/.R", recursive = TRUE)
+1761906047883:unlink("/tmp/Rtmp*", recursive = TRUE)
+1761906062962:devtools::document()
+1761906066829:devtools::install()
+1761906085625:devtools::install()
+1761906125908:tempdir()
+1761906151774:unlink("/usr/local/lib/R/site-library/ProjectAlessandra", recursive = TRUE)
+1761906151778:devtools::install(clean = TRUE)
+1761906164387:devtools::install()
+1761906183394:devtools::build()
+1761906213675:dir.exists("/tmp")
+1761906213679:file.access("/tmp", 2)
+1761906227187:dir.create("~/tmp_R", showWarnings = FALSE)
+1761906227196:Sys.setenv(TMPDIR = "~/tmp_R")
+1761906227198:tempdir()
+1761906244326:tempdir()
+1761906310576:devtools::document()
+1761906353861:getwd()
+1761906353863:file.access(getwd(), 2)
+1761906391986:unlink("man", recursive = TRUE)          # elimina help generati
+1761906391996:unlink("NAMESPACE")                      # verrà ricreato
+1761906392000:unlink("ProjectAlessandra.Rcheck", recursive = TRUE)
+1761906392001:unlink("ProjectAlessandra_*.tar.gz")     # eventuali build vecchi
+1761906392002:unlink(tempdir(), recursive = TRUE, force = TRUE)
+1761906392004:dir.create("~/tmp_R", showWarnings = FALSE)
+1761906392005:Sys.setenv(TMPDIR = normalizePath("~/tmp_R"))
+1761906404548:tempdir()
+1761906468710:?bulk_counts_qc
+1761906818588:devtools::document()
+1761906839053:devtools::install()
+1761906852767:devtools::loadall()
+1761906857309:devtools::load_all()
+1761906864863:devtools::install()
+1761906899815:?bulk_counts_summary
+1761906983519:roxygen2::roxygenise()
+1761907001135:devtools::document
+1761907006007:devtools::document()
+1761907017110:2+2
+1761907037424:getwd()
+1761907108612:library(ProjectAlessandra)
+1761907133688:?bulk_counts_summary_dt
+1761907205926:library(ProjectAlessandra)
+1761907216273:devtools::document()
+1761907223916:devtools::load_all()
+1761907229901:devtools::install()
+1761907254760:library(ProjectAlessandra)
+1761907259448:?ProjectAlessandra
+1761907300705:?bulk_counts_summary_dt

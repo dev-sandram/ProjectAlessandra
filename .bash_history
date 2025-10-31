@@ -61,3 +61,32 @@ git reset --hard origin/master
 git add README.md
 git commit -m "Aggiornamento README"
 git push origin master
+git add .
+git commit -m "Last Readme Update"
+git push origin master
+git add .
+git commit -m "General update""
+ echo 15254793 && echo $HISTCONTROL && /usr/bin/env && echo 54AAB29D
+git commit -m "General update"
+git push origin master
+git add .
+git commit -m "Workflow_analysis html update"
+git push origin master
+git add .
+git push origin master
+git add .
+git commit -m "Workflow_analysis html update"
+git push origin master
+git push --force origin master
+git add .
+git commit -m "Workflow_analysis html update"
+git push --force origin master
+git add workflow_analyis.html
+git add vignettes/ workflow_analyis.html
+git add vignettes/ workflow_analysis.html
+git add workflow_analysis.html
+ls -l
+git add vignettes/workflow_analysis.html
+git add -f vignettes/workflow_analysis.html
+git commit -m "workflow_analysis html update 2 "
+git push --force origin master

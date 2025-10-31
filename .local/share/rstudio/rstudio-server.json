@@ -1,4 +1,5 @@
 {
     "context_id": "5B6CF4AE",
-    "visual_mode_confirmed": true
+    "visual_mode_confirmed": true,
+    "error_handler_type": "traceback"
 }

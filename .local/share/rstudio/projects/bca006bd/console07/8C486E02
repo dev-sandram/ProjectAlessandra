@@ -90,3 +90,65 @@ remote: Resolving deltas:   0% (0/140)[Kremote: Resolving deltas:   1% (2/140)
 To https://github.com/dev-sandram/ProjectAlessandra.git
  + 5bea8dc...5a33b27 master -> master (forced update)
 ]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git push --force origin master[8P[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m "Workflow_analysis html update"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[K
+[?2004l]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git add .push --force origin master[8P[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m "Workflow_analysis html update"
+[?2004l[master a83d540] Workflow_analysis html update
+ 2 files changed, 27 insertions(+), 4 deletions(-)
+]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git commit -m "Workflow_analysis html update"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[Kpush --force origin master
+[?2004lEnumerating objects: 27, done.
+Counting objects:   3% (1/27)Counting objects:   7% (2/27)Counting objects:  11% (3/27)Counting objects:  14% (4/27)Counting objects:  18% (5/27)Counting objects:  22% (6/27)Counting objects:  25% (7/27)Counting objects:  29% (8/27)Counting objects:  33% (9/27)Counting objects:  37% (10/27)Counting objects:  40% (11/27)Counting objects:  44% (12/27)Counting objects:  48% (13/27)Counting objects:  51% (14/27)Counting objects:  55% (15/27)Counting objects:  59% (16/27)Counting objects:  62% (17/27)Counting objects:  66% (18/27)Counting objects:  70% (19/27)Counting objects:  74% (20/27)Counting objects:  77% (21/27)Counting objects:  81% (22/27)Counting objects:  85% (23/27)Counting objects:  88% (24/27)Counting objects:  92% (25/27)Counting objects:  96% (26/27)Counting objects: 100% (27/27)Counting objects: 100% (27/27), done.
+Delta compression using up to 4 threads
+Compressing objects:  11% (1/9)Compressing objects:  22% (2/9)Compressing objects:  33% (3/9)Compressing objects:  44% (4/9)Compressing objects:  55% (5/9)Compressing objects:  66% (6/9)Compressing objects:  77% (7/9)Compressing objects:  88% (8/9)Compressing objects: 100% (9/9)Compressing objects: 100% (9/9), done.
+Writing objects:   7% (1/14)Writing objects:  14% (2/14)Writing objects:  21% (3/14)Writing objects:  28% (4/14)Writing objects:  35% (5/14)Writing objects:  42% (6/14)Writing objects:  50% (7/14)Writing objects:  57% (8/14)Writing objects:  64% (9/14)Writing objects:  71% (10/14)Writing objects:  78% (11/14)Writing objects:  85% (12/14)Writing objects:  92% (13/14)Writing objects: 100% (14/14)Writing objects: 100% (14/14), 5.11 KiB | 871.00 KiB/s, done.
+Total 14 (delta 4), reused 1 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/4)[Kremote: Resolving deltas:  25% (1/4)[Kremote: Resolving deltas:  50% (2/4)[Kremote: Resolving deltas:  75% (3/4)[Kremote: Resolving deltas: 100% (4/4)[Kremote: Resolving deltas: 100% (4/4), completed with 4 local objects.[K
+To https://github.com/dev-sandram/ProjectAlessandra.git
+   5a33b27..a83d540  master -> master
+]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ [7mgit add nome_file.html[27mgit add nome_file.html[1P.html[1P.html[1P.html[1P.html[1P.html[1P.html[1P.html[1P.html[1P.htmlw.htmlo.htmlr.htmlk.htmlf.htmll.htmlo.htmlw.html_.htmla.htmln.htmla.htmll.htmly.htmli.htmls.htmls.html[1P.htmls.html[1P.html[C[C[C[C[C
+[?2004lfatal: pathspec 'workflow_analyis.html' did not match any files
+]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git add workflow_analyis.html[C workflow_analyis.htmlb workflow_analyis.htmli workflow_analyis.htmlg workflow_analyis.htmln workflow_analyis.htmle workflow_analyis.html[1P workflow_analyis.html[1P workflow_analyis.html[1P workflow_analyis.html[1P workflow_analyis.html[1P workflow_analyis.htmlv workflow_analyis.htmli workflow_analyis.htmlg workflow_analyis.htmln workflow_analyis.htmle workflow_analyis.htmlt workflow_analyis.htmlt workflow_analyis.htmle workflow_analyis.htmls workflow_analyis.html/ workflow_analyis.html
+[?2004lfatal: pathspec 'workflow_analyis.html' did not match any files
+]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git add vignettes/ workflow_analyis.htmlsis.html
+[?2004lfatal: pathspec 'workflow_analysis.html' did not match any files
+]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git add vignettes/ workflow_analysis.html[1P workflow_analysis.html[1P workflow_analysis.html[1P workflow_analysis.html[1P workflow_analysis.html[1P workflow_analysis.html[1P workflow_analysis.html[1P workflow_analysis.html[1P workflow_analysis.html[1P workflow_analysis.html[1P workflow_analysis.html[1Pworkflow_analysis.html[C workflow_analysis.html[C[1Pworkflow_analysis.html
+[?2004lfatal: pathspec 'workflow_analysis.html' did not match any files
+]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ ls-l[K[K -l
+[?2004ltotal 40
+-rw-r--r-- 1 alessandra alessandra 1129 Oct 30 22:52 DESCRIPTION
+drwxr-xr-x 2 alessandra alessandra 4096 Oct 30 22:52 [0m[01;34mman[0m
+-rw-r--r-- 1 alessandra alessandra  720 Oct 30 22:52 NAMESPACE
+drwxr-xr-x 2 alessandra alessandra 4096 Oct 30 22:52 [01;34mOutputs[0m
+drwxr-xr-x 2 alessandra alessandra 4096 Oct 30 23:12 [01;34mproject_oct25[0m
+drwxr-xr-x 2 alessandra alessandra 4096 Oct 30 22:52 [01;34mR[0m
+-rw-r--r-- 1 alessandra alessandra 2547 Oct 30 23:02 README.md
+-rw-r--r-- 1 alessandra alessandra  414 Oct 30 23:01 rstudio.Rproj
+drwxr-xr-x 2 alessandra alessandra 4096 Oct 30 22:52 [01;34mscripts[0m
+drwxr-xr-x 3 alessandra alessandra 4096 Oct 30 23:50 [01;34mvignettes[0m
+]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ [7mgit add vignettes/workflow_analysis.html[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit add vignettes/workflow_analysis.html
+[?2004lThe following paths are ignored by one of your .gitignore files:
+vignettes/workflow_analysis.html
+[33mhint: Use -f if you really want to add them.[m
+[33mhint: Turn this message off by running[m
+[33mhint: "git config advice.addIgnoredFile false"[m
+]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git add vignettes/workflow_analysis.html
+[?2004lThe following paths are ignored by one of your .gitignore files:
+vignettes/workflow_analysis.html
+[33mhint: Use -f if you really want to add them.[m
+[33mhint: Turn this message off by running[m
+[33mhint: "git config advice.addIgnoredFile false"[m
+]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ [7mgit add -f vignettes/workflow_analysis.html[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit add -f vignettes/workflow_analysis.html
+[?2004l]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git add -f vignettes/workflow_analysis.html[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[7mgit commit -m "Aggiunto file HTML in vignettes"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit commit -m "Aggiunto file HTML in vignettes"[C[C[1P vignettes"[1P vignettes"[1Pvignettes"[1P vignettes"[1P vignettes"[1P vignettes"[1P vignettes"[1Pvignettes"[1P vignettes"[1P vignettes"[1P vignettes"[1P vignettes"[1Pvignettes"[1P vignettes"[1P vignettes"[1P vignettes"[1P vignettes"[1P vignettes"[1P vignettes"[1P vignettes"[1P vignettes"[1P vignettes"[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K"[K[K"workflow_analysis update"hupdate"tupdate"mupdate"lupdate" update"[C[C[C[C[C e"[1Pe" e"[1Pe"[C "2" "
+[?2004l[master cac58b2] workflow_analysis html update 2
+ 1 file changed, 2905 insertions(+)
+ create mode 100644 vignettes/workflow_analysis.html
+]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git commit -m "workflow_analysis html update 2 "[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5Padd -f vignettes/workflow_analysis.html[3Pvignettes/workflow_analysis.html[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -l[Kgit add workflow_analysis.htmlvignettes/ workflow_analysis.html[1Pis.html[11Pworkflow_analyis.htmlpush --force origin mastercommit -m "Workflow_analysis html update"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[15Ppush --force origin master
+[?2004lEnumerating objects: 6, done.
+Counting objects:  16% (1/6)Counting objects:  33% (2/6)Counting objects:  50% (3/6)Counting objects:  66% (4/6)Counting objects:  83% (5/6)Counting objects: 100% (6/6)Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects:  25% (1/4)Compressing objects:  50% (2/4)Compressing objects:  75% (3/4)Compressing objects: 100% (4/4)Compressing objects: 100% (4/4), done.
+Writing objects:  25% (1/4)Writing objects:  50% (2/4)Writing objects:  75% (3/4)Writing objects: 100% (4/4)Writing objects: 100% (4/4), 1.06 MiB | 5.58 MiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/dev-sandram/ProjectAlessandra.git
+   a83d540..cac58b2  master -> master
+git add .
+[?2004l

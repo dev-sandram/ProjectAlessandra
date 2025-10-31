@@ -1,55 +1,3 @@
-library(microbenchmark)
-library(ggplot2)
-# carico le funzioni
-source("R/df_functions.R")
-source("R/dt_functions.R")
-#FINAL REVISION
-benchfr <- microbenchmark(
-df_version = final_revision_df("project_oct25/annotated_GSM3516673_normal_annotated_GSM3516672_tumor_SeuratIntegration.csv", "project_oct25/nt_combined_clustering.output.csv"),
-dt_version = final_revision_dt ("project_oct25/annotated_GSM3516673_normal_annotated_GSM3516672_tumor_SeuratIntegration.csv", "project_oct25/nt_combined_clustering.output.csv"),
-times = 10
-)
-?ggsvae
-?ggsave
-getwd()
-source("R/dt_functions.R")
-#FINAL REVISION
-benchfr <- microbenchmark(
-df_version = final_revision_df("project_oct25/annotated_GSM3516673_normal_annotated_GSM3516672_tumor_SeuratIntegration.csv", "project_oct25/nt_combined_clustering.output.csv"),
-dt_version = final_revision_dt ("project_oct25/annotated_GSM3516673_normal_annotated_GSM3516672_tumor_SeuratIntegration.csv", "project_oct25/nt_combined_clustering.output.csv"),
-times = 10
-)
-("R/df_functions.R")
-source("R/dt_functions.R")
-#FINAL REVISION
-benchfr <- microbenchmark(
-df_version = final_revision_df("project_oct25/annotated_GSM3516673_normal_annotated_GSM3516672_tumor_SeuratIntegration.csv", "project_oct25/nt_combined_clustering.output.csv"),
-dt_version = final_revision_dt ("project_oct25/annotated_GSM3516673_normal_annotated_GSM3516672_tumor_SeuratIntegration.csv", "project_oct25/nt_combined_clustering.output.csv"),
-times = 10
-)
-library(data.table)
-library(microbenchmark)
-library(ggplot2)
-# carico le funzioni
-source("R/df_functions.R")
-source("R/dt_functions.R")
-#FINAL REVISION
-benchfr <- microbenchmark(
-df_version = final_revision_df("project_oct25/annotated_GSM3516673_normal_annotated_GSM3516672_tumor_SeuratIntegration.csv", "project_oct25/nt_combined_clustering.output.csv"),
-dt_version = final_revision_dt ("project_oct25/annotated_GSM3516673_normal_annotated_GSM3516672_tumor_SeuratIntegration.csv", "project_oct25/nt_combined_clustering.output.csv"),
-times = 10
-)
-source("R/dt_functions.R")
-dt_version = final_revision_dt ("project_oct25/annotated_GSM3516673_normal_annotated_GSM3516672_tumor_SeuratIntegration.csv", "project_oct25/nt_combined_clustering.output.csv")
-source("R/dt_functions.R")
-dt_version = final_revision_dt ("project_oct25/annotated_GSM3516673_normal_annotated_GSM3516672_tumor_SeuratIntegration.csv", "project_oct25/nt_combined_clustering.output.csv")
-source("R/dt_functions.R")
-dt_version = final_revision_dt ("project_oct25/annotated_GSM3516673_normal_annotated_GSM3516672_tumor_SeuratIntegration.csv", "project_oct25/nt_combined_clustering.output.csv")
-?ggplot
-devtools::document()
-devtools::document()
-devtools::loadall()
-devtools::load_all()
 devtools::install()
 ?!
 a
@@ -510,3 +458,55 @@ View(high_counts_by_gene)
 View(high_counts_by_gene_sample)
 View(genes)
 View(high_overlaps)
+?ProjectAlessandra
+library(ProjectAlessandra)
+?ProjectAlessandra
+?ProjectAlessandra
+??ProjectAlessandra
+?bulk_counts_summary_dt
+devtools::document
+?ProjectAlessandra
+devtools::load_all()
+devtools::document()
+devtools::load_all()
+devtools::install()
+?ProjectAlessandra
+vignette(ProjectAlessandra)
+vignette("ProjectAlessandra")
+library(ProjectAlessandra)
+library(help = "ProjectAlessandra")
+?ProjectAlessandra
+ls("package:ProjectAlessandra")
+ls("package:data.table")
+help(package = "ProjectAlessandra")
+help(package = "ProjectAlessandra")
+?ProjectAlessandra
+help(ProjectAlessandra)
+help(package = "ProjectAlessandra")
+?package = "ProjectAlessandra"
+?help
+render("workflow_analysis.Rmd", output_format = "html_document")
+library(rmarkdown)
+render("workflow_analysis.Rmd", output_format = "html_document")
+render("vignettes/workflow_analysis.Rmd", output_format = "html_document")
+?render
+render("vignettes/workflow_analysis.Rmd", output_format = "html_document", knit_root_dir = "home/rstudio")
+render(
+"vignettes/workflow_analysis.Rmd",
+output_format = "html_document",
+knit_root_dir = "/home/rstudio"
+)
+?ProjectAlessandra
+?ProjectAlessandra
+help(projectAlessandra)
+help("projectAlessandra")
+library(ProjectAlessandra)
+?ProjectAlessandra
+devtools::document()
+devtools::load_all()
+devtools::install(ProjectAlessandra)
+devtools::install()
+?data.table
+?ProjectAlessandra
+help("ProjectAlessandra")
+help(package = "ProjectAlessandra")
