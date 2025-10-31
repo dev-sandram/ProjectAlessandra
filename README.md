@@ -169,13 +169,13 @@ Example outputs are available in Outputs/:
 - plot4_1.jpeg
 
 ## Dependencies
-```Package	Purpose
-data.table	Fast data manipulation
-ggplot2	Visualization
-microbenchmark	Performance comparison
-knitr, rmarkdown	Reporting
-dplyr (optional)	Readability in comparisons
-```
+| Package | Purpose |
+|----------|----------|
+| **data.table** | Fast data manipulation |
+| **ggplot2** | Visualization |
+| **microbenchmark** | Performance comparison |
+| **knitr**, **rmarkdown** | Reporting |
+| **dplyr** *(optional)* | Readability in comparisons |
 
 ## Citation
 If you use this package or adapt its structure, please cite:
