@@ -73,3 +73,12 @@ summary_cluster_celltype_sampletype.csv
 ]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git pi[Kush origin master
 [?2004lfatal: unable to access 'https://github.com/dev-sandram/ProjectAlessandra.git/': Failed to connect to github.com port 443 after 75150 ms: Connection refused
 ]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git add .
+[?2004l]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git commit -m "the fgi[K[Kinal one[K[K[K[K[K[K[K[K[K[K[K[K[KReadme upload"
+[?2004l[master d73906a] Readme upload
+ 2 files changed, 8 insertions(+), 2 deletions(-)
+]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git pi[Kush com[K[K[Korigin master
+[?2004lUsername for 'https://github.com': sandr     devsandra- m       -sandram
+Password for 'https://dev-sandram@github.com': 
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/dev-sandram/ProjectAlessandra.git/'
+]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git add . 
