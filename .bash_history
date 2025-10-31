@@ -94,3 +94,20 @@ git add .
 git commit -m "Library update"
 git push origin master
 docker login
+tree -L 2
+ls -R | head -n 50
+git add .
+git commit -m "Readme upload"
+git push origin master
+git add .
+git commit -m "the final one"
+git push origin master
+git add .
+git commit -m "Readme upload"
+git push origin master
+git add . 
+git commit -m "Readme upload"
+git push origin master
+git add .
+git commit -m "Readme upload2"
+git push origin master

@@ -1,94 +1,0 @@
-docker login
-[?2004lbash: docker: command not found
-]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ [7mtree -L 2[27m
-[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctree -L 2
-[A
-[?2004lbash: tree: command not found
-]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ [7mls -R | head -n 50[27mls -R | head -n 50
-[?2004l.:
-DESCRIPTION
-man
-NAMESPACE
-Outputs
-project_oct25
-R
-README.md
-rstudio.Rproj
-scripts
-vignettes
-
-./man:
-annotate_counts_df.Rd
-annotate_counts_dt.Rd
-atac_to_gene_df.Rd
-atac_to_gene_dt.Rd
-bulk_counts_qc_df.Rd
-bulk_counts_qc_dt.Rd
-bulk_counts_summary_df.Rd
-bulk_counts_summary_dt.Rd
-classify_labs_df.Rd
-classify_labs_dt.Rd
-combine_cohorts_df.Rd
-combine_cohorts_dt.Rd
-final_revision_df.Rd
-final_revision_dt.Rd
-gene_stats_filter_df.Rd
-gene_stats_filter_dt.Rd
-match_vitals_df.Rd
-match_vitals_dt.Rd
-ProjectAlessandra.Rd
-subset_counts_dt.Rd
-top_peaks_df.Rd
-top_peaks_dt.Rd
-variants_to_genes_df.Rd
-variants_to_genes_dt.Rd
-wide_long_wide_df.Rd
-wide_long_wide_dt.Rd
-
-./Outputs:
-celltype_counts_per_cluster.csv
-combined_cell_cluster_celltype.csv
-combined_celltype_integrationcluster.csv
-counts_per_cluster_celltype.csv
-normalized_celltype_percentages_by_tissue.csv
-normalized_percent_cluster_celltype_tissue.csv
-plot4_1_df.jpeg
-plot4_1.jpeg
-summary_cluster_celltype_sampletype.csv
-]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ [K]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ [K]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ [K]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ [K]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ [K]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ [K]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git add .
-[?2004l]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git m[Kcommit m[K-m "Readme upload"
-[?2004l[master 1fc1722] Readme upload
- 20 files changed, 322 insertions(+), 574 deletions(-)
- rewrite .local/share/rstudio/projects/bca006bd/console07/8C486E02 (98%)
- rewrite .local/share/rstudio/projects/bca006bd/console07/INDEX001 (70%)
- rewrite .local/share/rstudio/sessions/active/session-549e88dc/suspended-session-data/console_actions (99%)
- rewrite .local/share/rstudio/sessions/active/session-549e88dc/suspended-session-data/environment (97%)
- rewrite README.md (93%)
-]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git pi[Kush origin master
-[?2004lfatal: unable to access 'https://github.com/dev-sandram/ProjectAlessandra.git/': Failed to connect to github.com port 443 after 75140 ms: Connection refused
-]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ gitt[K add .
-[?2004l]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git commit -m ""t"h"e" "f"i"n"a"l" "o"n"e"
-[?2004l[master 75b4ae9] the final one
- 2 files changed, 31 insertions(+), 12 deletions(-)
-]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git pi[Kush origin master
-[?2004lfatal: unable to access 'https://github.com/dev-sandram/ProjectAlessandra.git/': Failed to connect to github.com port 443 after 75150 ms: Connection refused
-]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git add .
-[?2004l]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git commit -m "the fgi[K[Kinal one[K[K[K[K[K[K[K[K[K[K[K[K[KReadme upload"
-[?2004l[master d73906a] Readme upload
- 2 files changed, 8 insertions(+), 2 deletions(-)
-]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git pi[Kush com[K[K[Korigin master
-[?2004lUsername for 'https://github.com': sandr     devsandra- m       -sandram
-Password for 'https://dev-sandram@github.com': 
-remote: Invalid username or token. Password authentication is not supported for Git operations.
-fatal: Authentication failed for 'https://github.com/dev-sandram/ProjectAlessandra.git/'
-]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git add . 
-[?2004l]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ gi [Kt commit -m "Readme upload"
-[?2004l[master e3b7392] Readme upload
- 1 file changed, 10 insertions(+), 1 deletion(-)
-]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git push origin master
-[?2004lUsername for 'https://github.com': dev-sandram
-Password for 'https://dev-sandram@github.com': 
-remote: Invalid username or token. Password authentication is not supported for Git operations.
-fatal: Authentication failed for 'https://github.com/dev-sandram/ProjectAlessandra.git/'
-]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git add .
-[?2004l
