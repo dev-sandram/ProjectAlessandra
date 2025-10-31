@@ -1,9 +1,9 @@
-~/man/ProjectAlessandra.Rd
-~/R/ProjectAlessandra_package.R
+~/README.md
 ~/DESCRIPTION
 ~/vignettes/workflow_analysis.html
+~/man/ProjectAlessandra.Rd
+~/R/ProjectAlessandra_package.R
 ~/R/dt_functions.R
-~/README.md
 ~/vignettes/workflow_analysis.Rmd
 ~/scripts/Task7data_table.R
 ~/scripts/Task9data_frame.R

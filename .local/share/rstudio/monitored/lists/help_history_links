@@ -1,4 +1,3 @@
-help/library/ProjectAlessandra/html/annotate_counts_df.html,R: Annotate counts with metadata and compute summaries
 help/library/ProjectAlessandra/html/annotate_counts_dt.html,R: Annotate counts with metadata and compute summaries
 help/library/ggplot2/html/autoplot.html,R: Create a complete ggplot appropriate to a particular data...
 help/library/knitr/html/knitr-package.html,R: A general-purpose tool for dynamic report generation in R
@@ -11,5 +10,6 @@ help/library/rmarkdown/html/render.html,R: Render R Markdown
 help/library/data.table/html/data.table.html,R: Enhanced data.frame
 help/library/ProjectAlessandra/html/00Index.html,R: Data manipulation and analysis tools for genomics and bulk RNA-seq
 help/preview?file=%2Fhome%2Frstudio%2Fman%2FProjectAlessandra.Rd,ProjectAlessandra.Rd
-help/library/ProjectAlessandra/html/ProjectAlessandra.html,R: Data manipulation and analysis tools for genomics and bulk...
 help/library/ProjectAlessandra/html/bulk_counts_summary_dt.html,R: Summarize bulk RNA counts with metadata
+help/library/ProjectAlessandra/html/bulk_counts_qc_df.html,R: Add QC-style derived columns
+help/library/ProjectAlessandra/html/ProjectAlessandra.html,R: Data manipulation and analysis tools for genomics and bulk...

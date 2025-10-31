@@ -90,3 +90,7 @@ git add vignettes/workflow_analysis.html
 git add -f vignettes/workflow_analysis.html
 git commit -m "workflow_analysis html update 2 "
 git push --force origin master
+git add .
+git commit -m "Library update"
+git push origin master
+docker login
