@@ -30,6 +30,40 @@ Each task is implemented in two versions:
 - a **data.table** version for scalability and benchmarking  
 
 ---
+## Docker setup
+This project can be run in a **Docker container** to ensure a reproducible R and RStudio environment with all dependencies preinstalled.
+
+Below is the structure of the provided `Dockerfile`, with explanations for each step.
+### Base Image
+
+```dockerfile
+FROM rocker/rstudio:4.3.0
+```
+This includes R 4.3.0 and RStudio Server preinstalled and provides a browser-based RStudio interface accessible via localhost:8787.
+
+### R Packages installation
+```dockerfile
+RUN R -e "install.packages(c(
+  'data.table',
+  'ggplot2',
+  'microbenchmark',
+  'roxygen2',
+  'knitr',
+  'rmarkdown',
+  'devtools'
+))"
+```
+
+Each installed package serves a specific purpose in the ProjectAlessandra workflow:
+| Package              | Purpose                                                                              |
+| -------------------- | ------------------------------------------------------------------------------------ |
+| **`data.table`**     | High-performance data manipulation used throughout the workflow (`*_dt()` functions) |
+| **`ggplot2`**        | Visualization and exploratory plotting                                               |
+| **`microbenchmark`** | Compare execution speed of `data.frame` vs `data.table` versions                     |
+| **`roxygen2`**       | Auto-generates documentation (`.Rd` files in `/man`)                                 |
+| **`knitr`**          | Converts R Markdown to reports and vignettes                                         |
+| **`rmarkdown`**      | Generates HTML/PDF documentation and notebooks                                       |
+| **`devtools`**       | Simplifies package installation from GitHub (`devtools::install_github()`)           |
 
 ## Installation
 
@@ -44,7 +78,6 @@ Then load it as usual:
 
 ```r
 library(ProjectAlessandra)
-📘 Usage Overview
 ```
 
 ## Usage overview 
@@ -91,33 +124,35 @@ autoplot(bench)
 Across all workflows, data.table implementations demonstrate 1–2 orders of magnitude faster execution, particularly for joins and grouped aggregations.
 
 ## Workflow Coverage
-Task	Topic	Function
-1	Bulk RNA-seq summary	bulk_counts_summary_dt()
-2	QC columns	bulk_counts_qc_dt()
-3	Subset + indexing	subset_counts_dt()
-4	Annotate & summarize	annotate_counts_dt()
-5	Clinical lab classification	classify_labs_dt()
-6	Match labs ↔ vitals	match_vitals_dt()
-7	Top ATAC peaks	top_peaks_dt()
-8	Gene stats + filtering	gene_stats_filter_dt()
-9	Reshape wide ↔ long	wide_long_wide_dt()
-10	ATAC peaks ↔ genes	atac_to_gene_dt()
-11	Variants ↔ genes	variants_to_genes_dt()
-12	Multi-cohort merge	combine_cohorts_dt()
-Final	Single-cell integration	final_revision_dt()
+| Task | Topic | Function |
+|------|--------|-----------|
+| 1 | Bulk RNA-seq summary | `bulk_counts_summary_dt()` |
+| 2 | QC columns | `bulk_counts_qc_dt()` |
+| 3 | Subset + indexing | `subset_counts_dt()` |
+| 4 | Annotate & summarize | `annotate_counts_dt()` |
+| 5 | Clinical lab classification | `classify_labs_dt()` |
+| 6 | Match labs ↔ vitals | `match_vitals_dt()` |
+| 7 | Top ATAC peaks | `top_peaks_dt()` |
+| 8 | Gene stats + filtering | `gene_stats_filter_dt()` |
+| 9 | Reshape wide ↔ long | `wide_long_wide_dt()` |
+| 10 | ATAC peaks ↔ genes | `atac_to_gene_dt()` |
+| 11 | Variants ↔ genes | `variants_to_genes_dt()` |
+| 12 | Multi-cohort merge | `combine_cohorts_dt()` |
+| Final | Single-cell integration | `final_revision_dt()` |
+
 
 ## Folder Structure
 ProjectAlessandra/
-├── DESCRIPTION               # Package metadata
-├── NAMESPACE                 # Function exports
-├── R/                        # Core R source functions
-├── man/                      # Auto-generated documentation (.Rd)
-├── scripts/                  # Supplementary analysis or development scripts
-├── vignettes/                # Detailed workflows and tutorials (.Rmd)
-├── project_oct25/            # Project data and resources
-├── Outputs/                  # Generated CSVs and plots (e.g. single-cell summaries)
-├── README.md                 # You are here
-└── rstudio.Rproj             # RStudio project file
+├── DESCRIPTION # Package metadata
+├── NAMESPACE # Function exports
+├── R/ # Core R source functions
+├── man/ # Auto-generated documentation (.Rd)
+├── scripts/ # Supplementary analysis or development scripts
+├── vignettes/ # Detailed workflows and tutorials (.Rmd)
+├── project_oct25/ # Project data and resources
+├── Outputs/ # Generated CSVs and plots (e.g. single-cell summaries)
+├── README.md # You are here
+└── rstudio.Rproj # RStudio project file
 
 ## Final Revision: Single-cell integration
 The function final_revision_dt() merges Seurat integration clusters with cell type and tissue annotations, producing:
@@ -140,15 +175,15 @@ microbenchmark	Performance comparison
 knitr, rmarkdown	Reporting
 dplyr (optional)	Readability in comparisons
 
-📖 Citation
+## Citation
 If you use this package or adapt its structure, please cite:
 
 Alessandra, A. (2025). ProjectAlessandra: modular R workflows for multi-omics analysis using data.table.
 GitHub Repository: https://github.com/your-username/ProjectAlessandra
 
-💡 Author
+## Author
 Alessandra [Monterosso]
 [alessandramonte050@gmail.com]
 
-📜 License
+## License
 This project is released under the MIT License.
