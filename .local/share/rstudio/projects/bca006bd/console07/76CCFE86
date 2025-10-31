@@ -1,1 +1,14 @@
 ]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git add .
+[?2004l]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git commit -m "Readme upol[K[Kload 2"
+[?2004l[master 0051d6f] Readme upload 2
+ 5 files changed, 19 insertions(+), 183 deletions(-)
+ create mode 100644 .local/share/rstudio/projects/bca006bd/console07/76CCFE86
+ delete mode 100644 .local/share/rstudio/projects/bca006bd/console07/8C486E02
+ delete mode 100644 .local/share/rstudio/projects/bca006bd/console07/8C486E02.env
+ rewrite .local/share/rstudio/projects/bca006bd/console07/INDEX001 (85%)
+]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git push origin master
+[?2004lUsername for 'https://github.com': dev-sandram
+Password for 'https://dev-sandram@github.com': 
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/dev-sandram/ProjectAlessandra.git/'
+]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git add .
