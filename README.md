@@ -1,4 +1,4 @@
-# 🧬 ProjectAlessandra
+# ProjectAlessandra
 
 **ProjectAlessandra** is an R package designed to build, benchmark, and demonstrate modular data analysis workflows for **multi-omics datasets** — including RNA-seq, ATAC-seq, genomic variants, and clinical metadata — using both base **data.frame** and high-performance **data.table** paradigms.
 
@@ -11,7 +11,7 @@ The package was created as part of a didactic and research exercise (October 202
 
 ---
 
-## 🚀 Features
+## Features
 
 Each function in the package corresponds to a realistic step of an omics data analysis pipeline, covering:
 
@@ -31,21 +31,26 @@ Each task is implemented in two versions:
 
 ---
 
-## 🧩 Installation
+## Installation
 
 You can install the package directly from GitHub:
 
 ```r
 # install.packages("devtools")
 devtools::install_github("dev-sandram/ProjectAlessandra")
+```
+
 Then load it as usual:
 
-r
+```r
 library(ProjectAlessandra)
 📘 Usage Overview
+```
+
+## Usage overview 
 A typical workflow involves:
 
-r
+```r
 # Summarize RNA-seq counts
 result <- bulk_counts_summary_dt(
   "project_oct25/data/bulk_counts_long.csv",
@@ -66,13 +71,15 @@ peaks_to_genes <- atac_to_gene_dt(
   "project_oct25/data/atac_peaks.bed.csv",
   "project_oct25/data/gene_annotation.bed.csv"
 )
+```
+
 Detailed examples and end-to-end workflows are available in the vignette:
 vignettes/workflow_analysis.Rmd
 
-Benchmarking
+## Benchmarking
 Each function includes two parallel implementations (*_df() and *_dt()) allowing reproducible benchmarking via microbenchmark:
 
-r
+```r
 library(microbenchmark)
 bench <- microbenchmark(
   df_version = bulk_counts_summary_df(...),
@@ -80,9 +87,10 @@ bench <- microbenchmark(
   times = 10
 )
 autoplot(bench)
+```
 Across all workflows, data.table implementations demonstrate 1–2 orders of magnitude faster execution, particularly for joins and grouped aggregations.
 
-Workflow Coverage
+## Workflow Coverage
 Task	Topic	Function
 1	Bulk RNA-seq summary	bulk_counts_summary_dt()
 2	QC columns	bulk_counts_qc_dt()
@@ -98,7 +106,7 @@ Task	Topic	Function
 12	Multi-cohort merge	combine_cohorts_dt()
 Final	Single-cell integration	final_revision_dt()
 
-Folder Structure
+## Folder Structure
 ProjectAlessandra/
 ├── DESCRIPTION               # Package metadata
 ├── NAMESPACE                 # Function exports
@@ -110,7 +118,8 @@ ProjectAlessandra/
 ├── Outputs/                  # Generated CSVs and plots (e.g. single-cell summaries)
 ├── README.md                 # You are here
 └── rstudio.Rproj             # RStudio project file
-Final Revision: Single-cell integration
+
+## Final Revision: Single-cell integration
 The function final_revision_dt() merges Seurat integration clusters with cell type and tissue annotations, producing:
 - Cluster–cell type–tissue summary tables
 - Normalized frequency matrices
@@ -123,7 +132,7 @@ Example outputs are available in Outputs/:
 - normalized_percent_cluster_celltype_tissue.csv
 - plot4_1.jpeg
 
-Dependencies
+## Dependencies
 Package	Purpose
 data.table	Fast data manipulation
 ggplot2	Visualization

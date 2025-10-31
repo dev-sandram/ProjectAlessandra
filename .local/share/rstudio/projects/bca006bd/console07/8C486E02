@@ -56,4 +56,14 @@ plot4_1_df.jpeg
 plot4_1.jpeg
 summary_cluster_celltype_sampletype.csv
 ]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ [K]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ [K]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ [K]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ [K]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ [K]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ [K]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git add .
-[?2004l
+[?2004l]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git m[Kcommit m[K-m "Readme upload"
+[?2004l[master 1fc1722] Readme upload
+ 20 files changed, 322 insertions(+), 574 deletions(-)
+ rewrite .local/share/rstudio/projects/bca006bd/console07/8C486E02 (98%)
+ rewrite .local/share/rstudio/projects/bca006bd/console07/INDEX001 (70%)
+ rewrite .local/share/rstudio/sessions/active/session-549e88dc/suspended-session-data/console_actions (99%)
+ rewrite .local/share/rstudio/sessions/active/session-549e88dc/suspended-session-data/environment (97%)
+ rewrite README.md (93%)
+]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ git pi[Kush origin master
+[?2004lfatal: unable to access 'https://github.com/dev-sandram/ProjectAlessandra.git/': Failed to connect to github.com port 443 after 75140 ms: Connection refused
+]0;/home/rstudio[?2004h]0;alessandra@e6ebf5b1b6ae: ~[01;32malessandra@e6ebf5b1b6ae[00m:[01;34m~[00m$ gitt[K add .
