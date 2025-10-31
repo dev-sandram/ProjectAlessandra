@@ -142,7 +142,7 @@ Across all workflows, data.table implementations demonstrate 1–2 orders of mag
 
 
 ## Folder Structure
-ProjectAlessandra/
+```ProjectAlessandra/
 ├── DESCRIPTION # Package metadata
 ├── NAMESPACE # Function exports
 ├── R/ # Core R source functions
@@ -153,6 +153,7 @@ ProjectAlessandra/
 ├── Outputs/ # Generated CSVs and plots (e.g. single-cell summaries)
 ├── README.md # You are here
 └── rstudio.Rproj # RStudio project file
+```
 
 ## Final Revision: Single-cell integration
 The function final_revision_dt() merges Seurat integration clusters with cell type and tissue annotations, producing:
