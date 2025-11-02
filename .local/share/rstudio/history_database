@@ -5642,3 +5642,46 @@
 1762119144646:render("workflow_analysis.Rmd", output_format = "html_document")
 1762119176836:rmarkdown::render("vignettes/workflow_analysis.Rmd", output_format = "html_document")
 1762119234769:rmarkdown::render("vignettes/workflow_analysis.Rmd", output_format = "html_document",knit_root_dir = "/home/rstudio")
+1762119498751:#Goal: Combine cohorts safely.
+1762119498761:#Data: cohortA_samples.csv, cohortB_samples.csv
+1762119498763:#Tasks:
+1762119498764:#• rbindlist(list(A, B), use.names=TRUE, fill=TRUE) and verify column alignment.
+1762119498766:#• Order by cohort, condition, sample_id.
+1762119498769:#• Join back to bulk_counts_long and compute per-cohort, per-condition mean counts of the top 100 most variable genes.
+1762119498774:# Carichiamo la libreria
+1762119498779:library(data.table)
+1762119498892:# Leggiamo i file, specificando i percorsi
+1762119498894:cohortA <- fread("project_oct25/cohortA_samples.csv")
+1762119498899:cohortB <- fread("project_oct25/cohortB_samples.csv")
+1762119498903:counts  <- fread("project_oct25/bulk_counts_long.csv")
+1762119498945:# Aggiungiamo una colonna 'cohort' per tenere traccia della provenienza
+1762119498946:cohortA[, cohort := "A"]
+1762119498950:cohortB[, cohort := "B"]
+1762119498955:# Uniamo le due coorti
+1762119498957:# use.names = TRUE --> allinea le colonne con lo stesso nome
+1762119498959:# fill = TRUE      --> se mancano colonne in uno dei due file, le crea e le riempie con NA
+1762119498961:combined_cohorts <- rbindlist(list(cohortA, cohortB), use.names = TRUE, fill = TRUE)
+1762119498969:# Ordiniamo per coorte, condizione e sample_id
+1762119498971:setorder(combined_cohorts, cohort, condition, sample_id)
+1762119498975:# Uniamo per sample_id
+1762119498976:merged_per_sampleid <- merge(counts, combined_cohorts, by = "sample_id", all.x = TRUE)
+1762119498987:# PARTE 3: Troviamo i 100 geni più variabili
+1762119498988:# Calcoliamo la varianza dei conteggi per ciascun gene
+1762119498990:gene_variance <- merged_per_sampleid[, .(variance = var(count, na.rm = TRUE)), by = gene]
+1762119498997:# Ordiniamo per varianza decrescente e prendiamo i primi 100
+1762119498998:top100_genes <- gene_variance[order(-variance)][1:100, gene]
+1762119499002:print(head(top100_genes, 5))
+1762119499005:# Calcoliamo la media dei conteggi per coorte e condizione
+1762119499012:#           solo per i top 100 geni
+1762119499013:top100_data <- merged_per_sampleid[gene %in% top100_genes]
+1762119499020:mean_counts <- top100_data[, .(
+1762119499021:mean_count = mean(count, na.rm = TRUE)
+1762119499022:), by = .(gene, cohort, condition)]
+1762119501858:View(mean_counts)
+1762119639303:View(mean_counts)
+1762119825906:devtools::document()
+1762119832958:devtools::load_all()
+1762119838624:devtools::install()
+1762119873359:?ProjectAlessandra
+1762119897430:rmarkdown::render("vignettes/workflow_analysis.Rmd", output_format = "html_document",knit_root_dir = "/home/rstudio")
+1762119917580:rmarkdown::render("vignettes/workflow_analysis.Rmd", output_format = "html_document",knit_root_dir = "/home/rstudio")

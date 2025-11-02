@@ -696,12 +696,12 @@ Identification of genes with high variability to focus subsequent analyses on bi
 
 7.  Per-cohort, per-condition summary: Computes mean counts per gene, per cohort, and per condition.
 
-8.  Output --- Returns top100_data, a table with counts for the most variable genes along with cohort and condition annotations.
+8.  Output --- Returns mean_counts, a table with mean counts for the most variable genes along with cohort and condition annotations.
 
 ### Syntax example for bulk_counts_summary_dt function
 
 ```{r}
-top100_data <- combine_cohorts_dt(
+mean_counts <- combine_cohorts_dt(
 cohortA_path = "project_oct25/cohortA_samples.csv",
 cohortB_path = "project_oct25/cohortB_samples.csv",
 counts_path  = "project_oct25/bulk_counts_long.csv"
@@ -711,7 +711,7 @@ counts_path  = "project_oct25/bulk_counts_long.csv"
 ### Output
 
 ```{r, echo=FALSE, results='asis'}
-knitr::kable(head(top100_data, 10), caption = "Top 100 most variable genes with cohort and condition annotations")
+knitr::kable(head(mean_counts, 10), caption = "Top 100 most variable genes with cohort and condition annotations")
 ```
 
 ### Notes

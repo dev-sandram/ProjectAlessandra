@@ -500,7 +500,7 @@ combine_cohorts_dt <- function(cohortA_path, cohortB_path, counts_path) {
     mean_count = mean(count, na.rm = TRUE)
   ), by = .(gene, cohort, condition)]
 
-  return(top100_data)
+  return(mean_counts)
 }
 
 

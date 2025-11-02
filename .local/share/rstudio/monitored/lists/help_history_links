@@ -9,7 +9,7 @@ help/library/ProjectAlessandra/html/00Index.html,R: Data manipulation and analys
 help/preview?file=%2Fhome%2Frstudio%2Fman%2FProjectAlessandra.Rd,ProjectAlessandra.Rd
 help/library/ProjectAlessandra/html/bulk_counts_summary_dt.html,R: Summarize bulk RNA counts with metadata
 help/library/ProjectAlessandra/html/bulk_counts_qc_df.html,R: Add QC-style derived columns
-help/library/ProjectAlessandra/html/ProjectAlessandra.html,R: Data manipulation and analysis tools for genomics and bulk...
 help/library/NULL/help/plot,R: help
 help/library/base/html/as.data.frame.html,R: Coerce to a Data Frame
 help/library/data.table/html/rbindlist.html,R: Makes one data.table from a list of many
+help/library/ProjectAlessandra/html/ProjectAlessandra.html,R: Data manipulation and analysis tools for genomics and bulk...
