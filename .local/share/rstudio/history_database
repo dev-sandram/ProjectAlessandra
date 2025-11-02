@@ -5634,3 +5634,11 @@
 1762117563704:?plot
 1762117580670:?as.data.frame
 1762117795680:?rbindlist
+1762118950286:rmarkdown::render("workflow_analysis.Rmd", output_format = "html_document", output_file = "workflow_analysis.html")
+1762118981591:rmarkdown::render("vignettes/workflow_analysis.Rmd", output_format = "html_document", output_file = "vignettes/workflow_analysis.html")
+1762118992947:getwd()
+1762119026637:rmarkdown::render("/vignettes/workflow_analysis.Rmd", output_format = "html_document", output_file = "/vignettes/workflow_analysis.html")
+1762119134739:rmarkdown::render("workflow_analysis.Rmd", output_format = "html_document")
+1762119144646:render("workflow_analysis.Rmd", output_format = "html_document")
+1762119176836:rmarkdown::render("vignettes/workflow_analysis.Rmd", output_format = "html_document")
+1762119234769:rmarkdown::render("vignettes/workflow_analysis.Rmd", output_format = "html_document",knit_root_dir = "/home/rstudio")
