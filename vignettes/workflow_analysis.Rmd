@@ -783,7 +783,9 @@ Generates a detailed table including:
 
 -   Number of cells per cluster × cell type × sample type;
 
--   Total cells per cluster; - Percentages within cluster and within cell type;
+-   Total cells per cluster;
+
+-   Percentages within cluster and within cell type;
 
 -   Association to normal and tumor tissue.
 

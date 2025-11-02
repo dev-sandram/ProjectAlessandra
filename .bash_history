@@ -111,3 +111,22 @@ git push origin master
 git add .
 git commit -m "Readme upload2"
 git push origin master
+git add .
+git commit -m "Readme upload 2"
+git push origin master
+git add .
+git commit -m "Readme upload 2"
+git push origin master
+git add .
+git commit -m "the last one"
+git push origin master
+git add .
+git commit -m "finished"
+git push origin master
+git add .
+git commit -m "the end"
+git push commit master
+git push origin master
+git add .
+git commit -m "packages"
+git push origin master

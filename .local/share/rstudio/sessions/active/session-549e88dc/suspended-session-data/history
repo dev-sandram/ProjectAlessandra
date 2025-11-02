@@ -1,9 +1,3 @@
-times = 10
-)
-autoplot(bench9)
-# Task 10
-bench10 <- microbenchmark(
-df_version = atac_to_gene_df("project_oct25/atac_peaks.bed.csv", "project_oct25/gene_annotation.bed.csv"),
 dt_version = atac_to_gene_dt("project_oct25/atac_peaks.bed.csv", "project_oct25/gene_annotation.bed.csv"),
 times = 10
 )
@@ -510,3 +504,9 @@ devtools::install()
 library(ProjectAlessandra)
 ?ProjectAlessandra
 ?bulk_counts_summary_dt
+?ProjectAlessandra
+?bulk_counts_qc_df
+?ProjectAlessandra
+?ProjectAlessandra
+desc::desc_get("Description")
+tree -L 2

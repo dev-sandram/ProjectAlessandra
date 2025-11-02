@@ -1,4 +1,38 @@
 {
-    "type": [],
-    "data": []
+    "type": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        2,
+        2,
+        2,
+        0,
+        1,
+        3
+    ],
+    "data": [
+        "> ",
+        "?ProjectAlessandra",
+        "> ",
+        "?bulk_counts_qc_df",
+        "> ",
+        "?ProjectAlessandra",
+        "> ",
+        "?ProjectAlessandra",
+        "> ",
+        "desc::desc_get(\"Description\")",
+        "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Description ",
+        "\n\"This package provides a set of functions to efficiently manipulate, summarize, and analyze genomics datasets, including bulk RNA-seq, single-cell RNA-seq (Seurat), ATAC-seq, and variant data. It implements workflows for filtering, joining, summarizing, and annotating data tables using data.table, and includes tools for QC metrics, rolling joins, interval-based operations, and cohort combination. The package also provides comparison benchmarks between data.table and data.frame implementations to highlight performance gains. All functions are designed to facilitate reproducible analyses and reporting in R.\" ",
+        "\n",
+        "> ",
+        "tree -L 2",
+        "Error: unexpected numeric constant in \"tree -L 2\"\n"
+    ]
 }
