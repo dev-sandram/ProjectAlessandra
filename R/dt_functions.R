@@ -215,7 +215,7 @@ match_vitals_dt <- function(labs_path, vitals_path) {
   labs <- fread(labs_path)
   vitals <- fread(vitals_path)
 
-  labs[, time_iso := as.POSIXct(time_iso)]
+  labs[, time_iso := as.POSIXct(time_iso)]   #converte il tempo in un formato convenzionale
   vitals[, time_iso := as.POSIXct(time_iso)]
 
   setorder(labs, patient_id, time_iso)

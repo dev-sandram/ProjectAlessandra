@@ -983,4 +983,6 @@ Across all tasks:
 
 ### Conclusions of the project
 
+Beyond base R and data.table, several other packages can perform the same tasks. The tidyverse—especially dplyr—offers very readable syntax (Wickham et al., 2023), though it is generally slower on large joins and aggregations. dtplyr provides a middle ground by translating dplyr code into data.table for better performance (Hinds & Wickham, CRAN). For very large datasets or out-of-memory processing, tools such as Apache Arrow (Arrow Project, 2023) and DuckDB (Raasveldt & Mühleisen, 2019) are widely recognized as efficient alternatives. 
+
 This project successfully developed and benchmarked a complete multi-omics data analysis workflow implemented in R. Each task reproduces a realistic bioinformatics step --- from RNA-seq count summarization to ATAC-seq and variant integration --- using both traditional (data.frame) and optimized (data.table) paradigms.

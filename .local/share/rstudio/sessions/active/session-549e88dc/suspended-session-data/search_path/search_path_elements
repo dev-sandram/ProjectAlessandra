@@ -1,6 +1,8 @@
 .GlobalEnv
+package:microbenchmark
+package:ggplot2
+package:data.table
 package:ProjectAlessandra
-devtools_shims
 tools:rstudio
 package:stats
 package:graphics
