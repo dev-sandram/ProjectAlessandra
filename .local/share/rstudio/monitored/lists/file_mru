@@ -1,3 +1,4 @@
+~/vignettes/workflow_analysis.Rmd
 ~/DESCRIPTION
 ~/man/annotate_counts_df.Rd
 ~/scripts/Task11data_table.R
@@ -12,4 +13,3 @@
 ~/scripts/Task7data_table.R
 ~/scripts/Task5data_table.R
 ~/scripts/Task4data_table.R
-~/scripts/Task3data_table.R
